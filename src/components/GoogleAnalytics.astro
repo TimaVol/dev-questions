@@ -1,0 +1,20 @@
+---
+const id = import.meta.env.PUBLIC_GA_ID;
+const enabled = import.meta.env.PROD && id;
+---
+
+{
+	enabled && (
+		<>
+			<script async src={`https://www.googletagmanager.com/gtag/js?id=${id}`} />
+			<script is:inline define:vars={{ id }}>
+				window.dataLayer = window.dataLayer || [];
+				function gtag() {
+					dataLayer.push(arguments);
+				}
+				gtag('js', new Date());
+				gtag('config', id);
+			</script>
+		</>
+	)
+}

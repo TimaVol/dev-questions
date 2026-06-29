@@ -3,6 +3,7 @@ import '../styles/global.css';
 import ThemeInit from '../components/ThemeInit.astro';
 import ThemeToggle from '../components/ThemeToggle.astro';
 import SeoHead from '../components/SeoHead.astro';
+import GoogleAnalytics from '../components/GoogleAnalytics.astro';
 
 const pageTitle = "Підготовка до Dev-інтерв'ю";
 const pageDescription =
@@ -17,6 +18,7 @@ const pageDescription =
 		<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 		<title>{pageTitle}</title>
 		<SeoHead title={pageTitle} description={pageDescription} path="/" />
+		<GoogleAnalytics />
 		<ThemeInit />
 	</head>
 	<body class="landing">

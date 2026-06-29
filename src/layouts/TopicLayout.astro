@@ -8,6 +8,7 @@ import PageToolbar from '../components/PageToolbar.astro';
 import MobileBar from '../components/MobileBar.astro';
 import ThemeInit from '../components/ThemeInit.astro';
 import SeoHead from '../components/SeoHead.astro';
+import GoogleAnalytics from '../components/GoogleAnalytics.astro';
 import type { CollectionEntry } from 'astro:content';
 
 interface Props {
@@ -51,6 +52,7 @@ for (let i = 0; i < questions.length; i++) {
 		<meta name="generator" content={Astro.generator} />
 		<title>{pageTitle} — Підготовка до Dev-інтерв'ю</title>
 		<SeoHead title={pageTitle} description={pageDescription} path={pagePath} />
+		<GoogleAnalytics />
 		<link rel="preload" href="/search-index.json" as="fetch" crossorigin />
 		<ThemeInit />
 	</head>
