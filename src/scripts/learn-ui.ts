@@ -1,187 +1,151 @@
 import { filterSearchIndex, loadSearchIndex, type SearchItem } from './search-index.ts';
 
 const search = document.getElementById('q-search') as HTMLInputElement | null;
-const resultsEl = document.getElementById('search-results');
-const countEl = document.getElementById('visible-count');
-const totalEl = document.getElementById('page-total');
-const globalCountEl = document.getElementById('global-count');
+const statusEl = document.getElementById('toolbar-status');
+const pageQuestions = document.getElementById('page-questions');
+const resultsPanel = document.getElementById('results-panel');
+const toc = document.querySelector('.toc');
 
-const cards = [...document.querySelectorAll<HTMLElement>('.question-card')];
-const pageTotal = cards.length;
+const pageTotal = pageQuestions?.querySelectorAll('.question-card').length ?? 0;
 const currentPath = window.location.pathname;
+
+const difficultyLabels: Record<string, string> = {
+	easy: 'Легке',
+	medium: 'Середнє',
+	hard: 'Складне',
+};
 
 let difficulty = 'all';
 let allItems: SearchItem[] = [];
-let activeIdx = -1;
 let navIdx = -1;
 
-function visibleCards(): HTMLElement[] {
-	return cards.filter((c) => !c.hidden);
+function isGlobalMode(): boolean {
+	const q = search?.value.trim() ?? '';
+	return q.length > 0 || difficulty !== 'all';
 }
 
-function applyLocalFilters(): void {
-	const q = search?.value.trim().toLowerCase() ?? '';
-	for (const card of cards) {
-		const title = card.querySelector('h2')?.textContent?.toLowerCase() ?? '';
-		const d = card.dataset.difficulty ?? '';
-		const ok = title.includes(q) && (difficulty === 'all' || d === difficulty);
-		card.hidden = !ok;
-		const tocLi = document.querySelector<HTMLElement>(`[data-toc-item="${card.id}"]`);
-		if (tocLi) tocLi.hidden = !ok;
+function navTargets(): HTMLElement[] {
+	if (isGlobalMode()) {
+		return [...document.querySelectorAll<HTMLElement>('.result-card')];
 	}
-	for (const group of document.querySelectorAll<HTMLElement>('[data-toc-group]')) {
-		group.hidden = group.querySelectorAll('[data-toc-item]:not([hidden])').length === 0;
-	}
-	if (countEl) countEl.textContent = String(visibleCards().length);
+	return [...document.querySelectorAll<HTMLElement>('#page-questions .question-card')];
+}
+
+function setChipActive(chip: HTMLButtonElement): void {
+	difficulty = chip.dataset.difficultyFilter ?? 'all';
+	document
+		.querySelectorAll<HTMLButtonElement>('[data-difficulty-filter]')
+		.forEach((c) => c.classList.toggle('chip--active', c === chip));
+}
+
+function resetFilters(): void {
+	if (search) search.value = '';
+	difficulty = 'all';
+	document
+		.querySelectorAll<HTMLButtonElement>('[data-difficulty-filter]')
+		.forEach((c) => c.classList.toggle('chip--active', c.dataset.difficultyFilter === 'all'));
+}
+
+function showPageView(): void {
+	pageQuestions?.removeAttribute('hidden');
+	resultsPanel?.setAttribute('hidden', '');
+	toc?.removeAttribute('hidden');
+	if (statusEl) statusEl.textContent = `${pageTotal} на сторінці`;
 	navIdx = -1;
 }
 
-function renderResults(items: SearchItem[]): void {
-	if (!resultsEl) return;
+function renderMainResults(items: SearchItem[]): void {
+	if (!resultsPanel) return;
 
-	activeIdx = -1;
-	resultsEl.innerHTML = '';
+	pageQuestions?.setAttribute('hidden', '');
+	toc?.setAttribute('hidden', '');
+	resultsPanel.removeAttribute('hidden');
 
 	if (!items.length) {
-		resultsEl.hidden = true;
-		search?.setAttribute('aria-expanded', 'false');
+		resultsPanel.innerHTML =
+			'<p class="results-empty">Нічого не знайдено. Спробуйте інший запит або фільтр.</p>';
+		if (statusEl) statusEl.textContent = '0 знайдено';
+		navIdx = -1;
 		return;
 	}
 
-	const slice = items.slice(0, 20);
-	for (const item of slice) {
-		const li = document.createElement('li');
-		const btn = document.createElement('a');
-		btn.className = 'search-result';
-		btn.href = item.href;
-		btn.dataset.searchResult = item.id;
-		if (item.href.startsWith(`${currentPath}#`)) btn.dataset.samePage = '1';
+	const frag = document.createDocumentFragment();
+	for (let i = 0; i < items.length; i++) {
+		const item = items[i];
+		const link = document.createElement('a');
+		link.className = 'result-card';
+		link.href = item.href;
+		link.dataset.resultId = item.id;
+		if (item.href.startsWith(`${currentPath}#`)) link.dataset.samePage = '1';
+
+		const num = document.createElement('span');
+		num.className = 'result-card__num';
+		num.textContent = String(i + 1);
+
+		const body = document.createElement('div');
+		body.className = 'result-card__body';
 
 		const title = document.createElement('span');
-		title.className = 'search-result__title';
+		title.className = 'result-card__title';
 		title.textContent = item.title;
 
 		const meta = document.createElement('span');
-		meta.className = 'search-result__meta';
-		meta.textContent = item.label;
+		meta.className = 'result-card__meta';
+		meta.textContent = `${item.label} · ${item.category}`;
 
-		btn.append(title, meta);
-		li.append(btn);
-		resultsEl.append(li);
+		body.append(title, meta);
+
+		const badge = document.createElement('span');
+		badge.className = `badge badge--${item.difficulty}`;
+		badge.textContent = difficultyLabels[item.difficulty] ?? item.difficulty;
+
+		link.append(num, body, badge);
+		frag.append(link);
 	}
 
-	if (items.length > 20) {
-		const more = document.createElement('li');
-		more.className = 'search-result__more';
-		more.textContent = `Ще ${items.length - 20}… уточніть пошук`;
-		resultsEl.append(more);
-	}
-
-	resultsEl.hidden = false;
-	search?.setAttribute('aria-expanded', 'true');
-}
-
-function updateMeta(globalMatches: SearchItem[]): void {
-	const q = search?.value.trim() ?? '';
-	if (!globalCountEl) return;
-
-	if (!q) {
-		globalCountEl.hidden = true;
-		globalCountEl.textContent = '';
-		return;
-	}
-
-	const onPage = globalMatches.filter((item) => item.href.startsWith(`${currentPath}#`)).length;
-	globalCountEl.hidden = false;
-	globalCountEl.textContent =
-		globalMatches.length === onPage
-			? `${globalMatches.length} знайдено`
-			: `${globalMatches.length} знайдено · ${onPage} на цій сторінці`;
+	resultsPanel.replaceChildren(frag);
+	if (statusEl) statusEl.textContent = `${items.length} знайдено`;
+	navIdx = -1;
 }
 
 function applySearch(): void {
-	const q = search?.value.trim() ?? '';
-	applyLocalFilters();
-
-	if (!q) {
-		renderResults([]);
-		updateMeta([]);
-		search?.setAttribute('aria-expanded', 'false');
+	if (!isGlobalMode()) {
+		showPageView();
 		return;
 	}
 
+	const q = search?.value.trim() ?? '';
 	const matches = filterSearchIndex(allItems, q, difficulty);
-	renderResults(matches);
-	updateMeta(matches);
+	renderMainResults(matches);
 }
 
-function setActive(idx: number): void {
-	if (!resultsEl) return;
-	const links = [...resultsEl.querySelectorAll<HTMLAnchorElement>('[data-search-result]')];
-	if (!links.length) return;
-	activeIdx = Math.max(0, Math.min(idx, links.length - 1));
-	links.forEach((l, i) => l.classList.toggle('search-result--active', i === activeIdx));
-	links[activeIdx]?.scrollIntoView({ block: 'nearest' });
+function followSamePageResult(id: string): void {
+	resetFilters();
+	showPageView();
+	const card = document.getElementById(id);
+	if (card) scrollToCard(card);
 }
 
-function followActive(): void {
-	if (!resultsEl || activeIdx < 0) return;
-	const link = resultsEl.querySelectorAll<HTMLAnchorElement>('[data-search-result]')[activeIdx];
-	link?.click();
-}
+resultsPanel?.addEventListener('click', (e) => {
+	const link = (e.target as Element).closest<HTMLAnchorElement>('.result-card');
+	if (!link?.dataset.samePage) return;
+	e.preventDefault();
+	followSamePageResult(link.dataset.resultId!);
+});
 
 search?.addEventListener('input', applySearch);
 
 search?.addEventListener('keydown', (e) => {
-	if (!resultsEl || resultsEl.hidden) return;
-	const links = resultsEl.querySelectorAll('[data-search-result]');
-	if (!links.length) return;
-
-	if (e.key === 'ArrowDown') {
-		e.preventDefault();
-		setActive(activeIdx + 1);
-	} else if (e.key === 'ArrowUp') {
-		e.preventDefault();
-		setActive(activeIdx <= 0 ? links.length - 1 : activeIdx - 1);
-	} else if (e.key === 'Enter' && activeIdx >= 0) {
-		e.preventDefault();
-		followActive();
-	} else if (e.key === 'Escape') {
-		resultsEl.hidden = true;
-		activeIdx = -1;
-	}
-});
-
-resultsEl?.addEventListener('click', (e) => {
-	const link = (e.target as Element).closest<HTMLAnchorElement>('[data-search-result]');
-	if (!link) return;
-	if (link.dataset.samePage) {
-		e.preventDefault();
-		const id = link.dataset.searchResult!;
-		const card = document.getElementById(id);
-		if (card) {
-			scrollToCard(card);
-			const vis = visibleCards();
-			navIdx = vis.indexOf(card);
-		}
-		resultsEl.hidden = true;
+	if (e.key === 'Escape') {
+		resetFilters();
+		showPageView();
 		search?.blur();
 	}
 });
 
-document.addEventListener('click', (e) => {
-	if (!search || !resultsEl) return;
-	if (e.target === search || resultsEl.contains(e.target as Node)) return;
-	resultsEl.hidden = true;
-	activeIdx = -1;
-});
-
 for (const chip of document.querySelectorAll<HTMLButtonElement>('[data-difficulty-filter]')) {
 	chip.addEventListener('click', () => {
-		difficulty = chip.dataset.difficultyFilter ?? 'all';
-		document
-			.querySelectorAll<HTMLButtonElement>('[data-difficulty-filter]')
-			.forEach((c) => c.classList.toggle('chip--active', c === chip));
+		setChipActive(chip);
 		applySearch();
 	});
 }
@@ -203,9 +167,9 @@ function scrollToCard(card: HTMLElement): void {
 	card.scrollIntoView({ behavior: 'smooth', block: 'start' });
 	card.classList.add('question-card--focus');
 	setTimeout(() => card.classList.remove('question-card--focus'), 1200);
+	navIdx = navTargets().indexOf(card);
 }
 
-/** ponytail: anchor near top — cards scroll to start, not viewport center */
 function findNavIdx(vis: HTMLElement[]): number {
 	const anchor = 100;
 	let idx = 0;
@@ -221,11 +185,17 @@ function findNavIdx(vis: HTMLElement[]): number {
 }
 
 function navByKey(key: 'j' | 'k'): void {
-	const vis = visibleCards();
+	const vis = navTargets();
 	if (!vis.length) return;
 	if (navIdx < 0 || navIdx >= vis.length) navIdx = findNavIdx(vis);
 	else navIdx = key === 'j' ? Math.min(navIdx + 1, vis.length - 1) : Math.max(navIdx - 1, 0);
-	scrollToCard(vis[navIdx]);
+	const el = vis[navIdx];
+	el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+	el.classList.add(isGlobalMode() ? 'result-card--focus' : 'question-card--focus');
+	setTimeout(
+		() => el.classList.remove(isGlobalMode() ? 'result-card--focus' : 'question-card--focus'),
+		1200,
+	);
 }
 
 for (const a of document.querySelectorAll<HTMLAnchorElement>('.question-body a[href^="http"]')) {
@@ -235,5 +205,4 @@ for (const a of document.querySelectorAll<HTMLAnchorElement>('.question-body a[h
 
 loadSearchIndex().then((items) => {
 	allItems = items;
-	if (totalEl) totalEl.textContent = String(pageTotal);
 });

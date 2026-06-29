@@ -16,11 +16,7 @@ const { total } = Astro.props;
 				class="search-input"
 				placeholder="Пошук у всіх питаннях…"
 				autocomplete="off"
-				role="combobox"
-				aria-expanded="false"
-				aria-controls="search-results"
 			/>
-			<ul id="search-results" class="search-results" role="listbox" hidden></ul>
 		</label>
 		<div class="filter-chips" role="group" aria-label="Складність">
 			<button type="button" class="chip chip--active" data-difficulty-filter="all">Усі</button>
@@ -30,8 +26,7 @@ const { total } = Astro.props;
 		</div>
 	</div>
 	<div class="toolbar-meta">
-		<span id="visible-count">{total}</span> з <span id="page-total">{total}</span> на сторінці
-		<span id="global-count" class="toolbar-global" hidden></span>
+		<span id="toolbar-status">{total} на сторінці</span>
 		<span class="toolbar-hint">· <kbd>J</kbd>/<kbd>K</kbd> наступне/попереднє</span>
 	</div>
 </div>

@@ -24,10 +24,13 @@ export function filterSearchIndex(
 	difficulty: string,
 ): SearchItem[] {
 	const q = query.trim().toLowerCase();
-	if (!q) return [];
+	const hasQuery = q.length > 0;
+	const hasDifficulty = difficulty !== 'all';
+	if (!hasQuery && !hasDifficulty) return [];
 
 	return items.filter((item) => {
-		if (difficulty !== 'all' && item.difficulty !== difficulty) return false;
+		if (hasDifficulty && item.difficulty !== difficulty) return false;
+		if (!hasQuery) return true;
 		const haystack = `${item.title} ${item.category}`.toLowerCase();
 		return haystack.includes(q);
 	});

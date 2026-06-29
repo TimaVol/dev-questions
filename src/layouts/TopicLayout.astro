@@ -70,18 +70,22 @@ for (let i = 0; i < questions.length; i++) {
 
 				<PageToolbar total={questions.length} />
 
-				{
-					questions.map((entry, i) => {
-						const prev = questions[i - 1];
-						const showCategory = !prev || prev.data.category !== entry.data.category;
-						return (
-							<>
-								{showCategory && <CategorySection name={entry.data.category} />}
-								<QuestionCard entry={entry} index={i + 1} />
-							</>
-						);
-					})
-				}
+				<div id="results-panel" class="results-panel" hidden></div>
+
+				<div id="page-questions">
+					{
+						questions.map((entry, i) => {
+							const prev = questions[i - 1];
+							const showCategory = !prev || prev.data.category !== entry.data.category;
+							return (
+								<>
+									{showCategory && <CategorySection name={entry.data.category} />}
+									<QuestionCard entry={entry} index={i + 1} />
+								</>
+							);
+						})
+					}
+				</div>
 			</main>
 
 			<TableOfContents groups={tocGroups} />
