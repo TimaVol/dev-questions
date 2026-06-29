@@ -4,7 +4,7 @@ topic: frontend
 grade: senior
 category: "Загальні запитання"
 order: 1
-difficulty: hard
+difficulty: medium
 ---
 
 ## Відповідь

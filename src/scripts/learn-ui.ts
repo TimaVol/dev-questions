@@ -26,7 +26,7 @@ let navIdx = -1;
 
 function isGlobalMode(): boolean {
 	const q = search?.value.trim() ?? '';
-	return q.length > 0 || difficulty !== 'all' || showFavoritesOnly;
+	return q.length > 0 || showFavoritesOnly;
 }
 
 function navTargets(): HTMLElement[] {
@@ -98,11 +98,45 @@ function resetFilters(): void {
 	setFavoritesFilter(false);
 }
 
-function showPageView(): void {
+function resetPageFilter(): void {
+	for (const card of pageQuestions?.querySelectorAll<HTMLElement>('.question-card') ?? []) {
+		card.hidden = false;
+	}
+	for (const h of pageQuestions?.querySelectorAll<HTMLElement>('.category-heading') ?? []) {
+		h.hidden = false;
+	}
+}
+
+function applyPageDifficultyFilter(): void {
+	const cards = pageQuestions?.querySelectorAll<HTMLElement>('.question-card') ?? [];
+	let visible = 0;
+	for (const card of cards) {
+		const show = difficulty === 'all' || card.dataset.difficulty === difficulty;
+		card.hidden = !show;
+		if (show) visible++;
+	}
+	for (const h of pageQuestions?.querySelectorAll<HTMLElement>('.category-heading') ?? []) {
+		let el = h.nextElementSibling;
+		let hasVisible = false;
+		while (el && !el.classList.contains('category-heading')) {
+			if (el.classList.contains('question-card') && !(el as HTMLElement).hidden) hasVisible = true;
+			el = el.nextElementSibling;
+		}
+		h.hidden = !hasVisible;
+	}
+	showPageView(visible);
+}
+
+function showPageView(visibleCount?: number): void {
 	pageQuestions?.removeAttribute('hidden');
 	resultsPanel?.setAttribute('hidden', '');
 	toc?.removeAttribute('hidden');
-	if (statusEl) statusEl.textContent = `${pageTotal} на сторінці`;
+	if (statusEl) {
+		statusEl.textContent =
+			visibleCount != null && visibleCount !== pageTotal
+				? `${visibleCount} з ${pageTotal}`
+				: `${pageTotal} на сторінці`;
+	}
 	navIdx = -1;
 }
 
@@ -181,16 +215,21 @@ function renderMainResults(items: SearchItem[]): void {
 }
 
 function applySearch(): void {
-	if (!isGlobalMode()) {
-		showPageView();
+	if (isGlobalMode()) {
+		renderMainResults(getFilteredItems());
 		return;
 	}
-
-	renderMainResults(getFilteredItems());
+	resetPageFilter();
+	if (difficulty !== 'all') {
+		applyPageDifficultyFilter();
+		return;
+	}
+	showPageView();
 }
 
 function followSamePageResult(id: string): void {
 	resetFilters();
+	resetPageFilter();
 	showPageView();
 	const card = document.getElementById(id);
 	if (card) {
@@ -222,6 +261,7 @@ search?.addEventListener('input', applySearch);
 search?.addEventListener('keydown', (e) => {
 	if (e.key === 'Escape') {
 		resetFilters();
+		resetPageFilter();
 		showPageView();
 		search?.blur();
 	}

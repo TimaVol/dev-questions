@@ -4,7 +4,7 @@ topic: frontend
 grade: senior
 category: "HTML/CSS"
 order: 23
-difficulty: hard
+difficulty: medium
 ---
 
 ## Відповідь

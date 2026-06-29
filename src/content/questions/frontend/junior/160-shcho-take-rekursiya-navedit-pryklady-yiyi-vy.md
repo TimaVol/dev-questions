@@ -4,7 +4,7 @@ topic: frontend
 grade: junior
 category: "Алгоритми та структури даних"
 order: 160
-difficulty: easy
+difficulty: hard
 ---
 
 ## Відповідь

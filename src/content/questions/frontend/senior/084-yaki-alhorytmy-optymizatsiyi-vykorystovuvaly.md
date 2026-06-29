@@ -4,7 +4,7 @@ topic: frontend
 grade: senior
 category: "Алгоритми і структури даних"
 order: 84
-difficulty: hard
+difficulty: medium
 ---
 
 ## Відповідь

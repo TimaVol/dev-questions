@@ -4,7 +4,7 @@ topic: frontend
 grade: junior
 category: "Робота з бекендом"
 order: 150
-difficulty: easy
+difficulty: medium
 ---
 
 ## Відповідь

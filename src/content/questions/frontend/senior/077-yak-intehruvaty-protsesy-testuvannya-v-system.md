@@ -4,7 +4,7 @@ topic: frontend
 grade: senior
 category: "Тестування"
 order: 77
-difficulty: hard
+difficulty: medium
 ---
 
 ## Відповідь

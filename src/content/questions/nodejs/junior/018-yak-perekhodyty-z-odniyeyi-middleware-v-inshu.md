@@ -4,7 +4,7 @@ topic: nodejs
 grade: junior
 category: "Express.js"
 order: 18
-difficulty: easy
+difficulty: medium
 ---
 
 ## Відповідь

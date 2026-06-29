@@ -4,7 +4,7 @@ topic: frontend
 grade: junior
 category: "Основи HTML/CSS"
 order: 25
-difficulty: easy
+difficulty: medium
 ---
 
 ## Відповідь

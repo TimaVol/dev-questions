@@ -4,7 +4,7 @@ topic: nodejs
 grade: middle-senior
 category: "Запитання для системного програміста"
 order: 4
-difficulty: hard
+difficulty: easy
 ---
 
 ## Відповідь

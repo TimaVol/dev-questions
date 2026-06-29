@@ -4,7 +4,7 @@ topic: nodejs
 grade: junior
 category: "Бази даних"
 order: 42
-difficulty: easy
+difficulty: medium
 ---
 
 ## Відповідь

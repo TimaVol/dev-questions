@@ -4,7 +4,7 @@ topic: frontend
 grade: junior
 category: "Accessibility"
 order: 183
-difficulty: easy
+difficulty: medium
 ---
 
 ## Відповідь

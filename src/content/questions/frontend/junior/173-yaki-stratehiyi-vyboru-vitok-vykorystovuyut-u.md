@@ -4,7 +4,7 @@ topic: frontend
 grade: junior
 category: "Git і системи контролю версій"
 order: 173
-difficulty: easy
+difficulty: medium
 ---
 
 ## Відповідь

@@ -4,7 +4,7 @@ topic: nodejs
 grade: middle
 category: "Мікросервіси"
 order: 65
-difficulty: medium
+difficulty: hard
 ---
 
 ## Відповідь

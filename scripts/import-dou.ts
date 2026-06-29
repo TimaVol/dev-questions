@@ -267,7 +267,7 @@ function buildBody(q: ParsedQuestion, existingBody?: string): string {
 	return body;
 }
 
-function buildFrontmatter(q: ParsedQuestion): string {
+function buildFrontmatter(q: ParsedQuestion, preservedDifficulty?: string): string {
 	const lines = [
 		'---',
 		`title: ${JSON.stringify(q.title)}`,
@@ -275,7 +275,7 @@ function buildFrontmatter(q: ParsedQuestion): string {
 		`grade: ${q.grade}`,
 		`category: ${JSON.stringify(q.category)}`,
 		`order: ${q.order}`,
-		`difficulty: ${gradeDifficulty(q.grade)}`,
+		`difficulty: ${preservedDifficulty ?? gradeDifficulty(q.grade)}`,
 		'---',
 	];
 	return lines.join('\n');
@@ -287,8 +287,13 @@ function filePathFor(q: ParsedQuestion): string {
 	return path.join(OUT_DIR, q.topic, q.grade, file);
 }
 
-async function loadPreserved(): Promise<Map<string, string>> {
-	const map = new Map<string, string>();
+interface PreservedContent {
+	body: string;
+	difficulty?: 'easy' | 'medium' | 'hard';
+}
+
+async function loadPreserved(): Promise<Map<string, PreservedContent>> {
+	const map = new Map<string, PreservedContent>();
 	try {
 		const files = await readdir(OUT_DIR, { recursive: true });
 		for (const f of files) {
@@ -299,8 +304,12 @@ async function loadPreserved(): Promise<Map<string, string>> {
 			if (!titleMatch) continue;
 			const title = JSON.parse(titleMatch[1].trim());
 			const body = raw.replace(/^---[\s\S]*?---\n?/, '');
+			const diffMatch = raw.match(/^difficulty:\s*(easy|medium|hard)\s*$/m);
+			const difficulty = diffMatch?.[1] as PreservedContent['difficulty'];
 			if (!body.includes(PLACEHOLDER_MARKER)) {
-				map.set(title, body);
+				map.set(title, { body, difficulty });
+			} else if (difficulty) {
+				map.set(title, { body, difficulty });
 			}
 		}
 	} catch {
@@ -357,7 +366,7 @@ async function main() {
 
 	if (dryRun) {
 		console.log('[dry-run] Would write', all.length, 'questions. By grade:', byGrade);
-		console.log('[dry-run] Preserved answer bodies:', preserved.size);
+		console.log('[dry-run] Preserved entries:', preserved.size);
 		return;
 	}
 
@@ -373,9 +382,9 @@ async function main() {
 		const hashId = createHash('md5').update(q.id).digest('hex').slice(0, 8);
 		const manifestKey = `${q.topic}:${q.grade}:${hashId}`;
 
-		const existingBody = preserved.get(q.title);
-		const body = buildBody(q, existingBody);
-		const content = `${buildFrontmatter(q)}\n\n${body.trim()}\n`;
+		const existing = preserved.get(q.title);
+		const body = buildBody(q, existing?.body);
+		const content = `${buildFrontmatter(q, existing?.difficulty)}\n\n${body.trim()}\n`;
 
 		const outPath = path.join(OUT_DIR, rel);
 		await mkdir(path.dirname(outPath), { recursive: true });

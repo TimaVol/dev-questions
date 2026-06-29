@@ -4,7 +4,7 @@ topic: nodejs
 grade: middle
 category: "Тестування"
 order: 68
-difficulty: medium
+difficulty: easy
 ---
 
 ## Відповідь

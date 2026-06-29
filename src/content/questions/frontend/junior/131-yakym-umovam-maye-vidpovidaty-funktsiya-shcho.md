@@ -4,7 +4,7 @@ topic: frontend
 grade: junior
 category: "Фреймворки та бібліотеки"
 order: 131
-difficulty: easy
+difficulty: medium
 ---
 
 ## Відповідь

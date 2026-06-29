@@ -4,7 +4,7 @@ topic: frontend
 grade: middle
 category: "Accessibility"
 order: 100
-difficulty: medium
+difficulty: hard
 ---
 
 ## Відповідь

@@ -4,7 +4,7 @@ topic: frontend
 grade: senior
 category: "Accessibility"
 order: 114
-difficulty: hard
+difficulty: medium
 ---
 
 ## Відповідь

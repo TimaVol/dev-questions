@@ -4,7 +4,7 @@ topic: nodejs
 grade: senior
 category: "JavaScript"
 order: 29
-difficulty: hard
+difficulty: easy
 ---
 
 ## Відповідь

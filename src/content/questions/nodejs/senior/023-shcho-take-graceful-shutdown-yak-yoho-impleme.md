@@ -4,7 +4,7 @@ topic: nodejs
 grade: senior
 category: "Архітектура"
 order: 23
-difficulty: hard
+difficulty: medium
 ---
 
 ## Відповідь

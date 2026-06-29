@@ -4,7 +4,7 @@ topic: frontend
 grade: junior
 category: "Web Performance"
 order: 51
-difficulty: easy
+difficulty: medium
 ---
 
 ## Відповідь

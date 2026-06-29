@@ -4,7 +4,7 @@ topic: nodejs
 grade: junior
 category: "JavaScript"
 order: 36
-difficulty: easy
+difficulty: medium
 ---
 
 ## Відповідь

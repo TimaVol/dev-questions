@@ -4,7 +4,7 @@ topic: frontend
 grade: middle
 category: "HTML/CSS"
 order: 29
-difficulty: medium
+difficulty: easy
 ---
 
 ## Відповідь

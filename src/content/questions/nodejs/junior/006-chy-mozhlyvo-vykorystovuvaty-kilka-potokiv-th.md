@@ -4,7 +4,7 @@ topic: nodejs
 grade: junior
 category: "Node.js"
 order: 6
-difficulty: easy
+difficulty: hard
 ---
 
 ## Відповідь

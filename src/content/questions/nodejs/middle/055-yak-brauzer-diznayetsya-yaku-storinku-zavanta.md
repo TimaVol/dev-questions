@@ -4,7 +4,7 @@ topic: nodejs
 grade: middle
 category: "Networking & API"
 order: 55
-difficulty: medium
+difficulty: easy
 ---
 
 ## Відповідь

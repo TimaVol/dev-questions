@@ -4,7 +4,7 @@ topic: frontend
 grade: senior
 category: "JavaScript"
 order: 42
-difficulty: hard
+difficulty: easy
 ---
 
 ## Відповідь

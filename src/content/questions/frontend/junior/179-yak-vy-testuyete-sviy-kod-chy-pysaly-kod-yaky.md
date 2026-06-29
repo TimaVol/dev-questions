@@ -4,7 +4,7 @@ topic: frontend
 grade: junior
 category: "Тестування"
 order: 179
-difficulty: easy
+difficulty: medium
 ---
 
 ## Відповідь

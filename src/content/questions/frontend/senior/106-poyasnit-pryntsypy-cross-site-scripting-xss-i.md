@@ -4,7 +4,7 @@ topic: frontend
 grade: senior
 category: "Безпека"
 order: 106
-difficulty: hard
+difficulty: medium
 ---
 
 ## Відповідь

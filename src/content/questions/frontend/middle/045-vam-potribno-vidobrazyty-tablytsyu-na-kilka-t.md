@@ -4,7 +4,7 @@ topic: frontend
 grade: middle
 category: "Performance"
 order: 45
-difficulty: medium
+difficulty: hard
 ---
 
 ## Відповідь

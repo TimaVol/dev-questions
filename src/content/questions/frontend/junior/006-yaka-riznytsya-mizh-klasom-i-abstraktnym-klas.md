@@ -4,7 +4,7 @@ topic: frontend
 grade: junior
 category: "Загальні питання"
 order: 6
-difficulty: easy
+difficulty: medium
 ---
 
 ## Відповідь

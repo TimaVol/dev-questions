@@ -4,7 +4,7 @@ topic: nodejs
 grade: middle-senior
 category: "Запитання для прикладного програміста на Node.js"
 order: 31
-difficulty: hard
+difficulty: medium
 ---
 
 ## Відповідь

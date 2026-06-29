@@ -4,7 +4,7 @@ topic: frontend
 grade: senior
 category: "Performance"
 order: 40
-difficulty: hard
+difficulty: medium
 ---
 
 ## Відповідь

@@ -4,7 +4,7 @@ topic: frontend
 grade: junior
 category: "API браузера"
 order: 108
-difficulty: easy
+difficulty: medium
 ---
 
 ## Відповідь

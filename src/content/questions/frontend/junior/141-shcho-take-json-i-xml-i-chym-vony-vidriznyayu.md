@@ -4,7 +4,7 @@ topic: frontend
 grade: junior
 category: "Основи мережі та протоколи"
 order: 141
-difficulty: easy
+difficulty: medium
 ---
 
 ## Відповідь

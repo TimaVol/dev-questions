@@ -4,7 +4,7 @@ topic: nodejs
 grade: middle
 category: "System Design"
 order: 64
-difficulty: medium
+difficulty: hard
 ---
 
 ## Відповідь

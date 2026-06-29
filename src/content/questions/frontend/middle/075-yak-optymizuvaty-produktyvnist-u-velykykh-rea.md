@@ -4,7 +4,7 @@ topic: frontend
 grade: middle
 category: "Фреймворки та бібліотеки"
 order: 75
-difficulty: medium
+difficulty: hard
 ---
 
 ## Відповідь

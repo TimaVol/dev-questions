@@ -4,7 +4,7 @@ topic: nodejs
 grade: middle
 category: "Деплоймент і процес розробки"
 order: 52
-difficulty: medium
+difficulty: easy
 ---
 
 ## Відповідь

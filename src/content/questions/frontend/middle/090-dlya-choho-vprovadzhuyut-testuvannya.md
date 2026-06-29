@@ -4,7 +4,7 @@ topic: frontend
 grade: middle
 category: "Тести"
 order: 90
-difficulty: medium
+difficulty: easy
 ---
 
 ## Відповідь

@@ -4,7 +4,7 @@ topic: frontend
 grade: junior
 category: "Основи JavaScript"
 order: 76
-difficulty: easy
+difficulty: medium
 ---
 
 ## Відповідь

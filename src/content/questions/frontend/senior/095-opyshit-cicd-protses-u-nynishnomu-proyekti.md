@@ -4,7 +4,7 @@ topic: frontend
 grade: senior
 category: "Архітектура"
 order: 95
-difficulty: hard
+difficulty: medium
 ---
 
 ## Відповідь

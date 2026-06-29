@@ -4,7 +4,7 @@ topic: frontend
 grade: junior
 category: "TypeScript"
 order: 97
-difficulty: easy
+difficulty: medium
 ---
 
 ## Відповідь
