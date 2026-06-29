@@ -33,7 +33,7 @@ function navTargets(): HTMLElement[] {
 	if (isGlobalMode()) {
 		return [...document.querySelectorAll<HTMLElement>('.result-card')];
 	}
-	return [...document.querySelectorAll<HTMLElement>('#page-questions .question-card')];
+	return [...document.querySelectorAll<HTMLElement>('#page-questions .question-card:not([hidden])')];
 }
 
 function syncFavoriteButton(btn: HTMLButtonElement): void {
@@ -290,6 +290,10 @@ document.addEventListener('keydown', (e) => {
 		e.preventDefault();
 		navByKey('k');
 	}
+	if (e.code === 'Space') {
+		e.preventDefault();
+		toggleAnswerAtNav();
+	}
 });
 
 function findNavIdx(vis: HTMLElement[]): number {
@@ -314,6 +318,16 @@ function navByKey(key: 'j' | 'k'): void {
 	const el = vis[navIdx];
 	scrollToTarget(el);
 	navIdx = vis.indexOf(el);
+}
+
+function toggleAnswerAtNav(): void {
+	if (isGlobalMode()) return;
+	const vis = navTargets();
+	if (!vis.length) return;
+	const idx = navIdx >= 0 && navIdx < vis.length ? navIdx : findNavIdx(vis);
+	navIdx = idx;
+	const details = vis[idx].querySelector<HTMLDetailsElement>('.answer-panel');
+	if (details) details.open = !details.open;
 }
 
 for (const a of document.querySelectorAll<HTMLAnchorElement>('.question-body a[href^="http"]')) {
