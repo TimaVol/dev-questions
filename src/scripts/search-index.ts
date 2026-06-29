@@ -26,7 +26,6 @@ export function filterSearchIndex(
 	const q = query.trim().toLowerCase();
 	const hasQuery = q.length > 0;
 	const hasDifficulty = difficulty !== 'all';
-	if (!hasQuery && !hasDifficulty) return [];
 
 	return items.filter((item) => {
 		if (hasDifficulty && item.difficulty !== difficulty) return false;

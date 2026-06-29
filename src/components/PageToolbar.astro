@@ -18,11 +18,14 @@ const { total } = Astro.props;
 				autocomplete="off"
 			/>
 		</label>
-		<div class="filter-chips" role="group" aria-label="Складність">
+		<div class="filter-chips" role="group" aria-label="Фільтри">
 			<button type="button" class="chip chip--active" data-difficulty-filter="all">Усі</button>
 			<button type="button" class="chip" data-difficulty-filter="easy">Легкі</button>
 			<button type="button" class="chip" data-difficulty-filter="medium">Середні</button>
 			<button type="button" class="chip" data-difficulty-filter="hard">Складні</button>
+			<button type="button" class="chip chip--favorites" data-favorites-filter aria-pressed="false">
+				Обране <span id="favorites-count" class="chip-count" hidden></span>
+			</button>
 		</div>
 	</div>
 	<div class="toolbar-meta">

@@ -410,6 +410,64 @@ kbd {
 	color: var(--accent);
 }
 
+.chip--favorites.chip--active {
+	background: color-mix(in srgb, #e6a800 18%, var(--surface));
+	border-color: #e6a800;
+	color: #c99200;
+}
+
+.chip-count {
+	font-variant-numeric: tabular-nums;
+	opacity: 0.85;
+}
+
+.chip-count::before {
+	content: '·';
+	margin: 0 0.2em;
+}
+
+.favorite-btn {
+	flex-shrink: 0;
+	width: 2rem;
+	height: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: none;
+	background: transparent;
+	color: var(--muted);
+	cursor: pointer;
+	font-size: 1.15rem;
+	line-height: 1;
+	border-radius: 8px;
+	transition: color 0.15s, transform 0.15s;
+}
+
+.favorite-btn:hover {
+	color: #e6a800;
+	transform: scale(1.08);
+}
+
+.favorite-btn--on {
+	color: #e6a800;
+}
+
+.result-card-wrap {
+	display: flex;
+	align-items: stretch;
+	gap: 0.35rem;
+}
+
+.result-card-wrap .result-card {
+	flex: 1;
+	min-width: 0;
+}
+
+.result-card-wrap .favorite-btn {
+	align-self: center;
+	margin-right: 0.35rem;
+}
+
 .toolbar-meta {
 	margin-top: 0.6rem;
 	font-size: 0.8rem;

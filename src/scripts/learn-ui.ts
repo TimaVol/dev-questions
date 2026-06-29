@@ -1,3 +1,4 @@
+import { favoriteCount, getFavoriteIds, isFavorite, toggleFavorite } from './favorites.ts';
 import { filterSearchIndex, loadSearchIndex, type SearchItem } from './search-index.ts';
 
 const search = document.getElementById('q-search') as HTMLInputElement | null;
@@ -5,6 +6,8 @@ const statusEl = document.getElementById('toolbar-status');
 const pageQuestions = document.getElementById('page-questions');
 const resultsPanel = document.getElementById('results-panel');
 const toc = document.querySelector('.toc');
+const favoritesChip = document.querySelector<HTMLButtonElement>('[data-favorites-filter]');
+const favoritesCountEl = document.getElementById('favorites-count');
 
 const pageTotal = pageQuestions?.querySelectorAll('.question-card').length ?? 0;
 const currentPath = window.location.pathname;
@@ -16,12 +19,13 @@ const difficultyLabels: Record<string, string> = {
 };
 
 let difficulty = 'all';
+let showFavoritesOnly = false;
 let allItems: SearchItem[] = [];
 let navIdx = -1;
 
 function isGlobalMode(): boolean {
 	const q = search?.value.trim() ?? '';
-	return q.length > 0 || difficulty !== 'all';
+	return q.length > 0 || difficulty !== 'all' || showFavoritesOnly;
 }
 
 function navTargets(): HTMLElement[] {
@@ -31,6 +35,45 @@ function navTargets(): HTMLElement[] {
 	return [...document.querySelectorAll<HTMLElement>('#page-questions .question-card')];
 }
 
+function syncFavoriteButton(btn: HTMLButtonElement): void {
+	const id = btn.dataset.favoriteId;
+	if (!id) return;
+	const on = isFavorite(id);
+	btn.classList.toggle('favorite-btn--on', on);
+	btn.setAttribute('aria-pressed', String(on));
+	btn.setAttribute('aria-label', on ? 'Прибрати з обраного' : 'Додати в обране');
+	btn.textContent = on ? '★' : '☆';
+}
+
+function syncAllFavoriteButtons(): void {
+	for (const btn of document.querySelectorAll<HTMLButtonElement>('[data-favorite-id]')) {
+		syncFavoriteButton(btn);
+	}
+	updateFavoritesCount();
+}
+
+function updateFavoritesCount(): void {
+	const n = favoriteCount();
+	if (!favoritesCountEl) return;
+	if (n > 0) {
+		favoritesCountEl.hidden = false;
+		favoritesCountEl.textContent = String(n);
+	} else {
+		favoritesCountEl.hidden = true;
+		favoritesCountEl.textContent = '';
+	}
+}
+
+function createFavoriteButton(id: string): HTMLButtonElement {
+	const btn = document.createElement('button');
+	btn.type = 'button';
+	btn.className = 'favorite-btn';
+	btn.dataset.favoriteId = id;
+	btn.textContent = '☆';
+	syncFavoriteButton(btn);
+	return btn;
+}
+
 function setChipActive(chip: HTMLButtonElement): void {
 	difficulty = chip.dataset.difficultyFilter ?? 'all';
 	document
@@ -38,12 +81,20 @@ function setChipActive(chip: HTMLButtonElement): void {
 		.forEach((c) => c.classList.toggle('chip--active', c === chip));
 }
 
+function setFavoritesFilter(on: boolean): void {
+	showFavoritesOnly = on;
+	favoritesChip?.classList.toggle('chip--active', on);
+	favoritesChip?.setAttribute('aria-pressed', String(on));
+}
+
 function resetFilters(): void {
 	if (search) search.value = '';
 	difficulty = 'all';
+	showFavoritesOnly = false;
 	document
 		.querySelectorAll<HTMLButtonElement>('[data-difficulty-filter]')
 		.forEach((c) => c.classList.toggle('chip--active', c.dataset.difficultyFilter === 'all'));
+	setFavoritesFilter(false);
 }
 
 function showPageView(): void {
@@ -54,6 +105,23 @@ function showPageView(): void {
 	navIdx = -1;
 }
 
+function getFilteredItems(): SearchItem[] {
+	let items = allItems;
+	if (showFavoritesOnly) {
+		const favs = getFavoriteIds();
+		items = items.filter((item) => favs.has(item.id));
+	}
+	const q = search?.value.trim() ?? '';
+	return filterSearchIndex(items, q, difficulty);
+}
+
+function emptyResultsMessage(): string {
+	if (showFavoritesOnly && favoriteCount() === 0) {
+		return 'Ще немає обраних питань. Натисніть ☆ на картці питання.';
+	}
+	return 'Нічого не знайдено. Спробуйте інший запит або фільтр.';
+}
+
 function renderMainResults(items: SearchItem[]): void {
 	if (!resultsPanel) return;
 
@@ -62,8 +130,7 @@ function renderMainResults(items: SearchItem[]): void {
 	resultsPanel.removeAttribute('hidden');
 
 	if (!items.length) {
-		resultsPanel.innerHTML =
-			'<p class="results-empty">Нічого не знайдено. Спробуйте інший запит або фільтр.</p>';
+		resultsPanel.innerHTML = `<p class="results-empty">${emptyResultsMessage()}</p>`;
 		if (statusEl) statusEl.textContent = '0 знайдено';
 		navIdx = -1;
 		return;
@@ -72,6 +139,9 @@ function renderMainResults(items: SearchItem[]): void {
 	const frag = document.createDocumentFragment();
 	for (let i = 0; i < items.length; i++) {
 		const item = items[i];
+		const wrap = document.createElement('div');
+		wrap.className = 'result-card-wrap';
+
 		const link = document.createElement('a');
 		link.className = 'result-card';
 		link.href = item.href;
@@ -100,7 +170,8 @@ function renderMainResults(items: SearchItem[]): void {
 		badge.textContent = difficultyLabels[item.difficulty] ?? item.difficulty;
 
 		link.append(num, body, badge);
-		frag.append(link);
+		wrap.append(link, createFavoriteButton(item.id));
+		frag.append(wrap);
 	}
 
 	resultsPanel.replaceChildren(frag);
@@ -114,9 +185,7 @@ function applySearch(): void {
 		return;
 	}
 
-	const q = search?.value.trim() ?? '';
-	const matches = filterSearchIndex(allItems, q, difficulty);
-	renderMainResults(matches);
+	renderMainResults(getFilteredItems());
 }
 
 function followSamePageResult(id: string): void {
@@ -131,6 +200,17 @@ resultsPanel?.addEventListener('click', (e) => {
 	if (!link?.dataset.samePage) return;
 	e.preventDefault();
 	followSamePageResult(link.dataset.resultId!);
+});
+
+document.addEventListener('click', (e) => {
+	const btn = (e.target as Element).closest<HTMLButtonElement>('[data-favorite-id]');
+	if (!btn) return;
+	e.preventDefault();
+	e.stopPropagation();
+	toggleFavorite(btn.dataset.favoriteId!);
+	syncFavoriteButton(btn);
+	updateFavoritesCount();
+	if (isGlobalMode()) applySearch();
 });
 
 search?.addEventListener('input', applySearch);
@@ -149,6 +229,11 @@ for (const chip of document.querySelectorAll<HTMLButtonElement>('[data-difficult
 		applySearch();
 	});
 }
+
+favoritesChip?.addEventListener('click', () => {
+	setFavoritesFilter(!showFavoritesOnly);
+	applySearch();
+});
 
 document.addEventListener('keydown', (e) => {
 	if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) return;
@@ -205,4 +290,5 @@ for (const a of document.querySelectorAll<HTMLAnchorElement>('.question-body a[h
 
 loadSearchIndex().then((items) => {
 	allItems = items;
+	syncAllFavoriteButtons();
 });

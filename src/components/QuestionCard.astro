@@ -24,6 +24,15 @@ const { Content } = await render(entry);
 			<h2>{entry.data.title}</h2>
 			<DifficultyBadge difficulty={entry.data.difficulty} />
 		</div>
+		<button
+			type="button"
+			class="favorite-btn"
+			data-favorite-id={entry.id}
+			aria-label="Додати в обране"
+			aria-pressed="false"
+		>
+			☆
+		</button>
 	</header>
 
 	<details class="answer-panel">
