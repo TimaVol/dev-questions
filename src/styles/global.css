@@ -472,6 +472,93 @@ kbd {
 	color: #e6a800;
 }
 
+.pin-btn {
+	flex-shrink: 0;
+	width: 2rem;
+	height: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: none;
+	background: transparent;
+	color: var(--muted);
+	cursor: pointer;
+	font-size: 1rem;
+	line-height: 1;
+	border-radius: 8px;
+	transition: color 0.15s, transform 0.15s;
+}
+
+.pin-btn:hover {
+	color: var(--accent);
+	transform: scale(1.08);
+}
+
+.pin-btn--on {
+	color: var(--accent);
+}
+
+.question-actions {
+	display: flex;
+	flex-shrink: 0;
+	gap: 0.1rem;
+}
+
+.result-card-actions {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 0.15rem;
+	margin-right: 0.35rem;
+}
+
+.result-card-actions .pin-btn,
+.result-card-actions .favorite-btn {
+	align-self: center;
+	margin-right: 0;
+}
+
+.pin-resume {
+	margin: 0 0 1rem;
+	padding: 0.65rem 0.85rem;
+	font-size: 0.88rem;
+	background: color-mix(in srgb, var(--accent) 12%, var(--surface));
+	border: 1px solid color-mix(in srgb, var(--accent) 35%, var(--border));
+	border-radius: 10px;
+	line-height: 1.35;
+}
+
+.pin-resume a {
+	color: var(--accent);
+	font-weight: 500;
+	text-decoration: none;
+}
+
+.pin-resume a:hover {
+	text-decoration: underline;
+}
+
+.pin-resume--landing {
+	max-width: 36rem;
+}
+
+.pin-continue {
+	font-size: 0.85rem;
+	font-weight: 500;
+	color: var(--accent);
+	text-decoration: none;
+	white-space: nowrap;
+}
+
+.pin-continue::before {
+	content: '·';
+	color: var(--muted);
+}
+
+.pin-continue:hover {
+	text-decoration: underline;
+}
+
 .result-card-wrap {
 	display: flex;
 	align-items: stretch;
@@ -485,13 +572,17 @@ kbd {
 
 .result-card-wrap .favorite-btn {
 	align-self: center;
-	margin-right: 0.35rem;
+	margin-right: 0;
 }
 
 .toolbar-meta {
 	margin-top: 0.6rem;
 	font-size: 0.8rem;
 	color: var(--muted);
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 0.35rem;
 }
 
 .toolbar-hint {

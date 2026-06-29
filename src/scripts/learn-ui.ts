@@ -1,5 +1,7 @@
 import { favoriteCount, getFavoriteIds, isFavorite, toggleFavorite } from './favorites.ts';
 import { filterSearchIndex, loadSearchIndex, type SearchItem } from './search-index.ts';
+import { isPinned, togglePin, type Pin } from './pin.ts';
+import { updatePinResumeUI } from './pin-resume.ts';
 import { scrollOffset, scrollToTarget } from './scroll-target.ts';
 
 const search = document.getElementById('q-search') as HTMLInputElement | null;
@@ -46,6 +48,32 @@ function syncFavoriteButton(btn: HTMLButtonElement): void {
 	btn.textContent = on ? '★' : '☆';
 }
 
+function readPinFromBtn(btn: HTMLButtonElement): Pin {
+	return {
+		questionId: btn.dataset.pinId!,
+		path: btn.dataset.pinPath!,
+		title: btn.dataset.pinTitle!,
+		label: btn.dataset.pinLabel!,
+		index: Number(btn.dataset.pinIndex) || 0,
+	};
+}
+
+function syncPinButton(btn: HTMLButtonElement): void {
+	const id = btn.dataset.pinId;
+	if (!id) return;
+	const on = isPinned(id);
+	btn.classList.toggle('pin-btn--on', on);
+	btn.setAttribute('aria-pressed', String(on));
+	btn.setAttribute('aria-label', on ? 'Прибрати закладку' : 'Закріпити питання');
+	btn.textContent = on ? '📌' : '📍';
+}
+
+function syncAllPinButtons(): void {
+	for (const btn of document.querySelectorAll<HTMLButtonElement>('[data-pin-id]')) {
+		syncPinButton(btn);
+	}
+}
+
 function syncAllFavoriteButtons(): void {
 	for (const btn of document.querySelectorAll<HTMLButtonElement>('[data-favorite-id]')) {
 		syncFavoriteButton(btn);
@@ -72,6 +100,22 @@ function createFavoriteButton(id: string): HTMLButtonElement {
 	btn.dataset.favoriteId = id;
 	btn.textContent = '☆';
 	syncFavoriteButton(btn);
+	return btn;
+}
+
+function createPinButton(item: SearchItem): HTMLButtonElement {
+	const path = item.href.split('#')[0];
+	const card = document.getElementById(item.id);
+	const btn = document.createElement('button');
+	btn.type = 'button';
+	btn.className = 'pin-btn';
+	btn.dataset.pinId = item.id;
+	btn.dataset.pinPath = path;
+	btn.dataset.pinTitle = item.title;
+	btn.dataset.pinLabel = item.label;
+	btn.dataset.pinIndex = card?.dataset.index ?? '0';
+	btn.textContent = '📍';
+	syncPinButton(btn);
 	return btn;
 }
 
@@ -206,7 +250,10 @@ function renderMainResults(items: SearchItem[]): void {
 		badge.textContent = difficultyLabels[item.difficulty] ?? item.difficulty;
 
 		link.append(num, body, badge);
-		wrap.append(link, createFavoriteButton(item.id));
+		const actions = document.createElement('div');
+		actions.className = 'result-card-actions';
+		actions.append(createPinButton(item), createFavoriteButton(item.id));
+		wrap.append(link, actions);
 		frag.append(wrap);
 	}
 
@@ -247,6 +294,16 @@ resultsPanel?.addEventListener('click', (e) => {
 });
 
 document.addEventListener('click', (e) => {
+	const pinBtn = (e.target as Element).closest<HTMLButtonElement>('[data-pin-id]');
+	if (pinBtn) {
+		e.preventDefault();
+		e.stopPropagation();
+		togglePin(readPinFromBtn(pinBtn));
+		syncAllPinButtons();
+		updatePinResumeUI();
+		return;
+	}
+
 	const btn = (e.target as Element).closest<HTMLButtonElement>('[data-favorite-id]');
 	if (!btn) return;
 	e.preventDefault();
@@ -339,4 +396,5 @@ for (const a of document.querySelectorAll<HTMLAnchorElement>('.question-body a[h
 loadSearchIndex().then((items) => {
 	allItems = items;
 	syncAllFavoriteButtons();
+	syncAllPinButtons();
 });

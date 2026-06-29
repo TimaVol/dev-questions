@@ -10,6 +10,16 @@ interface Props {
 
 const { entry, index } = Astro.props;
 const { Content } = await render(entry);
+
+const topicLabels: Record<string, string> = { frontend: 'Frontend', nodejs: 'Node.js' };
+const gradeLabels: Record<string, string> = {
+	junior: 'Junior',
+	middle: 'Middle',
+	senior: 'Senior',
+	'middle-senior': 'Middle/Senior',
+};
+const pinPath = `/${entry.data.topic}/${entry.data.grade}`;
+const pinLabel = `${topicLabels[entry.data.topic]} · ${gradeLabels[entry.data.grade]}`;
 ---
 
 <section
@@ -24,15 +34,30 @@ const { Content } = await render(entry);
 			<h2>{entry.data.title}</h2>
 			<DifficultyBadge difficulty={entry.data.difficulty} />
 		</div>
-		<button
-			type="button"
-			class="favorite-btn"
-			data-favorite-id={entry.id}
-			aria-label="Додати в обране"
-			aria-pressed="false"
-		>
-			☆
-		</button>
+		<div class="question-actions">
+			<button
+				type="button"
+				class="pin-btn"
+				data-pin-id={entry.id}
+				data-pin-path={pinPath}
+				data-pin-title={entry.data.title}
+				data-pin-label={pinLabel}
+				data-pin-index={index}
+				aria-label="Закріпити питання"
+				aria-pressed="false"
+			>
+				📍
+			</button>
+			<button
+				type="button"
+				class="favorite-btn"
+				data-favorite-id={entry.id}
+				aria-label="Додати в обране"
+				aria-pressed="false"
+			>
+				☆
+			</button>
+		</div>
 	</header>
 
 	<details class="answer-panel">
