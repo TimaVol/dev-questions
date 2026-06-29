@@ -313,6 +313,10 @@ kbd {
 	gap: 0.65rem;
 }
 
+.results-panel[hidden] {
+	display: none !important;
+}
+
 .results-empty {
 	padding: 2rem 1rem;
 	text-align: center;

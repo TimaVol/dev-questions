@@ -129,6 +129,7 @@ function applyPageDifficultyFilter(): void {
 
 function showPageView(visibleCount?: number): void {
 	pageQuestions?.removeAttribute('hidden');
+	resultsPanel?.replaceChildren();
 	resultsPanel?.setAttribute('hidden', '');
 	toc?.removeAttribute('hidden');
 	if (statusEl) {
