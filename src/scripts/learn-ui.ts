@@ -282,11 +282,11 @@ favoritesChip?.addEventListener('click', () => {
 document.addEventListener('keydown', (e) => {
 	if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) return;
 	if (search && document.activeElement === search) return;
-	if (e.key === 'j' || e.key === 'J') {
+	if (e.code === 'KeyJ') {
 		e.preventDefault();
 		navByKey('j');
 	}
-	if (e.key === 'k' || e.key === 'K') {
+	if (e.code === 'KeyK') {
 		e.preventDefault();
 		navByKey('k');
 	}
