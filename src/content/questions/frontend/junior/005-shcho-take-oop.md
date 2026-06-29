@@ -34,4 +34,5 @@ class Cart {
 
 ## Документація
 
+- [Object-oriented programming — MDN](https://developer.mozilla.org/uk/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object-oriented_programming)
 - [Classes — MDN](https://developer.mozilla.org/uk/docs/Web/JavaScript/Reference/Classes)

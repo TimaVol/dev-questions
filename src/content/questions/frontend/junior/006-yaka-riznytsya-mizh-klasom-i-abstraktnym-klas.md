@@ -33,4 +33,4 @@ class LocalStorageAdapter extends Storage {
 ## Документація
 
 - [Classes — MDN](https://developer.mozilla.org/uk/docs/Web/JavaScript/Reference/Classes)
-- [Abstract classes — TypeScript](https://www.typescriptlang.org/docs/handbook/2/classes.html)
+- [Abstract classes — TypeScript](https://www.typescriptlang.org/docs/handbook/2/classes.html#abstract-classes-and-members)
