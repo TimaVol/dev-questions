@@ -1,9 +1,23 @@
+import { initHashNavigation, scrollToTarget } from './scroll-target.ts';
+
 const links = [...document.querySelectorAll<HTMLAnchorElement>('[data-toc-link]')];
 
 if (links.length) {
 	const headings = links
 		.map((l) => document.getElementById(l.dataset.tocLink!))
 		.filter(Boolean) as HTMLElement[];
+
+	for (const link of links) {
+		link.addEventListener('click', (e) => {
+			e.preventDefault();
+			const id = link.dataset.tocLink;
+			if (!id) return;
+			const el = document.getElementById(id);
+			if (!el) return;
+			history.pushState(null, '', `#${id}`);
+			scrollToTarget(el);
+		});
+	}
 
 	const observer = new IntersectionObserver(
 		(entries) => {
@@ -19,3 +33,5 @@ if (links.length) {
 
 	headings.forEach((h) => observer.observe(h));
 }
+
+initHashNavigation();

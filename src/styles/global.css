@@ -15,6 +15,7 @@
 	--radius: 10px;
 	--content-width: 42rem;
 	--mobile-bar-height: 3.25rem;
+	--scroll-offset: 7rem;
 	--scrollbar-size: 5px;
 	--scrollbar-thumb: color-mix(in srgb, var(--muted) 45%, var(--border));
 	--scrollbar-thumb-hover: var(--muted);
@@ -329,13 +330,28 @@ kbd {
 	border-radius: var(--radius);
 	text-decoration: none;
 	color: var(--text);
-	scroll-margin-top: 5rem;
+	scroll-margin-top: var(--scroll-offset);
 	transition: border-color 0.2s, box-shadow 0.2s, background 0.15s;
 }
 
 .result-card:hover {
 	border-color: var(--accent);
 	background: var(--accent-dim);
+}
+
+@keyframes nav-target-pulse {
+	0%,
+	100% {
+		box-shadow: 0 0 0 1px var(--accent);
+	}
+	50% {
+		box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 35%, transparent);
+	}
+}
+
+.nav-target--focus {
+	border-color: var(--accent) !important;
+	animation: nav-target-pulse 0.9s ease-in-out 3;
 }
 
 .result-card--focus {
@@ -571,7 +587,7 @@ kbd {
 	border: 1px solid var(--border);
 	border-radius: var(--radius);
 	margin-bottom: 1.25rem;
-	scroll-margin-top: 5rem;
+	scroll-margin-top: var(--scroll-offset);
 	transition: border-color 0.2s, box-shadow 0.2s;
 	min-width: 0;
 }
@@ -1147,7 +1163,11 @@ body.toc-open .drawer-backdrop {
 	}
 
 	.question-card {
-		scroll-margin-top: calc(var(--mobile-bar-height) + env(safe-area-inset-top, 0px) + 5rem);
+		scroll-margin-top: calc(var(--mobile-bar-height) + env(safe-area-inset-top, 0px) + 7rem);
+	}
+
+	:root {
+		--scroll-offset: calc(var(--mobile-bar-height) + env(safe-area-inset-top, 0px) + 7rem);
 	}
 }
 

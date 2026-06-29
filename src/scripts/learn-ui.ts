@@ -1,5 +1,6 @@
 import { favoriteCount, getFavoriteIds, isFavorite, toggleFavorite } from './favorites.ts';
 import { filterSearchIndex, loadSearchIndex, type SearchItem } from './search-index.ts';
+import { scrollOffset, scrollToTarget } from './scroll-target.ts';
 
 const search = document.getElementById('q-search') as HTMLInputElement | null;
 const statusEl = document.getElementById('toolbar-status');
@@ -192,7 +193,10 @@ function followSamePageResult(id: string): void {
 	resetFilters();
 	showPageView();
 	const card = document.getElementById(id);
-	if (card) scrollToCard(card);
+	if (card) {
+		history.pushState(null, '', `#${id}`);
+		requestAnimationFrame(() => scrollToTarget(card));
+	}
 }
 
 resultsPanel?.addEventListener('click', (e) => {
@@ -248,15 +252,8 @@ document.addEventListener('keydown', (e) => {
 	}
 });
 
-function scrollToCard(card: HTMLElement): void {
-	card.scrollIntoView({ behavior: 'smooth', block: 'start' });
-	card.classList.add('question-card--focus');
-	setTimeout(() => card.classList.remove('question-card--focus'), 1200);
-	navIdx = navTargets().indexOf(card);
-}
-
 function findNavIdx(vis: HTMLElement[]): number {
-	const anchor = 100;
+	const anchor = scrollOffset();
 	let idx = 0;
 	let best = Infinity;
 	for (let i = 0; i < vis.length; i++) {
@@ -275,12 +272,8 @@ function navByKey(key: 'j' | 'k'): void {
 	if (navIdx < 0 || navIdx >= vis.length) navIdx = findNavIdx(vis);
 	else navIdx = key === 'j' ? Math.min(navIdx + 1, vis.length - 1) : Math.max(navIdx - 1, 0);
 	const el = vis[navIdx];
-	el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-	el.classList.add(isGlobalMode() ? 'result-card--focus' : 'question-card--focus');
-	setTimeout(
-		() => el.classList.remove(isGlobalMode() ? 'result-card--focus' : 'question-card--focus'),
-		1200,
-	);
+	scrollToTarget(el);
+	navIdx = vis.indexOf(el);
 }
 
 for (const a of document.querySelectorAll<HTMLAnchorElement>('.question-body a[href^="http"]')) {
