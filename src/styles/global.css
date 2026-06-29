@@ -1175,6 +1175,40 @@ body.toc-open .drawer-backdrop {
 @media (max-width: 1024px) {
 	.mobile-bar {
 		display: flex;
+		transition: transform 0.22s ease;
+	}
+
+	.page-toolbar {
+		transition: transform 0.22s ease;
+	}
+
+	.page-header {
+		transition:
+			opacity 0.22s ease,
+			max-height 0.22s ease,
+			margin 0.22s ease;
+	}
+
+	body.mobile-chrome-hidden .mobile-bar {
+		transform: translateY(calc(-100% - env(safe-area-inset-top, 0px)));
+		pointer-events: none;
+	}
+
+	body.mobile-chrome-hidden.mobile-toolbar-stuck .page-toolbar {
+		transform: translateY(calc(-100% - env(safe-area-inset-top, 0px) - var(--mobile-bar-height)));
+		pointer-events: none;
+	}
+
+	body.mobile-chrome-hidden.mobile-toolbar-stuck .page-header {
+		max-height: 0;
+		margin-bottom: 0;
+		opacity: 0;
+		overflow: hidden;
+		pointer-events: none;
+	}
+
+	body.mobile-chrome-hidden {
+		--scroll-offset: 1.25rem;
 	}
 
 	.layout {
@@ -1258,11 +1292,19 @@ body.toc-open .drawer-backdrop {
 	}
 
 	.question-card {
-		scroll-margin-top: calc(var(--mobile-bar-height) + env(safe-area-inset-top, 0px) + 7rem);
+		scroll-margin-top: var(--scroll-offset);
 	}
 
 	:root {
 		--scroll-offset: calc(var(--mobile-bar-height) + env(safe-area-inset-top, 0px) + 7rem);
+	}
+}
+
+@media (max-width: 1024px) and (prefers-reduced-motion: reduce) {
+	.mobile-bar,
+	.page-toolbar,
+	.page-header {
+		transition: none;
 	}
 }
 

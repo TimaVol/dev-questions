@@ -5,14 +5,20 @@ let focused: HTMLElement | null = null;
 let focusTimer: ReturnType<typeof setTimeout> | null = null;
 
 export function scrollOffset(): number {
+	const chromeHidden = document.body.classList.contains('mobile-chrome-hidden');
 	const mobileBar = document.querySelector<HTMLElement>('.mobile-bar');
 	const toolbar = document.querySelector<HTMLElement>('.page-toolbar');
 	let offset = 12;
-	if (mobileBar && getComputedStyle(mobileBar).display !== 'none') {
+	if (!chromeHidden && mobileBar && getComputedStyle(mobileBar).display !== 'none') {
 		offset += mobileBar.getBoundingClientRect().height;
 	}
-	if (toolbar) {
-		offset += toolbar.getBoundingClientRect().height;
+	if (!chromeHidden && toolbar) {
+		const tr = toolbar.getBoundingClientRect();
+		const barBottom =
+			mobileBar && getComputedStyle(mobileBar).display !== 'none'
+				? mobileBar.getBoundingClientRect().bottom
+				: 0;
+		if (tr.top <= barBottom + 2) offset += tr.height;
 	}
 	return offset;
 }
