@@ -1,0 +1,37 @@
+---
+interface Props {
+	total: number;
+}
+
+const { total } = Astro.props;
+---
+
+<div class="page-toolbar">
+	<div class="toolbar-row">
+		<label class="search-wrap">
+			<span class="visually-hidden">Пошук питань</span>
+			<input
+				type="search"
+				id="q-search"
+				class="search-input"
+				placeholder="Пошук у всіх питаннях…"
+				autocomplete="off"
+				role="combobox"
+				aria-expanded="false"
+				aria-controls="search-results"
+			/>
+			<ul id="search-results" class="search-results" role="listbox" hidden></ul>
+		</label>
+		<div class="filter-chips" role="group" aria-label="Складність">
+			<button type="button" class="chip chip--active" data-difficulty-filter="all">Усі</button>
+			<button type="button" class="chip" data-difficulty-filter="easy">Легкі</button>
+			<button type="button" class="chip" data-difficulty-filter="medium">Середні</button>
+			<button type="button" class="chip" data-difficulty-filter="hard">Складні</button>
+		</div>
+	</div>
+	<div class="toolbar-meta">
+		<span id="visible-count">{total}</span> з <span id="page-total">{total}</span> на сторінці
+		<span id="global-count" class="toolbar-global" hidden></span>
+		<span class="toolbar-hint">· <kbd>J</kbd>/<kbd>K</kbd> наступне/попереднє</span>
+	</div>
+</div>

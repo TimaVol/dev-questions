@@ -1,0 +1,2580 @@
+{
+  "entries": {
+    "frontend:junior:3bc04a33": {
+      "file": "frontend/junior/001-chy-stezhyte-vy-za-novynamy-u-sviti-frontendu.md",
+      "title": "Чи стежите ви за новинами у світі фронтенду? Як саме?"
+    },
+    "frontend:junior:48e45323": {
+      "file": "frontend/junior/002-shcho-vidriznyaye-khoroshyy-kod-vid-pohanoho.md",
+      "title": "Що відрізняє хороший код від поганого?"
+    },
+    "frontend:junior:d1540872": {
+      "file": "frontend/junior/003-yaki-http-metody-ta-statusy-znayete.md",
+      "title": "Які HTTP-методи та статуси знаєте?"
+    },
+    "frontend:junior:fbccb181": {
+      "file": "frontend/junior/004-u-chomu-nebezpeka-vykonannya-kodu-shcho-nadkh.md",
+      "title": "У чому небезпека виконання коду, що надходить від користувача?"
+    },
+    "frontend:junior:951e24e2": {
+      "file": "frontend/junior/005-shcho-take-oop.md",
+      "title": "Що таке ООП?"
+    },
+    "frontend:junior:c10a72d5": {
+      "file": "frontend/junior/006-yaka-riznytsya-mizh-klasom-i-abstraktnym-klas.md",
+      "title": "Яка різниця між класом і абстрактним класом?"
+    },
+    "frontend:junior:085fece0": {
+      "file": "frontend/junior/007-shcho-take-doctype-i-navishcho-yoho-vykorysto.md",
+      "title": "Що таке DOCTYPE і навіщо його використовують?"
+    },
+    "frontend:junior:be2babec": {
+      "file": "frontend/junior/008-yaki-osnovni-tehy-struktury-html-storinky.md",
+      "title": "Які основні теги структури HTML-сторінки?"
+    },
+    "frontend:junior:f382e2ea": {
+      "file": "frontend/junior/009-shcho-take-semantychni-tehy-ta-navishcho-vony.md",
+      "title": "Що таке семантичні теги та навіщо вони потрібні? Наведіть приклади таких тегів."
+    },
+    "frontend:junior:2f87f70f": {
+      "file": "frontend/junior/010-shcho-mozhete-skazaty-pro-teh-br.md",
+      "title": "Що можете сказати про тег <br>?"
+    },
+    "frontend:junior:5e82e673": {
+      "file": "frontend/junior/011-yaki-tehy-z-naysvizhishykh-onovlen-vy-znayete.md",
+      "title": "Які теги з найсвіжіших оновлень ви знаєте?"
+    },
+    "frontend:junior:43c66e3c": {
+      "file": "frontend/junior/012-u-chomu-riznytsya-mizh-div-i-span.md",
+      "title": "У чому різниця між <div> і <span>."
+    },
+    "frontend:junior:ae96a407": {
+      "file": "frontend/junior/013-shcho-take-data-atrybuty-v-yakykh-vypadkakh-y.md",
+      "title": "Що таке data-атрибути, в яких випадках їх використовуєте?"
+    },
+    "frontend:junior:f65469e7": {
+      "file": "frontend/junior/014-yak-vykorystovuyut-atrybuty-class-ta-id-yaka.md",
+      "title": "Як використовують атрибути class та id? Яка різниця між класами та ідентифікаторами?"
+    },
+    "frontend:junior:db8f4fc1": {
+      "file": "frontend/junior/015-shcho-take-vnutrishni-ta-zovnishni-hiperposyl.md",
+      "title": "Що таке внутрішні та зовнішні гіперпосилання і які вони мають атрибути?"
+    },
+    "frontend:junior:e664a643": {
+      "file": "frontend/junior/016-shcho-vy-znayete-pro-svg-yaki-ye-varianty-dod.md",
+      "title": "Що ви знаєте про SVG? Які є варіанти додавання SVG на сторінки сайту? Чим вони відрізняються?"
+    },
+    "frontend:junior:f4889ac5": {
+      "file": "frontend/junior/017-yak-stvoryty-formu-v-html-i-zabezpechyty-yiyi.md",
+      "title": "Як створити форму в HTML і забезпечити її валідацію?"
+    },
+    "frontend:junior:2a4b8f3c": {
+      "file": "frontend/junior/018-yaki-ye-typy-spyskiv-u-html-shcho-take-ul-ol.md",
+      "title": "Які є типи списків у HTML? Що таке ul / ol / dl?"
+    },
+    "frontend:junior:a91d22ce": {
+      "file": "frontend/junior/019-shcho-take-iframe-i-dlya-choho-yoho-vykorysto.md",
+      "title": "Що таке iframe і для чого його використовують?"
+    },
+    "frontend:junior:a9386d23": {
+      "file": "frontend/junior/020-yaki-metody-vidpravky-danykh-formy-vy-znayete.md",
+      "title": "Які методи відправки даних форми ви знаєте?"
+    },
+    "frontend:junior:69b29fed": {
+      "file": "frontend/junior/021-yaki-osnovni-vidminnosti-mizh-blokovymy-ta-vb.md",
+      "title": "Які основні відмінності між блоковими та вбудованими елементами в HTML? Як вони впливають на структуру сторінки?"
+    },
+    "frontend:junior:c0a2db45": {
+      "file": "frontend/junior/022-yaki-css-metodolohiyi-vy-znayete-ta-yaki-vyko.md",
+      "title": "Які CSS-методології ви знаєте та які використовуєте самі? Обґрунтуйте вибір нинішньої методології."
+    },
+    "frontend:junior:f56ece17": {
+      "file": "frontend/junior/023-shcho-take-css-selektory-navedit-pryklady.md",
+      "title": "Що таке CSS-селектори? Наведіть приклади."
+    },
+    "frontend:junior:9017ac73": {
+      "file": "frontend/junior/024-yak-pratsyuye-nasliduvannya-v-css.md",
+      "title": "Як працює наслідування в CSS?"
+    },
+    "frontend:junior:59424807": {
+      "file": "frontend/junior/025-shcho-take-model-korobky-v-css-i-yak-yiyi-moz.md",
+      "title": "Що таке «модель коробки» в CSS і як її можна змінити?"
+    },
+    "frontend:junior:af137992": {
+      "file": "frontend/junior/026-u-chomu-riznytsya-mizh-margin-i-padding.md",
+      "title": "У чому різниця між margin і padding?"
+    },
+    "frontend:junior:4b26511f": {
+      "file": "frontend/junior/027-shcho-take-flexbox-yak-realizuvaty-verstku-za.md",
+      "title": "Що таке Flexbox? Як реалізувати верстку за допомогою Flexbox чи Grid і який підхід найбільш доречний в якому випадку?"
+    },
+    "frontend:junior:e7a5ed77": {
+      "file": "frontend/junior/028-shcho-take-mediazapyty-ta-yak-yikh-vykorystov.md",
+      "title": "Що таке медіазапити та як їх використовувати?"
+    },
+    "frontend:junior:81c7baee": {
+      "file": "frontend/junior/029-yak-mozhna-prykhovaty-element-za-dopomohoyu-c.md",
+      "title": "Як можна приховати елемент за допомогою CSS? Чи однаково будуть працювати opacity: 0; display: none; visibility:hidden?"
+    },
+    "frontend:junior:7ef1bd9d": {
+      "file": "frontend/junior/030-yak-mozhna-zrobyty-loho-poseredyni-ekrana.md",
+      "title": "Як можна зробити лого посередині екрана?"
+    },
+    "frontend:junior:fc75baaa": {
+      "file": "frontend/junior/031-yak-rozmistyty-khrestyk-dlya-zakryttya-sprava.md",
+      "title": "Як розмістити хрестик для закриття справа зверху елемента?"
+    },
+    "frontend:junior:3576d89a": {
+      "file": "frontend/junior/032-yak-zrobyty-ostanniy-element-spysku-chervonym.md",
+      "title": "Як зробити останній елемент списку червоним, незалежно від довжини списку без JS?"
+    },
+    "frontend:junior:8248000b": {
+      "file": "frontend/junior/033-yaki-ye-mozhlyvosti-zadaty-kolir.md",
+      "title": "Які є можливості задати колір?"
+    },
+    "frontend:junior:0be9c96a": {
+      "file": "frontend/junior/034-shcho-take-z-index-chy-kozhen-element-yoho-ma.md",
+      "title": "Що таке z-index? Чи кожен елемент його має?"
+    },
+    "frontend:junior:997ddc95": {
+      "file": "frontend/junior/035-yaki-perevahy-i-nedoliky-vykorystannya-css-pr.md",
+      "title": "Які переваги і недоліки використання CSS-препроцесорів?"
+    },
+    "frontend:junior:52a5a01d": {
+      "file": "frontend/junior/036-yaki-metody-tsentruvannya-elementa-v-css.md",
+      "title": "Які методи центрування елемента в CSS?"
+    },
+    "frontend:junior:0fe9d08e": {
+      "file": "frontend/junior/037-yaki-metody-vertykalnoho-tsentruvannya-v-css.md",
+      "title": "Які методи вертикального центрування в CSS ви знаєте?"
+    },
+    "frontend:junior:34e51e3c": {
+      "file": "frontend/junior/038-dlya-choho-isnuyut-rizni-rivni-zaholovkiv-yak.md",
+      "title": "Для чого існують різні рівні заголовків, якщо розмір можна встановити стилями?"
+    },
+    "frontend:junior:6edad7f5": {
+      "file": "frontend/junior/039-yaki-ye-varianty-pozytsionuvannya-elementa-na.md",
+      "title": "Які є варіанти позиціонування елемента на сторінці?"
+    },
+    "frontend:junior:7dcd688c": {
+      "file": "frontend/junior/040-yaki-buvayut-vydy-display-yakyy-vykorystovuye.md",
+      "title": "Які бувають види display? Який використовуєте найчастіше? У чому особливість inline-block?"
+    },
+    "frontend:junior:8e69c9ec": {
+      "file": "frontend/junior/041-u-chomu-vidminnist-mizh-position-relative-ta.md",
+      "title": "У чому відмінність між position: relative та position: absolute ?"
+    },
+    "frontend:junior:5996b38b": {
+      "file": "frontend/junior/042-yaki-odynytsi-rozmiriv-ye-v-css.md",
+      "title": "Які одиниці розмірів є в CSS?"
+    },
+    "frontend:junior:b7eaa2a3": {
+      "file": "frontend/junior/043-yaki-ryzyky-vykorystannya-vidyemnykh-znachen.md",
+      "title": "Які ризики використання відʼємних значень для відступів?"
+    },
+    "frontend:junior:c93afe82": {
+      "file": "frontend/junior/044-shcho-take-psevdoklasy-ta-psevdoelementy-v-ch.md",
+      "title": "Що таке псевдокласи та псевдоелементи? В чому між ними різниця? Як ви використовуєте псевдокласи та псевдоелементи в CSS?"
+    },
+    "frontend:junior:42134b54": {
+      "file": "frontend/junior/045-shcho-take-adaptyvnyy-dyzayn.md",
+      "title": "Що таке адаптивний дизайн?"
+    },
+    "frontend:junior:b016622a": {
+      "file": "frontend/junior/046-yaka-riznytsya-mizh-kartynkamy-dodanymy-chere.md",
+      "title": "Яка різниця між картинками, доданими через HTML-тег <img>, і CSS-властивістю background-image?"
+    },
+    "frontend:junior:5c9e431f": {
+      "file": "frontend/junior/047-yak-vy-vyrishuyete-problemy-z-krosbrauzernoyu.md",
+      "title": "Як ви вирішуєте проблеми з кросбраузерною сумісністю в розробці вебсайтів, зокрема в контексті різних версій браузерів?"
+    },
+    "frontend:junior:88e3281c": {
+      "file": "frontend/junior/048-yak-iz-vrakhuvannyam-html-i-css-zabezpechyty.md",
+      "title": "Як із врахуванням HTML і CSS забезпечити доступність сайту?"
+    },
+    "frontend:junior:66fb7e14": {
+      "file": "frontend/junior/049-yak-realizuvaty-responsive-design-vykorystovu.md",
+      "title": "Як реалізувати responsive design, використовуючи CSS?"
+    },
+    "frontend:junior:c02cdb04": {
+      "file": "frontend/junior/050-poyasnit-kontseptsiyu-css-zminnykh.md",
+      "title": "Поясніть концепцію CSS-змінних."
+    },
+    "frontend:junior:1580591d": {
+      "file": "frontend/junior/051-yaki-vlastyvosti-css-vplyvayut-na-shvydkodiyu.md",
+      "title": "Які властивості CSS впливають на швидкодію?"
+    },
+    "frontend:junior:d99ff0b0": {
+      "file": "frontend/junior/052-shcho-zazvychay-naybilshe-znyzhuye-pokaznyky.md",
+      "title": "Що зазвичай найбільше знижує показники швидкодії сайту?"
+    },
+    "frontend:junior:a74201be": {
+      "file": "frontend/junior/053-yak-zrobyty-dvi-kolonky-na-css-tak-shchob-odn.md",
+      "title": "Як зробити дві колонки на CSS так, щоб одна розтягувалася, а інша — ні?"
+    },
+    "frontend:junior:754ccef4": {
+      "file": "frontend/junior/054-yaki-plyusy-ta-minusy-css-animatsiy-porivnyan.md",
+      "title": "Які плюси та мінуси CSS-анімацій порівняно з JS-анімаціями?"
+    },
+    "frontend:junior:94c22e76": {
+      "file": "frontend/junior/055-yak-mozhna-perebyty-important-abo-dosyahty-sk.md",
+      "title": "Як можна перебити important або досягти схожого ефекту без important?"
+    },
+    "frontend:junior:d89ae42f": {
+      "file": "frontend/junior/056-chy-validnyy-tsey-hmtl-vypravte-vsi-pomylky-r.md",
+      "title": "Чи валідний цей HMTL? Виправте всі помилки. Розкажіть про валідність HMTL загалом."
+    },
+    "frontend:junior:141b5de1": {
+      "file": "frontend/junior/057-shcho-take-mobile-first-pidkhid-yaki-yoho-per.md",
+      "title": "Що таке mobile-first підхід, які його переваги та недоліки?"
+    },
+    "frontend:junior:b2f0a7e8": {
+      "file": "frontend/junior/058-poyasnit-yak-obchyslyuyetsya-spetsyfichnist-u.md",
+      "title": "Поясніть, як обчислюється специфічність у CSS-селекторах."
+    },
+    "frontend:junior:12615dae": {
+      "file": "frontend/junior/059-dlya-choho-vykorystovuyut-pre-postprotsesory.md",
+      "title": "Для чого використовують пре-/постпроцесори?"
+    },
+    "frontend:junior:0f5823b0": {
+      "file": "frontend/junior/060-nazvit-typy-inputiv-u-formakh-yak-vidpravyty.md",
+      "title": "Назвіть типи інпутів у формах. Як відправити форму на сервер (без JS)?"
+    },
+    "frontend:junior:8558330e": {
+      "file": "frontend/junior/061-shcho-vy-znayete-pro-core-web-vitals.md",
+      "title": "Що ви знаєте про Core Web Vitals?"
+    },
+    "frontend:junior:8cac5ac9": {
+      "file": "frontend/junior/062-chym-vidriznyayutsya-laboratorni-ta-polovi-za.md",
+      "title": "Чим відрізняються лабораторні та польові заміри перформансу?"
+    },
+    "frontend:junior:b3037cdc": {
+      "file": "frontend/junior/063-yaki-formaty-kartynok-znayete-chym-vony-vidri.md",
+      "title": "Які формати картинок знаєте, чим вони відрізняються?"
+    },
+    "frontend:junior:20747f25": {
+      "file": "frontend/junior/064-vash-sayt-dovho-zavantazhuyetsya-na-mobilnomu.md",
+      "title": "Ваш сайт довго завантажується на мобільному пристрої. Розкажіть крок за кроком, як будете шукати причину."
+    },
+    "frontend:junior:6a6168a4": {
+      "file": "frontend/junior/065-yaki-instrumenty-vykorystovuyete-dlya-optymiz.md",
+      "title": "Які інструменти використовуєте для оптимізації швидкості завантаження вебсторінки у роботі з HTML і CSS?"
+    },
+    "frontend:junior:ac1c3893": {
+      "file": "frontend/junior/066-yak-vy-optymizuyete-robotu-zobrazhen-na-vebst.md",
+      "title": "Як ви оптимізуєте роботу зображень на вебсторінці для покращення продуктивності?"
+    },
+    "frontend:junior:a01170d8": {
+      "file": "frontend/junior/067-yaki-metody-optymizatsiyi-vebstorinok-vy-znay.md",
+      "title": "Які методи оптимізації вебсторінок ви знаєте?"
+    },
+    "frontend:junior:d59594a9": {
+      "file": "frontend/junior/068-pererakhuyte-typy-danykh-u-js.md",
+      "title": "Перерахуйте типи даних у JS."
+    },
+    "frontend:junior:6d4af389": {
+      "file": "frontend/junior/069-chym-vidriznyayetsya-masyv-ta-obyekt-u-yakykh.md",
+      "title": "Чим відрізняється масив та обʼєкт? У яких випадках що використовуєте?"
+    },
+    "frontend:junior:dbe37361": {
+      "file": "frontend/junior/070-events-v-js-rozkazhit-pro-event-propagation-b.md",
+      "title": "Events в JS. Розкажіть про event propagation, bubbling, delegation, preventing тощо."
+    },
+    "frontend:junior:5064e72f": {
+      "file": "frontend/junior/071-u-chomu-riznytsya-mizh-var-let-i-const-u-yaky.md",
+      "title": "У чому різниця між var, let і const. У яких випадках що потрібно використовувати?"
+    },
+    "frontend:junior:a18a6d5e": {
+      "file": "frontend/junior/072-chy-mozhlyvo-perevyznachyty-const.md",
+      "title": "Чи можливо перевизначити const?"
+    },
+    "frontend:junior:7702d04e": {
+      "file": "frontend/junior/073-chy-vidomi-pryntsypy-dry-kiss-yagni.md",
+      "title": "Чи відомі принципи DRY, KISS, YAGNI ?"
+    },
+    "frontend:junior:3d809e13": {
+      "file": "frontend/junior/074-u-chomu-vidminnosti-localstorage-vid-sessions.md",
+      "title": "У чому відмінності LocalStorage від SessionStorage? Як ви використовуєте LocalStorage та SessionStorage в JavaScript? У яких випадках вважаєте їхнє використання доцільним?"
+    },
+    "frontend:junior:65e76035": {
+      "file": "frontend/junior/075-shcho-take-zamykannya-closure-v-javascript-i.md",
+      "title": "Що таке замикання (closure) в JavaScript і як воно працює?"
+    },
+    "frontend:junior:5eaae91d": {
+      "file": "frontend/junior/076-shcho-take-oblast-vydymosti-zminnoyi.md",
+      "title": "Що таке область видимості змінної?"
+    },
+    "frontend:junior:686c66fe": {
+      "file": "frontend/junior/077-shcho-take-anonimna-funktsiya.md",
+      "title": "Що таке анонімна функція?"
+    },
+    "frontend:junior:d3f931a9": {
+      "file": "frontend/junior/078-shcho-take-strilkova-funktsiya-i-yak-vona-vid.md",
+      "title": "Що таке стрілкова функція і як вона відрізняється від звичайної функції?"
+    },
+    "frontend:junior:e7b7ee08": {
+      "file": "frontend/junior/079-yaki-metody-pereboru-masyviv-vy-znayete.md",
+      "title": "Які методи перебору масивів ви знаєте?"
+    },
+    "frontend:junior:03d3eeef": {
+      "file": "frontend/junior/080-shcho-take-json-i-yak-pratsyuvaty-z-nym-u-jav.md",
+      "title": "Що таке JSON і як працювати з ним у JavaScript?"
+    },
+    "frontend:junior:23627156": {
+      "file": "frontend/junior/081-yak-vykonuyetsya-asynkhronnyy-kod-u-javascrip.md",
+      "title": "Як виконується асинхронний код у JavaScript?"
+    },
+    "frontend:junior:4a76b97d": {
+      "file": "frontend/junior/082-yak-vy-pratsyuyete-z-asynkhronnym-kodom-u-jav.md",
+      "title": "Як ви працюєте з асинхронним кодом у JavaScript без використання async/await? Які інші підходи ви розглядаєте для роботи з асинхронністю?"
+    },
+    "frontend:junior:384f2fe6": {
+      "file": "frontend/junior/083-riznytsya-mizh-i.md",
+      "title": "Різниця між == і ===."
+    },
+    "frontend:junior:319ece4c": {
+      "file": "frontend/junior/084-shcho-take-prototyp-u-javascript.md",
+      "title": "Що таке прототип у JavaScript?"
+    },
+    "frontend:junior:d7203a2b": {
+      "file": "frontend/junior/085-u-chomu-riznytsya-mizh-null-ta-undefined.md",
+      "title": "У чому різниця між null та undefined?"
+    },
+    "frontend:junior:8005b2a0": {
+      "file": "frontend/junior/086-shcho-take-kontekst-yak-mozhna-zminyuvaty-kon.md",
+      "title": "Що таке контекст? Як можна змінювати контекст виконання функції?"
+    },
+    "frontend:junior:00b268df": {
+      "file": "frontend/junior/087-shcho-take-promise-u-yakykh-vypadkakh-vy-nym.md",
+      "title": "Що таке Promise? У яких випадках ви ним користуєтеся?"
+    },
+    "frontend:junior:517f1334": {
+      "file": "frontend/junior/088-yaki-osoblyvosti-obyektnooriyentovanoho-prohr.md",
+      "title": "Які особливості об’єктноорієнтованого програмування у JavaScript?"
+    },
+    "frontend:junior:e4dd31f0": {
+      "file": "frontend/junior/089-yak-z-js-kodu-zvernutys-do-html-elementa-ta-z.md",
+      "title": "Як з JS-коду звернутись до HTML-елемента та змінити його текст?"
+    },
+    "frontend:junior:856db6cd": {
+      "file": "frontend/junior/090-shcho-take-destrukturyzatsiya.md",
+      "title": "Що таке деструктуризація?"
+    },
+    "frontend:junior:f1817248": {
+      "file": "frontend/junior/091-shcho-bude-yakshcho-zvernutys-do-elementa-yak.md",
+      "title": "Що буде, якщо звернутись до елемента, якого немає за індексом (const arr = [’a’, ’b’]; console.log(arr[20])?"
+    },
+    "frontend:junior:4868d282": {
+      "file": "frontend/junior/092-u-chomu-riznytsya-mizh-forof-ta-forin.md",
+      "title": "У чому різниця між for..of та for...in?"
+    },
+    "frontend:junior:df8edd0a": {
+      "file": "frontend/junior/093-yaki-osnovni-vidminnosti-mizh-typescript-i-ja.md",
+      "title": "Які основні відмінності між TypeScript і JavaScript?"
+    },
+    "frontend:junior:751a5e47": {
+      "file": "frontend/junior/094-yaki-perevahy-ta-nedoliky-vykorystannya-types.md",
+      "title": "Які переваги та недоліки використання TypeScript?"
+    },
+    "frontend:junior:9a4ff798": {
+      "file": "frontend/junior/095-shcho-take-typy-danykh-u-typescript-i-yak-yik.md",
+      "title": "Що таке типи даних у TypeScript і як їх використовують?"
+    },
+    "frontend:junior:220698b9": {
+      "file": "frontend/junior/096-rozkazhit-pro-interfeysy-v-typescript-i-naved.md",
+      "title": "Розкажіть про інтерфейси в TypeScript і наведіть приклади їх використання."
+    },
+    "frontend:junior:478f7760": {
+      "file": "frontend/junior/097-yak-pratsyuyut-generics-u-typescript-i-chomu.md",
+      "title": "Як працюють Generics у TypeScript і чому вони корисні?"
+    },
+    "frontend:junior:9625c4db": {
+      "file": "frontend/junior/098-yak-mozhna-vykorystovuvaty-enums-u-typescript.md",
+      "title": "Як можна використовувати Enums у TypeScript і які їхні переваги?"
+    },
+    "frontend:junior:7aad5763": {
+      "file": "frontend/junior/099-yak-typescript-pokrashchuye-bezpeku-typiv-pro.md",
+      "title": "Як TypeScript покращує безпеку типів проти JavaScript?"
+    },
+    "frontend:junior:0b8b5a76": {
+      "file": "frontend/junior/100-yaki-mozhlyvosti-dlya-refaktorynhu-ta-pidtrym.md",
+      "title": "Які можливості для рефакторингу та підтримки коду надає TypeScript?"
+    },
+    "frontend:junior:174a2ba6": {
+      "file": "frontend/junior/101-shcho-take-decorators-u-typescript-i-v-yakykh.md",
+      "title": "Що таке Decorators у TypeScript і в яких випадках їх використовують?"
+    },
+    "frontend:junior:3cd9072f": {
+      "file": "frontend/junior/102-yak-u-typescript-vykorystovuyut-prostory-imen.md",
+      "title": "Як у TypeScript використовують простори імен і модулі?"
+    },
+    "frontend:junior:6fb71450": {
+      "file": "frontend/junior/103-yaki-stratehiyi-mihratsiyi-z-javascript-na-ty.md",
+      "title": "Які стратегії міграції з JavaScript на TypeScript ви знаєте?"
+    },
+    "frontend:junior:1d7cef4f": {
+      "file": "frontend/junior/104-shcho-take-dom.md",
+      "title": "Що таке DOM?"
+    },
+    "frontend:junior:1ad72add": {
+      "file": "frontend/junior/105-yak-javascript-vzayemodiye-z-dom.md",
+      "title": "Як JavaScript взаємодіє з DOM?"
+    },
+    "frontend:junior:600b4139": {
+      "file": "frontend/junior/106-shcho-take-ajax.md",
+      "title": "Що таке AJAX?"
+    },
+    "frontend:junior:dfb69daf": {
+      "file": "frontend/junior/107-yak-vykonaty-http-zapyt-za-dopomohoyu-javascr.md",
+      "title": "Як виконати HTTP-запит за допомогою JavaScript?"
+    },
+    "frontend:junior:d2d34e0d": {
+      "file": "frontend/junior/108-shcho-take-jsonp-i-yak-yoho-vykorystovuyut.md",
+      "title": "Що таке JSONP і як його використовують?"
+    },
+    "frontend:junior:0a52cda9": {
+      "file": "frontend/junior/109-yaki-ye-sposoby-zberihannya-danykh-u-brauzeri.md",
+      "title": "Які є способи зберігання даних у браузері?"
+    },
+    "frontend:junior:41bb5090": {
+      "file": "frontend/junior/110-shcho-take-obrobka-podiy-u-javascript.md",
+      "title": "Що таке обробка подій у JavaScript?"
+    },
+    "frontend:junior:6febdd19": {
+      "file": "frontend/junior/111-shcho-take-event-bubbling-ta-event-capturing.md",
+      "title": "Що таке event bubbling та event capturing у контексті обробки подій у DOM? Як використовуєте ці концепції для ефективної обробки подій?"
+    },
+    "frontend:junior:de34adf5": {
+      "file": "frontend/junior/112-shcho-take-delehuvannya-podiy-u-dom-yak-vy-vy.md",
+      "title": "Що таке делегування подій у DOM, як ви використовуєте цей підхід для оптимізації обробки подій, особливо на великих сторінках?"
+    },
+    "frontend:junior:a6e9e9b9": {
+      "file": "frontend/junior/113-navishcho-vykorystovuyut-freymvorky-yaki-yikh.md",
+      "title": "Навіщо використовують фреймворки, які їхні переваги та недоліки?"
+    },
+    "frontend:junior:53fd0eb2": {
+      "file": "frontend/junior/114-chym-varto-keruvatysya-u-vybori-freymvorku.md",
+      "title": "Чим варто керуватися у виборі фреймворку?"
+    },
+    "frontend:junior:83e8a776": {
+      "file": "frontend/junior/115-shcho-take-komponentno-oriyentovanyy-pidkhid.md",
+      "title": "Що таке компонентно-орієнтований підхід?"
+    },
+    "frontend:junior:bb2beb82": {
+      "file": "frontend/junior/116-u-chomu-problema-keruvannya-stanom-i-yaki-ye.md",
+      "title": "У чому проблема керування станом і які є підходи до її вирішення?"
+    },
+    "frontend:junior:d8f1b3bf": {
+      "file": "frontend/junior/117-shcho-take-virtualnyy-dom.md",
+      "title": "Що таке віртуальний DOM?"
+    },
+    "frontend:junior:709108d0": {
+      "file": "frontend/junior/118-yaki-metody-zhyttyevoho-tsyklu-komponentiv-vy.md",
+      "title": "Які методи життєвого циклу компонентів ви знаєте?"
+    },
+    "frontend:junior:91c134a0": {
+      "file": "frontend/junior/119-yak-optymizuvaty-produktyvnist-rishen-z-vykor.md",
+      "title": "Як оптимізувати продуктивність рішень з використанням фреймворків?"
+    },
+    "frontend:junior:ad69f905": {
+      "file": "frontend/junior/120-shcho-take-renderynh-na-storoni-servera-navis.md",
+      "title": "Що таке рендеринг на стороні сервера? Навіщо він потрібен, які бувають варіанти реалізації?"
+    },
+    "frontend:junior:968c37d3": {
+      "file": "frontend/junior/121-yak-vzayemodiyaty-z-api-v-mezhakh-bibliotekfr.md",
+      "title": "Як взаємодіяти з API в межах бібліотек/фреймворків?"
+    },
+    "frontend:junior:7621482d": {
+      "file": "frontend/junior/122-yaki-osoblyvosti-upravlinnya-danymy-ta-marshr.md",
+      "title": "Які особливості управління даними та маршрутизації?"
+    },
+    "frontend:junior:658ec4d4": {
+      "file": "frontend/junior/123-yaki-osnovni-vidminnosti-mizh-angular-i-react.md",
+      "title": "Які основні відмінності між Angular і React?"
+    },
+    "frontend:junior:9527e5a0": {
+      "file": "frontend/junior/124-yak-vy-rozriznyayete-klasovi-ta-funktsionalni.md",
+      "title": "Як ви розрізняєте класові та функціональні компоненти в React? В яких випадках вважаєте за доцільне використовувати той або інший тип компонента?"
+    },
+    "frontend:junior:58d87485": {
+      "file": "frontend/junior/125-yak-mozhna-optymizuvaty-produktyvnist-u-react.md",
+      "title": "Як можна оптимізувати продуктивність у React-застосунках? Які підходи використовуєте для уникнення надмірного рендерингу та для оптимізації часу завантаження компонентів?"
+    },
+    "frontend:junior:a8cc9ed1": {
+      "file": "frontend/junior/126-yak-realizuyete-upravlinnya-stanom-u-react-za.md",
+      "title": "Як реалізуєте управління станом у React-застосунках? Які підходи використовуєте для підтримки читабельності та ефективного управління більш складним/глобальним станом?"
+    },
+    "frontend:junior:812ea6cd": {
+      "file": "frontend/junior/127-yak-vyrishuyete-pytannya-upravlinnya-formamy.md",
+      "title": "Як вирішуєте питання управління формами в React? Які підходи використовуєте для валідації та обробки форм?"
+    },
+    "frontend:junior:9ecf089c": {
+      "file": "frontend/junior/128-yak-vykonaty-kod-funktsiyi-lyshe-pry-pershomu.md",
+      "title": "Як виконати код функції лише при першому рендері компонента?"
+    },
+    "frontend:junior:82f9b9a2": {
+      "file": "frontend/junior/129-yak-obroblyayete-podiyi-u-react.md",
+      "title": "Як обробляєте події у React?"
+    },
+    "frontend:junior:5d1b48f5": {
+      "file": "frontend/junior/130-shcho-take-react-khuky-yaki-vbudovani-khuky-v.md",
+      "title": "Що таке React-хуки, які вбудовані хуки використовуєте?"
+    },
+    "frontend:junior:bf2f3269": {
+      "file": "frontend/junior/131-yakym-umovam-maye-vidpovidaty-funktsiya-shcho.md",
+      "title": "Яким умовам має відповідати функція, щоб бути хуком?"
+    },
+    "frontend:junior:d6612d05": {
+      "file": "frontend/junior/132-yak-vy-robyte-servernyy-renderynh-u-nextjs-ya.md",
+      "title": "Як ви робите серверний рендеринг у Next.js? Які переваги цього підходу бачите, у яких випадках вважаєте його найбільш доцільним?"
+    },
+    "frontend:junior:d59df3c1": {
+      "file": "frontend/junior/133-shcho-take-komponenty-u-vuejs.md",
+      "title": "Що таке компоненти у Vue.js?"
+    },
+    "frontend:junior:ef1c43ba": {
+      "file": "frontend/junior/134-yak-pratsyuye-dyrektyva-ngif-v-angular.md",
+      "title": "Як працює директива ngIf в Angular?"
+    },
+    "frontend:junior:b10b2ac7": {
+      "file": "frontend/junior/135-ye-zavdannya-porakhuvaty-koefitsiyent-yakyy-b.md",
+      "title": "Є завдання порахувати коефіцієнт, який буде потрібен у компоненті і який залежить тільки від декількох констант у проєкті. Де його найкраще порахувати?"
+    },
+    "frontend:junior:c30a5c7d": {
+      "file": "frontend/junior/136-shcho-take-http-i-https-yaka-mizh-nymy-riznyt.md",
+      "title": "Що таке HTTP і HTTPS, яка між ними різниця?"
+    },
+    "frontend:junior:7613d1a3": {
+      "file": "frontend/junior/137-yaki-osnovni-metody-http-zapytiv-get-post-put.md",
+      "title": "Які основні методи HTTP-запитів (GET, POST, PUT, DELETE) і їхні відмінності?"
+    },
+    "frontend:junior:ae73811b": {
+      "file": "frontend/junior/138-shcho-take-status-kody-http-navedit-pryklady.md",
+      "title": "Що таке статус-коди HTTP, наведіть приклади найбільш поширених."
+    },
+    "frontend:junior:36ef7a3f": {
+      "file": "frontend/junior/139-shcho-take-rest-api-i-yaki-yoho-osnovni-prynt.md",
+      "title": "Що таке REST API і які його основні принципи?"
+    },
+    "frontend:junior:c787abf3": {
+      "file": "frontend/junior/140-yaki-zasoby-bezpeky-vykorystovuyut-pid-chas-r.md",
+      "title": "Які засоби безпеки використовують під час роботи з вебзапитами?"
+    },
+    "frontend:junior:5eadc281": {
+      "file": "frontend/junior/141-shcho-take-json-i-xml-i-chym-vony-vidriznyayu.md",
+      "title": "Що таке JSON і XML і чим вони відрізняються у використанні?"
+    },
+    "frontend:junior:261ef8bc": {
+      "file": "frontend/junior/142-yak-pratsyuye-mekhanizm-cors-cross-origin-res.md",
+      "title": "Як працює механізм CORS (Cross-Origin Resource Sharing)?"
+    },
+    "frontend:junior:f3351067": {
+      "file": "frontend/junior/143-shcho-take-websocket-i-v-chomu-yoho-osoblyvos.md",
+      "title": "Що таке WebSocket і в чому його особливості порівняно з традиційними HTTP-запитами?"
+    },
+    "frontend:junior:406374af": {
+      "file": "frontend/junior/144-yak-funktsionuye-keshuvannya-vebresursiv.md",
+      "title": "Як функціонує кешування вебресурсів?"
+    },
+    "frontend:junior:0011dd7c": {
+      "file": "frontend/junior/145-shcho-take-ssltls-i-yak-tse-vykorystovuyut-dl.md",
+      "title": "Що таке SSL/TLS і як це використовують для реалізації безпеки?"
+    },
+    "frontend:junior:c9a1f2a4": {
+      "file": "frontend/junior/146-shcho-take-api-i-yak-frontend-vzayemodiye-z-n.md",
+      "title": "Що таке API і як фронтенд взаємодіє з ним?"
+    },
+    "frontend:junior:62df5fc8": {
+      "file": "frontend/junior/147-yaki-ye-formaty-obminu-danymy-mizh-frontendom.md",
+      "title": "Які є формати обміну даними між фронтендом і бекендом?"
+    },
+    "frontend:junior:6b2d5787": {
+      "file": "frontend/junior/148-shcho-take-crud-operatsiyi-i-yak-vony-realizu.md",
+      "title": "Що таке CRUD-операції і як вони реалізуються на практиці?"
+    },
+    "frontend:junior:76e8f129": {
+      "file": "frontend/junior/149-yak-vykorystovuvaty-vebsokety-dlya-realizatsi.md",
+      "title": "Як використовувати вебсокети для реалізації реального часу комунікацій?"
+    },
+    "frontend:junior:08c5faa8": {
+      "file": "frontend/junior/150-yaki-zasoby-autentyfikatsiyi-ta-avtoryzatsiyi.md",
+      "title": "Які засоби аутентифікації та авторизації використовують у сучасних вебзастосунках?"
+    },
+    "frontend:junior:faa0e522": {
+      "file": "frontend/junior/151-yaki-osnovni-pryntsypy-bezpechnoho-zberihanny.md",
+      "title": "Які основні принципи безпечного зберігання та передачі користувацьких даних?"
+    },
+    "frontend:junior:f35e6a36": {
+      "file": "frontend/junior/152-shcho-take-graphql-i-v-chomu-yoho-perevahy-ta.md",
+      "title": "Що таке GraphQL і в чому його переваги та недоліки порівняно з REST?"
+    },
+    "frontend:junior:5453de25": {
+      "file": "frontend/junior/153-yaki-stratehiyi-keshuvannya-danykh-mozhut-but.md",
+      "title": "Які стратегії кешування даних можуть бути використані у фронтенді?"
+    },
+    "frontend:junior:3361e97c": {
+      "file": "frontend/junior/154-yak-mozhna-obroblyaty-velyki-obsyahy-danykh-b.md",
+      "title": "Як можна обробляти великі обсяги даних без негативного впливу на продуктивність фронтенду?"
+    },
+    "frontend:junior:72451ba6": {
+      "file": "frontend/junior/155-yaki-instrumenty-i-pidkhody-vykorystovuyut-dl.md",
+      "title": "Які інструменти і підходи використовують для моніторингу та відлагодження запитів до сервера?"
+    },
+    "frontend:junior:c3d35023": {
+      "file": "frontend/junior/156-shcho-take-alhorytmichna-skladnist-i-yak-yiyi.md",
+      "title": "Що таке алгоритмічна складність і як її оцінювати?"
+    },
+    "frontend:junior:1eab17b5": {
+      "file": "frontend/junior/157-rozkazhit-pro-osnovni-struktury-danykh-taki-y.md",
+      "title": "Розкажіть про основні структури даних, такі як масиви, списки, стеки та черги."
+    },
+    "frontend:junior:b518f19e": {
+      "file": "frontend/junior/158-yaki-alhorytmy-sortuvannya-vy-znayete-i-yak-v.md",
+      "title": "Які алгоритми сортування ви знаєте і як вони працюють?"
+    },
+    "frontend:junior:3b7c57e2": {
+      "file": "frontend/junior/159-yak-realizuvaty-poshuk-u-shyrynu-ta-poshuk-u.md",
+      "title": "Як реалізувати пошук у ширину та пошук у глибину на графі й де це потрібно на фронтенді?"
+    },
+    "frontend:junior:2a0f2d4b": {
+      "file": "frontend/junior/160-shcho-take-rekursiya-navedit-pryklady-yiyi-vy.md",
+      "title": "Що таке рекурсія, наведіть приклади її використання."
+    },
+    "frontend:junior:2c195034": {
+      "file": "frontend/junior/161-yak-mozhna-optymizuvaty-alhorytmy-za-dopomoho.md",
+      "title": "Як можна оптимізувати алгоритми за допомогою мемоізації?"
+    },
+    "frontend:junior:3c90689d": {
+      "file": "frontend/junior/162-yaki-alhorytmy-poshuku-vy-znayete-i-yak-vony.md",
+      "title": "Які алгоритми пошуку ви знаєте і як вони відрізняються один від одного?"
+    },
+    "frontend:junior:d61fb16f": {
+      "file": "frontend/junior/163-yak-pratsyuye-khesh-tablytsya-ta-yaki-yiyi-pe.md",
+      "title": "Як працює хеш-таблиця та які її переваги та недоліки?"
+    },
+    "frontend:junior:01bd6f63": {
+      "file": "frontend/junior/164-rozkazhit-pro-alhorytmy-roboty-z-derevamy-tak.md",
+      "title": "Розкажіть про алгоритми роботи з деревами, такі як двійкове дерево пошуку."
+    },
+    "frontend:junior:0a7085cc": {
+      "file": "frontend/junior/165-yaki-alhorytmy-mozhna-vykorystovuvaty-dlya-po.md",
+      "title": "Які алгоритми можна використовувати для пошуку найкоротшого шляху в графі?"
+    },
+    "frontend:junior:8a31c6fd": {
+      "file": "frontend/junior/166-shcho-take-systema-kontrolyu-versiy-i-navishc.md",
+      "title": "Що таке система контролю версій і навіщо її використовують?"
+    },
+    "frontend:junior:46e6188f": {
+      "file": "frontend/junior/167-yaki-osnovni-komandy-git-vy-znayete-i-dlya-ch.md",
+      "title": "Які основні команди Git ви знаєте і для чого їх використовують?"
+    },
+    "frontend:junior:d782bc64": {
+      "file": "frontend/junior/168-yaka-riznytsya-mizh-git-merge-ta-git-rebase.md",
+      "title": "Яка різниця між git merge та git rebase?"
+    },
+    "frontend:junior:a2c2a1d6": {
+      "file": "frontend/junior/169-shcho-take-commit-u-git-i-yak-yoho-pravylno-f.md",
+      "title": "Що таке commit у Git і як його правильно формувати?"
+    },
+    "frontend:junior:7fe86825": {
+      "file": "frontend/junior/170-yak-vypravyty-pomylky-v-poperednikh-komitakh.md",
+      "title": "Як виправити помилки в попередніх комітах?"
+    },
+    "frontend:junior:0aabdb56": {
+      "file": "frontend/junior/171-shcho-take-hilky-v-git-i-yak-yikh-efektyvno-v.md",
+      "title": "Що таке гілки в Git і як їх ефективно використовувати?"
+    },
+    "frontend:junior:3d85f5b7": {
+      "file": "frontend/junior/172-yak-stvoryty-novu-hilku-v-git.md",
+      "title": "Як створити нову гілку в Git?"
+    },
+    "frontend:junior:d57bcd7d": {
+      "file": "frontend/junior/173-yaki-stratehiyi-vyboru-vitok-vykorystovuyut-u.md",
+      "title": "Які стратегії вибору віток використовують у різних розробницьких процесах (наприклад, Git Flow)?"
+    },
+    "frontend:junior:51fa6d45": {
+      "file": "frontend/junior/174-yak-vykorystovuvaty-tehy-v-git.md",
+      "title": "Як використовувати теги в Git?"
+    },
+    "frontend:junior:b4f98fe9": {
+      "file": "frontend/junior/175-shcho-take-konflikt-zlyttya-i-yak-yoho-vyrish.md",
+      "title": "Що таке конфлікт злиття і як його вирішити?"
+    },
+    "frontend:junior:28f04fa2": {
+      "file": "frontend/junior/176-yaki-naykrashchi-praktyky-roboty-z-viddalenym.md",
+      "title": "Які найкращі практики роботи з віддаленими репозиторіями?"
+    },
+    "frontend:junior:8fb4126a": {
+      "file": "frontend/junior/177-yak-vykorystovuvaty-gitignore-fayl.md",
+      "title": "Як використовувати .gitignore файл?"
+    },
+    "frontend:junior:f26c80e1": {
+      "file": "frontend/junior/178-chyyeyu-vidpovidalnistyu-ye-bah-na-prodakshni.md",
+      "title": "Чиєю відповідальністю є баг на продакшні — розробника чи тестувальника?"
+    },
+    "frontend:junior:7181cbb9": {
+      "file": "frontend/junior/179-yak-vy-testuyete-sviy-kod-chy-pysaly-kod-yaky.md",
+      "title": "Як ви тестуєте свій код? Чи писали код, який не можна було перевірити до деплою?"
+    },
+    "frontend:junior:dacecfb5": {
+      "file": "frontend/junior/180-shcho-take-aaa-v-testuvanni.md",
+      "title": "Що таке ААА в тестуванні?"
+    },
+    "frontend:junior:acdd7c3e": {
+      "file": "frontend/junior/181-shcho-take-vebdostupnist.md",
+      "title": "Що таке вебдоступність?"
+    },
+    "frontend:junior:551a0ebb": {
+      "file": "frontend/junior/182-yak-testuvaty-vebdostupnist.md",
+      "title": "Як тестувати вебдоступність?"
+    },
+    "frontend:junior:7d17e6d8": {
+      "file": "frontend/junior/183-nazvit-bazovi-tekhniky-stvorennya-dostupnykh.md",
+      "title": "Назвіть базові техніки створення доступних вебінтерфейсів."
+    },
+    "frontend:junior:efeebbce": {
+      "file": "frontend/junior/184-v-yakykh-vypadkakh-treba-vykorystovuvaty-posy.md",
+      "title": "В яких випадках треба використовувати посилання, а в яких — кнопки?"
+    },
+    "frontend:junior:9d8802f0": {
+      "file": "frontend/junior/185-yakyy-tekst-maye-mistytysya-v-atrybuti-alt.md",
+      "title": "Який текст має міститися в атрибуті alt?"
+    },
+    "frontend:middle:bab87723": {
+      "file": "frontend/middle/001-nazvit-pryntsypy-oop.md",
+      "title": "Назвіть принципи ООП."
+    },
+    "frontend:middle:4229787d": {
+      "file": "frontend/middle/002-poyasnit-kozhnu-skladovu-solid.md",
+      "title": "Поясніть кожну складову SOLID."
+    },
+    "frontend:middle:7ac4b794": {
+      "file": "frontend/middle/003-chomu-treba-zvertaty-uvahu-na-skladnist-alhor.md",
+      "title": "Чому треба звертати увагу на складність алгоритму?"
+    },
+    "frontend:middle:1ddf30a4": {
+      "file": "frontend/middle/004-na-yaki-sutnosti-vy-rozdilyayete-faylovu-stru.md",
+      "title": "На які сутності ви розділяєте файлову структуру на початку проєктування?"
+    },
+    "frontend:middle:849a705e": {
+      "file": "frontend/middle/005-yak-vy-rozumiyete-shcho-nastav-chas-vidokremy.md",
+      "title": "Як ви розумієте, що настав час відокремити певну сутність у проєкті?"
+    },
+    "frontend:middle:a9375d72": {
+      "file": "frontend/middle/006-poverkhovo-opyshit-yak-vidbuvayetsya-bild-pro.md",
+      "title": "Поверхово опишіть, як відбувається білд проєкту?"
+    },
+    "frontend:middle:17ddaaee": {
+      "file": "frontend/middle/007-yaka-vasha-ulyublena-tekhnolohiyainstrumentte.md",
+      "title": "Яка ваша улюблена технологія/інструмент/тег у розробці?"
+    },
+    "frontend:middle:1e78224c": {
+      "file": "frontend/middle/008-shcho-vy-robyte-shchob-kod-bulo-lehshe-pidtry.md",
+      "title": "Що ви робите, щоб код було легше підтримувати?"
+    },
+    "frontend:middle:977233c2": {
+      "file": "frontend/middle/009-shcho-take-refaktorynh-i-yak-vy-yoho-provodyt.md",
+      "title": "Що таке рефакторинг і як ви його проводите?"
+    },
+    "frontend:middle:74936580": {
+      "file": "frontend/middle/010-shcho-take-mikrorozmitka.md",
+      "title": "Що таке мікророзмітка?"
+    },
+    "frontend:middle:344ca489": {
+      "file": "frontend/middle/011-shcho-take-seo-na-shcho-maye-zvertaty-uvahu-r.md",
+      "title": "Що таке SEO? На що має звертати увагу розробник для забезпечення гарних SEO-показників у майбутньому?"
+    },
+    "frontend:middle:8059b1fb": {
+      "file": "frontend/middle/012-yaki-tekhniky-orhanizatsiyi-ikonok-na-sayti-v.md",
+      "title": "Які техніки організації іконок на сайті ви знаєте? Назвіть плюси та мінуси кожної."
+    },
+    "frontend:middle:480ea45f": {
+      "file": "frontend/middle/013-yak-mozhna-optymizuvaty-css-dlya-krashchoyi-p.md",
+      "title": "Як можна оптимізувати CSS для кращої продуктивності?"
+    },
+    "frontend:middle:8cb4cb51": {
+      "file": "frontend/middle/014-shcho-take-suchasnyy-css-na-vashu-dumku-shcho.md",
+      "title": "Що таке «сучасний CSS», на вашу думку? Що із сучасного CSS ви використовуєте в щоденній роботі?"
+    },
+    "frontend:middle:068f2226": {
+      "file": "frontend/middle/015-chym-vidriznyayutsya-zminni-v-scss-i-css-cust.md",
+      "title": "Чим відрізняються змінні в SCSS і CSS Custom Properties? У чому перевага тих чи інших?"
+    },
+    "frontend:middle:626d1467": {
+      "file": "frontend/middle/016-yak-vy-vyrishuyete-konflikty-styliv-pry-robot.md",
+      "title": "Як ви вирішуєте конфлікти стилів при роботі з декількома фронтендерами на проєкті чи запобігаєте цьому?"
+    },
+    "frontend:middle:33894321": {
+      "file": "frontend/middle/017-u-chomu-riznytsya-mizh-transition-i-animation.md",
+      "title": "У чому різниця між transition і animation? В яких випадках що використовуєте?"
+    },
+    "frontend:middle:c7634313": {
+      "file": "frontend/middle/018-potribno-dodaty-kastomni-styli-dlya-skrolbaru.md",
+      "title": "Потрібно додати кастомні стилі для скролбару. Як би ви це зробили?"
+    },
+    "frontend:middle:fbb05952": {
+      "file": "frontend/middle/019-yaki-metody-izolyatsiyi-styliv-vy-znayete.md",
+      "title": "Які методи ізоляції стилів ви знаєте?"
+    },
+    "frontend:middle:eb7e2e26": {
+      "file": "frontend/middle/020-navishcho-potribni-css-logical-properties-chy.md",
+      "title": "Навіщо потрібні CSS Logical Properties? Чи використовуєте їх?"
+    },
+    "frontend:middle:809e101d": {
+      "file": "frontend/middle/021-rozkazhit-pro-sviy-dosvid-vykorystannya-css-g.md",
+      "title": "Розкажіть про свій досвід використання CSS Grid Layout."
+    },
+    "frontend:middle:9a649cfc": {
+      "file": "frontend/middle/022-yak-pratsyuye-css-funktsiya-clamp-nazvit-kory.md",
+      "title": "Як працює CSS-функція clamp()? Назвіть корисні приклади її використання."
+    },
+    "frontend:middle:054d83a2": {
+      "file": "frontend/middle/023-yak-optymizuvaty-styli-dlya-druku-na-prynteri.md",
+      "title": "Як оптимізувати стилі для друку на принтері?"
+    },
+    "frontend:middle:0aaf084d": {
+      "file": "frontend/middle/024-yaki-css-freymvorky-vy-znayete-z-yakymy-z-nyk.md",
+      "title": "Які CSS-фреймворки ви знаєте? З якими з них працювали на проєктах? Які плюси та мінуси вони мали?"
+    },
+    "frontend:middle:f9708c02": {
+      "file": "frontend/middle/025-yak-vy-pratsyuyete-z-adaptyvnymy-ta-rezynovym.md",
+      "title": "Як ви працюєте з адаптивними та резиновими макетами? Як розглядаєте проблеми, пов’язані з різними роздільними здатностями екранів і пристроями?"
+    },
+    "frontend:middle:291d6b53": {
+      "file": "frontend/middle/026-yak-orhanizovuyete-css-styli-u-velykykh-proye.md",
+      "title": "Як організовуєте CSS-стилі у великих проєктах? Чи використовуєте які-небудь методології?"
+    },
+    "frontend:middle:03e51452": {
+      "file": "frontend/middle/027-yak-obyrayete-mizh-vykorystannyam-i-ne-vykory.md",
+      "title": "Як обираєте між використанням і не використанням препроцесорів CSS, таких як Sass чи Less, у своїх проєктах? Які переваги ви бачите у цьому?"
+    },
+    "frontend:middle:6c7793ac": {
+      "file": "frontend/middle/028-yak-vprovadzhuyete-kontseptsiyu-komponentnoho.md",
+      "title": "Як впроваджуєте концепцію «компонентного» підходу у вашому CSS-коді? Які стратегії використовуєте для створення повторно використовуваних і легко модифікованих компонентів у ваших стилях?"
+    },
+    "frontend:middle:fabdeeda": {
+      "file": "frontend/middle/029-yak-semantychna-verstka-vplyvaye-na-dostupnis.md",
+      "title": "Як семантична верстка впливає на доступність сторінки?"
+    },
+    "frontend:middle:4b43d51d": {
+      "file": "frontend/middle/030-na-shcho-vplyvaye-doctype.md",
+      "title": "На що впливає doctype?"
+    },
+    "frontend:middle:f64cb0ed": {
+      "file": "frontend/middle/031-yaki-preprotsesory-css-vy-znayete-i-yaki-yikh.md",
+      "title": "Які препроцесори CSS ви знаєте і які їхні переваги?"
+    },
+    "frontend:middle:9e002755": {
+      "file": "frontend/middle/032-yak-zrobyty-posylannya-z-yakoho-mozhna-zavant.md",
+      "title": "Як зробити посилання, з якого можна завантажити прикріплений файл?"
+    },
+    "frontend:middle:939e49b8": {
+      "file": "frontend/middle/033-chomu-inodi-translate-krashche-za-positionabs.md",
+      "title": "Чому іноді translate краще за position:absolute під час написання стилів?"
+    },
+    "frontend:middle:25676df3": {
+      "file": "frontend/middle/034-nazvit-osoblyvosti-ta-vidminnosti-flex-i-grid.md",
+      "title": "Назвіть особливості та відмінності flex і grid? Чому віддаєте перевагу?"
+    },
+    "frontend:middle:aee0807d": {
+      "file": "frontend/middle/035-dublyuvannya-htmlcss-dlya-responsive-design-p.md",
+      "title": "Дублювання HTML/CSS для responsive design: плюси, мінуси, підводні камені."
+    },
+    "frontend:middle:2c273c62": {
+      "file": "frontend/middle/036-yaki-osnovni-metryky-vymiryuyut-produktyvnist.md",
+      "title": "Які основні метрики вимірюють продуктивність сайту?"
+    },
+    "frontend:middle:cd0a7580": {
+      "file": "frontend/middle/037-shcho-take-cumulative-layout-shift-i-yak-pokr.md",
+      "title": "Що таке Cumulative Layout Shift і як покращити його значення?"
+    },
+    "frontend:middle:7120d007": {
+      "file": "frontend/middle/038-shcho-take-critical-css.md",
+      "title": "Що таке Critical CSS?"
+    },
+    "frontend:middle:90a45a5f": {
+      "file": "frontend/middle/039-yak-vy-rozroblyayete-animatsiyi-z-pohlyadu-pr.md",
+      "title": "Як ви розробляєте анімації з погляду продуктивності, зокрема при використанні CSS або JavaScript?"
+    },
+    "frontend:middle:447ae22d": {
+      "file": "frontend/middle/040-yaki-formaty-zobrazhen-krashche-vykorystovuva.md",
+      "title": "Які формати зображень краще використовувати у вебі? Які методи оптимізації зображень для вебу?"
+    },
+    "frontend:middle:ba361222": {
+      "file": "frontend/middle/041-yak-upravlyayete-intehratsiyeyu-storonnikh-bi.md",
+      "title": "Як управляєте інтеграцією сторонніх бібліотек або плагінів для зменшення впливу на продуктивність?"
+    },
+    "frontend:middle:779b121b": {
+      "file": "frontend/middle/042-yak-realizuyete-lazy-loading-dlya-zobrazhen-t.md",
+      "title": "Як реалізуєте lazy loading для зображень та інших ресурсів для оптимізації часу завантаження?"
+    },
+    "frontend:middle:da0e749a": {
+      "file": "frontend/middle/043-yak-vykorystovuyete-prefetching-i-preloading.md",
+      "title": "Як використовуєте prefetching і preloading ресурсів для підвищення швидкості переходу між сторінками?"
+    },
+    "frontend:middle:ca50974c": {
+      "file": "frontend/middle/044-u-vas-ye-storinka-halereyi-na-yakiy-potribno.md",
+      "title": "У вас є сторінка галереї, на якій потрібно показати велику кількість відео з YouTube. Як би ви це реалізували так, щоб сторінка швидко завантажувалась?"
+    },
+    "frontend:middle:9be5f40c": {
+      "file": "frontend/middle/045-vam-potribno-vidobrazyty-tablytsyu-na-kilka-t.md",
+      "title": "Вам потрібно відобразити таблицю на кілька тисяч рядків. Як би ви це втілили, щоб сторінка швидко завантажувалась і швидко реагувала на дії користувача?"
+    },
+    "frontend:middle:ee5925ea": {
+      "file": "frontend/middle/046-yak-vy-b-orhanizuvaly-zavantazhennya-velykoyi.md",
+      "title": "Як ви б організували завантаження великої кількості CSS-стилів на сторінці так, щоб користувач міг якнайшвидше взаємодіяти з нею, при цьому уникнувши зсуву макета?"
+    },
+    "frontend:middle:3fc964b6": {
+      "file": "frontend/middle/047-u-chomu-riznytsya-mizh-localstorage-sessionst.md",
+      "title": "У чому різниця між LocalStorage, SessionStorage та cookies?"
+    },
+    "frontend:middle:7a6d516d": {
+      "file": "frontend/middle/048-koly-vykorystovuyete-map-ta-set.md",
+      "title": "Коли використовуєте Map та Set?"
+    },
+    "frontend:middle:1c674d72": {
+      "file": "frontend/middle/049-yaki-znayete-sposoby-shchob-vyyavyty-chy-pere.md",
+      "title": "Які знаєте способи, щоб виявити, чи перебуває елемент у viewport користувача?"
+    },
+    "frontend:middle:3338143f": {
+      "file": "frontend/middle/050-shcho-take-service-workers-u-yakykh-vypadkakh.md",
+      "title": "Що таке Service Workers, у яких випадках їх використовуєте?"
+    },
+    "frontend:middle:2a1cb622": {
+      "file": "frontend/middle/051-shcho-take-websockets-dlya-choho-vony-potribn.md",
+      "title": "Що таке Websockets? Для чого вони потрібні?"
+    },
+    "frontend:middle:f448723a": {
+      "file": "frontend/middle/052-yak-obroblyayete-pomylky-v-zastosunku.md",
+      "title": "Як обробляєте помилки в застосунку?"
+    },
+    "frontend:middle:b497925b": {
+      "file": "frontend/middle/053-shcho-take-event-loop-yak-vono-pratsyuye.md",
+      "title": "Що таке event loop? Як воно працює?"
+    },
+    "frontend:middle:0d7b8cf2": {
+      "file": "frontend/middle/054-u-chomu-riznytsya-mizh-typamy-ta-interfeysamy.md",
+      "title": "У чому різниця між типами та інтерфейсами?"
+    },
+    "frontend:middle:a5436955": {
+      "file": "frontend/middle/055-shcho-take-modyfikatory-dostupu.md",
+      "title": "Що таке модифікатори доступу?"
+    },
+    "frontend:middle:56d903c9": {
+      "file": "frontend/middle/056-shcho-take-type-guard.md",
+      "title": "Що таке type guard?"
+    },
+    "frontend:middle:204cbe49": {
+      "file": "frontend/middle/057-yaka-meta-stvorennya-abstract-class.md",
+      "title": "Яка мета створення abstract class?"
+    },
+    "frontend:middle:90be1d2c": {
+      "file": "frontend/middle/058-yaki-vydy-obyektnykh-modeley-vy-znayete.md",
+      "title": "Які види обʼєктних моделей ви знаєте?"
+    },
+    "frontend:middle:b5858ee8": {
+      "file": "frontend/middle/059-shcho-take-polifily-y-dlya-choho-vony-potribn.md",
+      "title": "Що таке поліфіли й для чого вони потрібні?"
+    },
+    "frontend:middle:da277283": {
+      "file": "frontend/middle/060-dlya-choho-vykorystovuyut-anonimni-funktsiyi.md",
+      "title": "Для чого використовують анонімні функції?"
+    },
+    "frontend:middle:2bb7b9e9": {
+      "file": "frontend/middle/061-shcho-take-es6-moduli.md",
+      "title": "Що таке ES6-модулі?"
+    },
+    "frontend:middle:6d3d7a89": {
+      "file": "frontend/middle/062-yak-vykorystovuyete-modulnist-u-javascript-dl.md",
+      "title": "Як використовуєте модульність у JavaScript для організації вашого коду?"
+    },
+    "frontend:middle:065a0b70": {
+      "file": "frontend/middle/063-yaki-pidkhody-vykorystovuyete-dlya-unyknennya.md",
+      "title": "Які підходи використовуєте для уникнення конфліктів та забезпечення читабельності та масштабованості коду?"
+    },
+    "frontend:middle:0654ca5b": {
+      "file": "frontend/middle/064-yak-vy-optymizuyete-ta-pratsyuyete-z-animatsi.md",
+      "title": "Як ви оптимізуєте та працюєте з анімаціями в браузері? Які підходи використовуєте для досягнення високої продуктивності та плавності анімацій?"
+    },
+    "frontend:middle:20588fa0": {
+      "file": "frontend/middle/065-yak-realizovuyete-lazy-loading-velykykh-resur.md",
+      "title": "Як реалізовуєте lazy loading великих ресурсів, таких як зображення або скрипти, для оптимізації завантаження сторінок? Як це взаємодіє з асинхронним кодом?"
+    },
+    "frontend:middle:30396766": {
+      "file": "frontend/middle/066-yak-vykorystovuyete-instrumenty-zabezpechenny.md",
+      "title": "Як використовуєте інструменти забезпечення якості коду, такі як ESLint? Як визначаєте та дотримуєтеся кодового стилю в проєкті?"
+    },
+    "frontend:middle:3b3e8ce4": {
+      "file": "frontend/middle/067-yak-vy-pratsyuyete-z-arkhitekturoyu-ta-patern.md",
+      "title": "Як ви працюєте з архітектурою та патернами проєктування в JavaScript? Які конкретні патерни використовуєте для структурування коду та полегшення його розширення?"
+    },
+    "frontend:middle:8cb0b804": {
+      "file": "frontend/middle/068-yak-by-vy-realizovuvaly-vidsotkovyy-preloader.md",
+      "title": "Як би ви реалізовували відсотковий прелоадер на сайті, де треба завантажувати картинки, 3D-об’єкти та додаткові JSON-файли?"
+    },
+    "frontend:middle:0e8d5c17": {
+      "file": "frontend/middle/069-chy-ye-u-vas-dosvid-z-pwa.md",
+      "title": "Чи є у вас досвід з PWA?"
+    },
+    "frontend:middle:3998be60": {
+      "file": "frontend/middle/070-shcho-take-funktsiyi-heneratory-i-yake-yikh-p.md",
+      "title": "Що таке функції-генератори і яке їх практичне застосування?"
+    },
+    "frontend:middle:d9c60c59": {
+      "file": "frontend/middle/071-rozkazhit-pro-vsi-sposoby-vykorystannya-opera.md",
+      "title": "Розкажіть про всі способи використання оператора ’...’."
+    },
+    "frontend:middle:09ebae5c": {
+      "file": "frontend/middle/072-rozkazhit-pro-upravlinnya-stanom-u-vuejs.md",
+      "title": "Розкажіть про управління станом у Vue.js."
+    },
+    "frontend:middle:525ccae2": {
+      "file": "frontend/middle/073-yak-realizuvaty-marshrutyzatsiyu-routing-v-re.md",
+      "title": "Як реалізувати маршрутизацію (routing) в React?"
+    },
+    "frontend:middle:a817729c": {
+      "file": "frontend/middle/074-yak-optymizuvaty-renderynh-komponentiv-u-reac.md",
+      "title": "Як оптимізувати рендеринг компонентів у React?"
+    },
+    "frontend:middle:57e0347a": {
+      "file": "frontend/middle/075-yak-optymizuvaty-produktyvnist-u-velykykh-rea.md",
+      "title": "Як оптимізувати продуктивність у великих React-застосунках?"
+    },
+    "frontend:middle:ce2278af": {
+      "file": "frontend/middle/076-z-yakymy-problemamy-v-react-komponentakh-chas.md",
+      "title": "З якими проблемами в React-компонентах часто стикались?"
+    },
+    "frontend:middle:44795a02": {
+      "file": "frontend/middle/077-yak-vy-upravlyayete-stanamy-v-react-app-yak-p.md",
+      "title": "Як ви управляєте станами в React APP? Як передавати стани між кількома компонентами?"
+    },
+    "frontend:middle:74f65fa4": {
+      "file": "frontend/middle/078-yaki-pidkhody-vykorystovuyete-dlya-lazy-loadi.md",
+      "title": "Які підходи використовуєте для lazy loading компонентів, управління станом і кешування даних?"
+    },
+    "frontend:middle:7df70db1": {
+      "file": "frontend/middle/079-shcho-take-side-effects-z-yakymy-instrumentam.md",
+      "title": "Що таке side effects? З якими інструментами є досвід?"
+    },
+    "frontend:middle:91fd7f1d": {
+      "file": "frontend/middle/080-yak-vyrishuyete-problemy-marshrutyzatsiyi-v-s.md",
+      "title": "Як вирішуєте проблеми маршрутизації в складних React-застосунках? Які підходи використовуєте для організації маршрутів та управління структурою застосунку?"
+    },
+    "frontend:middle:31274c98": {
+      "file": "frontend/middle/081-yak-obroblyayete-animatsiyi-v-react-yak-vykor.md",
+      "title": "Як обробляєте анімації в React? Як використовуєте CSS-анімації та бібліотеки для створення плавних і високопродуктивних анімацій?"
+    },
+    "frontend:middle:9743a3e7": {
+      "file": "frontend/middle/082-yak-vykorystovuyete-arkhitekturni-paterny-nap.md",
+      "title": "Як використовуєте архітектурні патерни (наприклад, Flux або Redux) для ефективного управління станом у React-застосунку? Які переваги та обмеження бачите в застосуванні цих патернів?"
+    },
+    "frontend:middle:f1984701": {
+      "file": "frontend/middle/083-yak-optymizuyete-ta-masshtabuyete-nextjs-zast.md",
+      "title": "Як оптимізуєте та масштабуєте Next.js застосунки для високого трафіку? Як вирішуєте питання кешування, CDN, інших аспектів продуктивності?"
+    },
+    "frontend:middle:3374353c": {
+      "file": "frontend/middle/084-shcho-take-re-render-komponenta-koly-vin-vidb.md",
+      "title": "Що таке ре-рендер компонента, коли він відбувається чи можна вплинути на цей процес?"
+    },
+    "frontend:middle:01f7cc7c": {
+      "file": "frontend/middle/085-shcho-take-react-context-koly-yoho-vykorystov.md",
+      "title": "Що таке React Context, коли його використовуєте?"
+    },
+    "frontend:middle:d3edf285": {
+      "file": "frontend/middle/086-shcho-take-memoyizatsiya-v-react-ta-koly-vona.md",
+      "title": "Що таке мемоїзація в React та коли вона потрібна?"
+    },
+    "frontend:middle:ff4ac697": {
+      "file": "frontend/middle/087-yak-vykonaty-kod-pered-vydalennyam-komponenta.md",
+      "title": "Як виконати код перед видаленням компонента з дерева?"
+    },
+    "frontend:middle:27f42351": {
+      "file": "frontend/middle/088-u-yakykh-vypadkakh-vykorystovuyete-usereducer.md",
+      "title": "У яких випадках використовуєте useReducer?"
+    },
+    "frontend:middle:5d2396bb": {
+      "file": "frontend/middle/089-yaki-ui-biblioteky-znayete-u-chomu-yikhni-per.md",
+      "title": "Які UI-бібліотеки знаєте, у чому їхні переваги та недоліки?"
+    },
+    "frontend:middle:dd765ffc": {
+      "file": "frontend/middle/090-dlya-choho-vprovadzhuyut-testuvannya.md",
+      "title": "Для чого впроваджують тестування?"
+    },
+    "frontend:middle:18b5a128": {
+      "file": "frontend/middle/091-chy-ye-vypadky-koly-testuvannya-ne-ye-dotsiln.md",
+      "title": "Чи є випадки, коли тестування не є доцільним?"
+    },
+    "frontend:middle:fc5c84f4": {
+      "file": "frontend/middle/092-yaki-vydy-testuvannya-znayete.md",
+      "title": "Які види тестування знаєте?"
+    },
+    "frontend:middle:003e2395": {
+      "file": "frontend/middle/093-u-chomu-riznytsya-mizh-e2e-ta-unit-testamy.md",
+      "title": "У чому різниця між е2е та unit-тестами?"
+    },
+    "frontend:middle:25be1cd4": {
+      "file": "frontend/middle/094-yaki-instrumenty-dlya-avtomatyzatsiyi-testuva.md",
+      "title": "Які інструменти для автоматизації тестування знаєте?"
+    },
+    "frontend:middle:e9f69ea1": {
+      "file": "frontend/middle/095-yak-testuvaty-restful-api.md",
+      "title": "Як тестувати RESTful API?"
+    },
+    "frontend:middle:d5f52609": {
+      "file": "frontend/middle/096-shcho-take-tdd.md",
+      "title": "Що таке TDD?"
+    },
+    "frontend:middle:23cb0663": {
+      "file": "frontend/middle/097-yak-obyrayete-chy-pokryvaty-funktsional-testa.md",
+      "title": "Як обираєте, чи покривати функціонал тестами?"
+    },
+    "frontend:middle:cb3d2693": {
+      "file": "frontend/middle/098-yak-vyyavlyayete-ta-izolyuyete-pomylky-v-kodi.md",
+      "title": "Як виявляєте та ізолюєте помилки в коді? Які інструменти для відладки використовуєте?"
+    },
+    "frontend:middle:8a31c80a": {
+      "file": "frontend/middle/099-yaki-rivni-dostupnosti-znayete-chym-vony-vidr.md",
+      "title": "Які рівні доступності знаєте? Чим вони відрізняються?"
+    },
+    "frontend:middle:63d6d69a": {
+      "file": "frontend/middle/100-opyshit-osoblyvosti-implementatsiyi-navihatsi.md",
+      "title": "Опишіть особливості імплементації навігації по сайту з клавіатури."
+    },
+    "frontend:middle:a43ad6e6": {
+      "file": "frontend/middle/101-dlya-choho-vykorystovuyut-html5-landmarks.md",
+      "title": "Для чого використовують HTML5 Landmarks?"
+    },
+    "frontend:middle:61ad41a6": {
+      "file": "frontend/middle/102-yaki-problemy-z-vebdostupnistyu-traplyayutsya.md",
+      "title": "Які проблеми з вебдоступністю трапляються в SPA-застосунках найчастіше?"
+    },
+    "frontend:middle:fcfebf39": {
+      "file": "frontend/middle/103-dyzayner-konsultuyetsya-z-vamy-shchodo-dyzayn.md",
+      "title": "Дизайнер консультується з вами щодо дизайну майбутнього проєкту. Які поради в контексті доступності ви йому дасте?"
+    },
+    "frontend:senior:8eb1ea54": {
+      "file": "frontend/senior/001-yakymy-neobkhidnymy-znannyamy-ta-navychkamy-p.md",
+      "title": "Якими необхідними знаннями та навичками потрібно володіти Senior-розробнику?"
+    },
+    "frontend:senior:8e7aaa97": {
+      "file": "frontend/senior/002-yakoyu-maye-buty-robota-ta-komunikatsiyi-v-ko.md",
+      "title": "Якою має бути робота та комунікації в команді розробників?"
+    },
+    "frontend:senior:4876149a": {
+      "file": "frontend/senior/003-yaki-metody-otsinky-ta-planuvannya-proyektiv.md",
+      "title": "Які методи оцінки та планування проєктів використовуєте?"
+    },
+    "frontend:senior:5632a41a": {
+      "file": "frontend/senior/004-na-shcho-zvertayete-uvahu-pid-chas-vyboru-tek.md",
+      "title": "На що звертаєте увагу під час вибору технологій на проєкті?"
+    },
+    "frontend:senior:bacb166b": {
+      "file": "frontend/senior/005-yak-pidkhodyte-do-mentorstva-ta-rozvytku-mens.md",
+      "title": "Як підходите до менторства та розвитку менш досвідчених розробників?"
+    },
+    "frontend:senior:c37f7365": {
+      "file": "frontend/senior/006-yak-vprovadzhuyete-novi-tekhnolohiyi-abo-prak.md",
+      "title": "Як впроваджуєте нові технології або практики в команду?"
+    },
+    "frontend:senior:2ecba103": {
+      "file": "frontend/senior/007-yak-vyrishuyete-konflikty-ta-problemy-v-koman.md",
+      "title": "Як вирішуєте конфлікти та проблеми в команді?"
+    },
+    "frontend:senior:a038f481": {
+      "file": "frontend/senior/008-yak-bude-vyhlyadaty-frontend-rozrobka-za-dva.md",
+      "title": "Як буде виглядати фронтенд-розробка за два-три роки?"
+    },
+    "frontend:senior:8f2baa0a": {
+      "file": "frontend/senior/009-yaki-z-novykh-freymvorkiv-vy-probuvaly-vykory.md",
+      "title": "Які з нових фреймворків ви пробували використовувати?"
+    },
+    "frontend:senior:181a1c63": {
+      "file": "frontend/senior/010-yaki-mayete-pet-proyekty-mozhlyvo-zaymayetesy.md",
+      "title": "Які маєте пет-проєкти, можливо, займаєтеся опенсорсом?"
+    },
+    "frontend:senior:cf86eaa6": {
+      "file": "frontend/senior/011-chy-vystupayete-na-konferentsiyakhmitapakh.md",
+      "title": "Чи виступаєте на конференціях/мітапах?"
+    },
+    "frontend:senior:c01aeb95": {
+      "file": "frontend/senior/012-chy-dilytesya-des-rehulyarno-profesiynymy-dum.md",
+      "title": "Чи ділитеся десь регулярно професійними думками, в яких спільнотах берете участь?"
+    },
+    "frontend:senior:eb28525a": {
+      "file": "frontend/senior/013-yaki-porekomenduyete-podkastykanalyavtoriv.md",
+      "title": "Які порекомендуєте подкасти/канали/авторів?"
+    },
+    "frontend:senior:cb421267": {
+      "file": "frontend/senior/014-yaki-novi-instrumenty-vy-pochaly-vykorystovuv.md",
+      "title": "Які нові інструменти ви почали використовувати і можете порекомендувати?"
+    },
+    "frontend:senior:6a125a19": {
+      "file": "frontend/senior/015-yaki-vy-znayete-systemy-imenuvannya-klasiv-ch.md",
+      "title": "Які ви знаєте системи іменування класів? Чи взагалі використовуєте якісь?"
+    },
+    "frontend:senior:00adcf67": {
+      "file": "frontend/senior/016-yak-zbyrayete-css.md",
+      "title": "Як збираєте CSS?"
+    },
+    "frontend:senior:0c50abf4": {
+      "file": "frontend/senior/017-chy-dovodylos-pratsyuvaty-z-web-components-sh.md",
+      "title": "Чи доводилось працювати з Web Components? Що таке Shadow DOM?"
+    },
+    "frontend:senior:4806a428": {
+      "file": "frontend/senior/018-chomu-deyaki-tehy-ne-mayut-psevdoelementiv-na.md",
+      "title": "Чому деякі теги не мають псевдоелементів, наприклад img?"
+    },
+    "frontend:senior:1513c797": {
+      "file": "frontend/senior/019-chy-ye-mistse-dlya-css-vlastyvosti-float-u-su.md",
+      "title": "Чи є місце для CSS-властивості float у сучасному вебі?"
+    },
+    "frontend:senior:31a9b014": {
+      "file": "frontend/senior/020-shcho-take-adaptyvna-typohrafika-yaki-tekhnik.md",
+      "title": "Що таке адаптивна типографіка? Які техніки ви знаєте та використовуєте на своїх проєктах?"
+    },
+    "frontend:senior:08563140": {
+      "file": "frontend/senior/021-rozkazhit-pro-vashe-bachennya-suchasnoho-adap.md",
+      "title": "Розкажіть про ваше бачення сучасного адаптивного вебдизайну: які існують альтернативи для media queries. Обґрунтуйте вибір одиниць виміру для брейкпоінтів та їх значення."
+    },
+    "frontend:senior:6844b67b": {
+      "file": "frontend/senior/022-u-chomu-vidminnist-node-sass-vid-dart-sass-ta.md",
+      "title": "У чому відмінність Node Sass від Dart Sass та які особливості міграції?"
+    },
+    "frontend:senior:81b3ba41": {
+      "file": "frontend/senior/023-nazvit-vidminnosti-mizh-import-use-ta-forward.md",
+      "title": "Назвіть відмінності між @import, @use та @forward в Sass."
+    },
+    "frontend:senior:5bc3712e": {
+      "file": "frontend/senior/024-chy-stvoryuyete-vy-staylhaydy-dlya-svoyikh-pr.md",
+      "title": "Чи створюєте ви стайлгайди для своїх проєктів? Які техніки або інструменти використовуєте для цього?"
+    },
+    "frontend:senior:0a7aaa1f": {
+      "file": "frontend/senior/025-yaki-ye-alternatyvy-dlya-overflow-hidden.md",
+      "title": "Які є альтернативи для overflow: hidden?"
+    },
+    "frontend:senior:dd10157c": {
+      "file": "frontend/senior/026-dyzayner-napolyahaye-na-kastomizatsiyi-styliv.md",
+      "title": "Дизайнер наполягає на кастомізації стилів для всіх елементів складної форми. Які ваші дії?"
+    },
+    "frontend:senior:18b71df5": {
+      "file": "frontend/senior/027-yaki-ye-keysy-vykorystannya-media-v-css-okrim.md",
+      "title": "Які є кейси використання @media в CSS, окрім screen?"
+    },
+    "frontend:senior:4ced6fe0": {
+      "file": "frontend/senior/028-yak-vyrishuyete-problemy-z-vysokym-obsyahom-s.md",
+      "title": "Як вирішуєте проблеми з високим обсягом стилів і підтримкою великих кодових баз у великих проєктах? Які підходи та методології використовуєте для організації CSS-коду на рівні архітектури?"
+    },
+    "frontend:senior:72f3eda3": {
+      "file": "frontend/senior/029-yak-optymizuyete-zavantazhennya-storinok-zokr.md",
+      "title": "Як оптимізуєте завантаження сторінок, зокрема використання Critical CSS та інших стратегій для зменшення часу до першого байту та часу до відображення?"
+    },
+    "frontend:senior:0931b117": {
+      "file": "frontend/senior/030-rozkazhit-pro-vash-dosvid-vykorystannya-prepr.md",
+      "title": "Розкажіть про ваш досвід використання препроцесорів CSS (наприклад, Sass або Less) та інших інструментів для автоматизації завдань під час розробки великих проєктів."
+    },
+    "frontend:senior:06451c2b": {
+      "file": "frontend/senior/031-yak-vyrishuyete-zavdannya-krosbrauzernoyi-sum.md",
+      "title": "Як вирішуєте завдання кросбраузерної сумісності на етапі розробки та як уникнути непорозумінь між розробниками та QA-командою під час тестування на різних браузерах?"
+    },
+    "frontend:senior:558d376c": {
+      "file": "frontend/senior/032-yak-realizuyete-server-side-rendering-ssr-abo.md",
+      "title": "Як реалізуєте server-side rendering (SSR) або static site generation (SSG) із CSS-in-JS, перед якими викликами ви можете постати в цьому контексті?"
+    },
+    "frontend:senior:374aa0f3": {
+      "file": "frontend/senior/033-yaku-novu-fichu-v-css-z-tykh-shcho-zaraz-pere.md",
+      "title": "Яку нову фічу в CSS (з тих, що зараз перебувають на стадії розробки або імплементації в деяких браузерах) ви очікуєте найбільше? Чому саме цю?"
+    },
+    "frontend:senior:4d55e05e": {
+      "file": "frontend/senior/034-uyavit-shcho-vy-diznalysya-pro-sviy-maybutniy.md",
+      "title": "Уявіть, що ви дізналися про свій майбутній проєкт. Це великий публічний мультимовний сайт з арабською та японською мовами включно. На проєкті вам будуть допомагати два джуніор-фронтендери. Опишіть, як ви сплануєте CSS-архітектуру та підготуєте своїх джунів для такого проєкту."
+    },
+    "frontend:senior:49fca5f8": {
+      "file": "frontend/senior/035-vam-potribno-zrobyty-halereyu-kartynok-yaki-m.md",
+      "title": "Вам потрібно зробити галерею картинок, які мають плавно гортатись при скролі вбік усередині галереї. Як би ви це реалізували? Чи можливо це зробити без JS?"
+    },
+    "frontend:senior:778c02c4": {
+      "file": "frontend/senior/036-na-umovnomu-sayti-ye-kastomnyy-dekoratyvnyy-s.md",
+      "title": "На умовному сайті є кастомний декоративний шрифт, який негативно впливає на продуктивність. Назвіть усі можливі варіанти його оптимізації."
+    },
+    "frontend:senior:7a5cbac0": {
+      "file": "frontend/senior/037-uyavit-shcho-ye-staryy-proyekt-na-pidtrymtsi.md",
+      "title": "Уявіть, що є старий проєкт на підтримці (не JS-стек, бек на PHP-фреймворку), який перекинули на вас з іншої команди. Завдання: максимально оптимізувати фронтенд-проєкту, вклавшись у бюджет і 16 годин. Опишіть вашу стратегію оптимізації та кроки в межах означених обмежень."
+    },
+    "frontend:senior:21158efc": {
+      "file": "frontend/senior/038-u-chomu-osoblyvist-pidhotovky-ta-pidyednannya.md",
+      "title": "У чому особливість підготовки та під’єднання фронтенд-асетів залежно від використання HTTP1 або HTTP2 на сервері?"
+    },
+    "frontend:senior:21f83f42": {
+      "file": "frontend/senior/039-chy-oznayomleni-vy-zi-skladannyam-byudzhetu-p.md",
+      "title": "Чи ознайомлені ви зі складанням бюджету продуктивності (Performance Budget)? Як ви розумієте це поняття?"
+    },
+    "frontend:senior:13df8e64": {
+      "file": "frontend/senior/040-shcho-take-dom-reflow-repaint-composite-yak-t.md",
+      "title": "Що таке DOM Reflow, Repaint, Composite? Як це працює?"
+    },
+    "frontend:senior:edb91db4": {
+      "file": "frontend/senior/041-yak-paralelno-proytys-po-masyvu-promises-a-po.md",
+      "title": "Як паралельно пройтись по масиву Promises? А послідовно?"
+    },
+    "frontend:senior:ac759948": {
+      "file": "frontend/senior/042-shcho-take-symbol-yake-yoho-praktychne-zastos.md",
+      "title": "Що таке Symbol? Яке його практичне застосування?"
+    },
+    "frontend:senior:ca32d022": {
+      "file": "frontend/senior/043-navedit-pryklady-realizatsiyi-paternu-observe.md",
+      "title": "Наведіть приклади реалізації патерну Observer у браузері."
+    },
+    "frontend:senior:ec6be77e": {
+      "file": "frontend/senior/044-navedit-pryklady-stsenariyiv-yaki-mozhut-pryz.md",
+      "title": "Наведіть приклади сценаріїв, які можуть призвести до витоку пам’яті у клієнтському коді."
+    },
+    "frontend:senior:1e0ecff7": {
+      "file": "frontend/senior/045-u-chomu-riznytsya-mizh-websockets-i-server-se.md",
+      "title": "У чому різниця між Websockets і Server Send Event?"
+    },
+    "frontend:senior:209cdfa4": {
+      "file": "frontend/senior/046-rozkazhit-pro-service-workers.md",
+      "title": "Розкажіть про Service Workers."
+    },
+    "frontend:senior:68f340a6": {
+      "file": "frontend/senior/047-yak-pratsyuvaty-z-websockets-dlya-realizatsiy.md",
+      "title": "Як працювати з WebSockets для реалізації двостороннього зв’язку?"
+    },
+    "frontend:senior:31a1d229": {
+      "file": "frontend/senior/048-yakshcho-yakas-animatsiya-na-sayti-povilna-ny.md",
+      "title": "Якщо якась анімація на сайті повільна (низький FPS), як дізнатися причину? Які причини бувають?"
+    },
+    "frontend:senior:056f8509": {
+      "file": "frontend/senior/049-yaki-sposoby-orhanizatsiyi-kodupaterny-vykory.md",
+      "title": "Які способи організації коду/патерни використовуєте і чому?"
+    },
+    "frontend:senior:dc32b1b2": {
+      "file": "frontend/senior/050-yaki-ye-varianty-zberihannya-danykh-na-kliyen.md",
+      "title": "Які є варіанти зберігання даних на клієнті?"
+    },
+    "frontend:senior:67606b7d": {
+      "file": "frontend/senior/051-yak-by-vy-realizuvaly-keshuvannya-na-kliyenti.md",
+      "title": "Як би ви реалізували кешування на клієнті? Коли це доречно?"
+    },
+    "frontend:senior:96a49a71": {
+      "file": "frontend/senior/052-yak-vy-realizuyete-autentyfikatsiyu-ta-avtory.md",
+      "title": "Як ви реалізуєте аутентифікацію та авторизацію (якщо є) у вашому застосунку? Як ви дбаєте про безпеку та управління правами доступу на клієнтській та серверній стороні?"
+    },
+    "frontend:senior:ce13f43d": {
+      "file": "frontend/senior/053-yak-vy-vykorystovuyete-code-splitting-ta-lazy.md",
+      "title": "Як ви використовуєте code splitting та lazy loading у коді для оптимізації завантаження сторінок та ресурсів? Як це впливає на продуктивність застосунку?"
+    },
+    "frontend:senior:c07effdc": {
+      "file": "frontend/senior/054-yak-vy-realizuyete-avtomatychne-testuvannya-p.md",
+      "title": "Як ви реалізуєте автоматичне тестування під час розробки? Які інструменти використовуєте для unit-тестування, інтеграційного тестування та тестування взаємодії?"
+    },
+    "frontend:senior:b55d4e73": {
+      "file": "frontend/senior/055-ye-zavdannya-peredavaty-dani-mizh-dvoma-rizny.md",
+      "title": "Є завдання передавати дані між двома різними вебсайтами. Які є способи це робити? А якщо тільки client side? Якщо ми маємо доступ до коду обох сайтів? Якщо один показується на іншому через iframe? Якщо ж ми не маємо доступу до одного з них?"
+    },
+    "frontend:senior:0f9ab956": {
+      "file": "frontend/senior/056-shcho-novoho-zyavylos-u-18-y-versiyi-react.md",
+      "title": "Що нового зʼявилось у 18-й версії React?"
+    },
+    "frontend:senior:a19b613b": {
+      "file": "frontend/senior/057-yak-trymaty-posylannya-na-funktsiyu-z-aktualn.md",
+      "title": "Як тримати посилання на функцію з актуальними параметрами, але не викликати useEffect зайвий раз?"
+    },
+    "frontend:senior:9e25b2f7": {
+      "file": "frontend/senior/058-u-chomu-riznytsya-mizh-uselayouteffect-ta-use.md",
+      "title": "У чому різниця між useLayoutEffect та useEffect, у яких випадках що використовуєте?"
+    },
+    "frontend:senior:ec63800b": {
+      "file": "frontend/senior/059-rozkazhit-pro-khuk-usetransition.md",
+      "title": "Розкажіть про хук useTransition."
+    },
+    "frontend:senior:9d2cd633": {
+      "file": "frontend/senior/060-yaki-paterny-z-react-vy-znayete.md",
+      "title": "Які патерни з React ви знаєте?"
+    },
+    "frontend:senior:0ec08530": {
+      "file": "frontend/senior/061-navedit-pryklad-react-paternu-compound-compon.md",
+      "title": "Наведіть приклад React-патерну Compound components."
+    },
+    "frontend:senior:344da136": {
+      "file": "frontend/senior/062-chy-potribni-biblioteky-dlya-state-management.md",
+      "title": "Чи потрібні бібліотеки для state management, якщо є бібліотеки для кешування (React Query/SWR) і React Context?"
+    },
+    "frontend:senior:f91d50ba": {
+      "file": "frontend/senior/063-yak-obroblyayete-pomylky-u-react-komponentakh.md",
+      "title": "Як обробляєте помилки у React-компонентах?"
+    },
+    "frontend:senior:527ef67c": {
+      "file": "frontend/senior/064-poyasnit-shcho-vidbuvayetsya-v-tsomu-kodi-ta.md",
+      "title": "Поясніть, що відбувається в цьому коді та в яких сценаріях він може бути корисним:"
+    },
+    "frontend:senior:ce82c194": {
+      "file": "frontend/senior/065-yak-upravlyaty-hlobalnym-stanom-u-zastosunkak.md",
+      "title": "Як управляти глобальним станом у застосунках на Angular через ngrx/store?"
+    },
+    "frontend:senior:eb4bb4fd": {
+      "file": "frontend/senior/066-yak-vy-pidtrymuyete-konsystentnist-dyzaynu-ta.md",
+      "title": "Як ви підтримуєте консистентність дизайну та стилізації великих кодових баз React-проєктів? Які підходи або інструменти використовуєте для підтримання єдності інтерфейсу користувача?"
+    },
+    "frontend:senior:daa79388": {
+      "file": "frontend/senior/067-yak-vy-strukturuyete-ta-orhanizovuyete-kompon.md",
+      "title": "Як ви структуруєте та організовуєте компоненти великих React-застосунків? Які підходи використовуєте для логічного розділення компонентів, повторного використання та підтримки коду?"
+    },
+    "frontend:senior:017e612e": {
+      "file": "frontend/senior/068-yak-upravlyayete-formamy-v-react-zokrema-vyko.md",
+      "title": "Як управляєте формами в React, зокрема використовуючи бібліотеки для форм, такі як Formik чи React Hook Form? Як обробляєте валідацію, маскування та інші аспекти форм?"
+    },
+    "frontend:senior:860df886": {
+      "file": "frontend/senior/069-u-vas-ye-zavdannya-vidrenderyty-velykyy-spyso.md",
+      "title": "У вас є завдання відрендерити великий список (100к + items). Як би виконали це завдання?"
+    },
+    "frontend:senior:defcf900": {
+      "file": "frontend/senior/070-optymizatsiya-react-komponentiv-shcho-varto-r.md",
+      "title": "Оптимізація React-компонентів: що варто робити, а що ні? Чи варто і коли варто використовувати useMemo та useCallback?"
+    },
+    "frontend:senior:4e938517": {
+      "file": "frontend/senior/071-yak-zbyrayete-react-zastosunok.md",
+      "title": "Як збираєте React-застосунок?"
+    },
+    "frontend:senior:23081de3": {
+      "file": "frontend/senior/072-yaki-instrumenty-vykorystovuvaly-dlya-state-m.md",
+      "title": "Які інструменти використовували для state management і чому обирали саме їх?"
+    },
+    "frontend:senior:fe38f422": {
+      "file": "frontend/senior/073-chy-vykorystovuyete-inkrementalnu-perevirku-i.md",
+      "title": "Чи використовуєте інкрементальну перевірку (incremental static regeneration) в Next.js для оновлення статичних сторінок на основі часових інтервалів або змін у даних? Як це впливає на продуктивність і кешування?"
+    },
+    "frontend:senior:6c71775c": {
+      "file": "frontend/senior/074-chy-ye-u-vas-dosvid-pokryttya-velykykh-system.md",
+      "title": "Чи є у вас досвід покриття великих систем тестами?"
+    },
+    "frontend:senior:d052f0f2": {
+      "file": "frontend/senior/075-chy-ye-u-vas-dosvid-kastomizatsiyi-testovykh.md",
+      "title": "Чи є у вас досвід кастомізації тестових утиліт під потреби проєкту."
+    },
+    "frontend:senior:08de3094": {
+      "file": "frontend/senior/076-yak-orhanizovuvaty-testovi-dani-ta-robyty-yik.md",
+      "title": "Як організовувати тестові дані та робити їх відповідними до різних сценаріїв тестування?"
+    },
+    "frontend:senior:a6517524": {
+      "file": "frontend/senior/077-yak-intehruvaty-protsesy-testuvannya-v-system.md",
+      "title": "Як інтегрувати процеси тестування в системи неперервної інтеграції та розгортання?"
+    },
+    "frontend:senior:a00be639": {
+      "file": "frontend/senior/078-yak-varto-avtomatyzovuvaty-testuvannya-yaki-i.md",
+      "title": "Як варто автоматизовувати тестування? Які інструменти та мови скриптів використовуєте?"
+    },
+    "frontend:senior:00d3ec9e": {
+      "file": "frontend/senior/079-yak-zabezpechyty-konsystentnist-rezultativ-te.md",
+      "title": "Як забезпечити консистентність результатів тестування в різних середовищах (розробка, тестування, продакшн)?"
+    },
+    "frontend:senior:5070c207": {
+      "file": "frontend/senior/080-yak-vyznachayete-koly-prohramnyy-produkt-hoto.md",
+      "title": "Як визначаєте, коли програмний продукт готовий до випуску? Які критерії «зеленого світла» для релізу використовуєте?"
+    },
+    "frontend:senior:c6ae63bf": {
+      "file": "frontend/senior/081-chy-znayete-pidkhid-chaos-engineering-yakshch.md",
+      "title": "Чи знаєте підхід chaos engineering, якщо так, то як його можна застосувати на фронтенді?"
+    },
+    "frontend:senior:d87f4ddc": {
+      "file": "frontend/senior/082-z-yakymy-netryvialnymy-strukturamy-danykh-vy.md",
+      "title": "З якими нетривіальними структурами даних ви працювали або які знаєте?"
+    },
+    "frontend:senior:e2d1baa2": {
+      "file": "frontend/senior/083-rozkazhit-pro-crdt.md",
+      "title": "Розкажіть про CRDT."
+    },
+    "frontend:senior:099d6253": {
+      "file": "frontend/senior/084-yaki-alhorytmy-optymizatsiyi-vykorystovuvaly.md",
+      "title": "Які алгоритми оптимізації використовували для підвищення продуктивності великих застосунків?"
+    },
+    "frontend:senior:80a75c4b": {
+      "file": "frontend/senior/085-yaki-alhorytmy-sortuvannya-vvazhayete-naybils.md",
+      "title": "Які алгоритми сортування вважаєте найбільш ефективними для обробки великих наборів даних?"
+    },
+    "frontend:senior:aa7cec21": {
+      "file": "frontend/senior/086-yak-vykorystovuyete-dynamichne-prohramuvannya.md",
+      "title": "Як використовуєте динамічне програмування в реальних проєктах? Наведіть приклад."
+    },
+    "frontend:senior:faf33f13": {
+      "file": "frontend/senior/087-rozkazhit-pro-praktychne-vykorystannya-strukt.md",
+      "title": "Розкажіть про практичне використання структур даних, таких як AVL-дерева або червоно-чорні дерева."
+    },
+    "frontend:senior:8c6cd197": {
+      "file": "frontend/senior/088-yak-mozhna-realizuvaty-hlyboku-zamorozku-obye.md",
+      "title": "Як можна реалізувати «глибоку заморозку об’єкта у JavaScript»?"
+    },
+    "frontend:senior:2e5242b6": {
+      "file": "frontend/senior/089-yak-mozhna-realizuvaty-serializatsiyu-obyekta.md",
+      "title": "Як можна реалізувати серіалізацію об’єкта, який містить циклічні посилання?"
+    },
+    "frontend:senior:3aef7743": {
+      "file": "frontend/senior/090-yak-mozhna-realizuvaty-virtual-dom-analohichn.md",
+      "title": "Як можна реалізувати Virtual DOM аналогічно реалізації в React?"
+    },
+    "frontend:senior:82d8817e": {
+      "file": "frontend/senior/091-za-yakymy-kharakterystykamy-oberete-freymvork.md",
+      "title": "За якими характеристиками оберете фреймворк для нового проєкту?"
+    },
+    "frontend:senior:1269afaa": {
+      "file": "frontend/senior/092-za-yakymy-kharakterystykamy-oberete-ui-biblio.md",
+      "title": "За якими характеристиками оберете UI-бібліотеку для нового проєкту?"
+    },
+    "frontend:senior:20ee2cbb": {
+      "file": "frontend/senior/093-shcho-take-syhnaly-yak-vony-realizovani-u-riz.md",
+      "title": "Що таке сигнали, як вони реалізовані у різних фреймворках?"
+    },
+    "frontend:senior:464c2109": {
+      "file": "frontend/senior/094-yaki-perevahy-ta-nedoliky-monorepozytoriyiv-p.md",
+      "title": "Які переваги та недоліки монорепозиторіїв проти використання різних репозиторіїв?"
+    },
+    "frontend:senior:e47feb68": {
+      "file": "frontend/senior/095-opyshit-cicd-protses-u-nynishnomu-proyekti.md",
+      "title": "Опишіть CI/CD-процес у нинішньому проєкті."
+    },
+    "frontend:senior:d18a9e16": {
+      "file": "frontend/senior/096-shcho-take-mikroservisna-arkhitektura-i-yiyi.md",
+      "title": "Що таке мікросервісна архітектура і її переваги порівняно з монолітною?"
+    },
+    "frontend:senior:0216783d": {
+      "file": "frontend/senior/097-yak-vy-b-dyzaynyly-systemu-dlya-vysokoyi-dost.md",
+      "title": "Як ви б дизайнили систему для високої доступності та масштабування?"
+    },
+    "frontend:senior:b96c8cbe": {
+      "file": "frontend/senior/098-yaki-paterny-proyektuvannya-vy-znayete-i-de-y.md",
+      "title": "Які патерни проєктування ви знаєте і де їх застосовувати?"
+    },
+    "frontend:senior:2dd93f5b": {
+      "file": "frontend/senior/099-yaki-ye-stratehiyi-masshtabuvannya-vebzastosu.md",
+      "title": "Які є стратегії масштабування вебзастосунків?"
+    },
+    "frontend:senior:f7d9469d": {
+      "file": "frontend/senior/100-rozkazhit-pro-single-page-application-yoho-pe.md",
+      "title": "Розкажіть про Single Page Application, його переваги та недоліки."
+    },
+    "frontend:senior:ba0a02a8": {
+      "file": "frontend/senior/101-yaki-arkhitekturni-paterny-vebzastosunkiv-vyk.md",
+      "title": "Які архітектурні патерни вебзастосунків використовували та які їхні переваги?"
+    },
+    "frontend:senior:1e747b04": {
+      "file": "frontend/senior/102-yak-varto-rozroblyaty-masshtabovani-ta-vysoko.md",
+      "title": "Як варто розробляти масштабовані та високопродуктивні фронтенд-системи?"
+    },
+    "frontend:senior:77bd20d3": {
+      "file": "frontend/senior/103-chy-oznayomleni-vy-z-arkhitekturoyu-mikrofron.md",
+      "title": "Чи ознайомлені ви з архітектурою мікрофронтендів? Можливо, знаєте конкретні реалізації?"
+    },
+    "frontend:senior:3a1f4ecb": {
+      "file": "frontend/senior/104-yak-pidtrymuvaty-balans-mizh-hotovymy-rishenn.md",
+      "title": "Як підтримувати баланс між готовими рішеннями та розробкою власних рішень у проєктах? Як варто ухвалювати рішення щодо вибору?"
+    },
+    "frontend:senior:0b8ebb9c": {
+      "file": "frontend/senior/105-yak-podbaty-pro-bezpeku-vebzastosunkiv.md",
+      "title": "Як подбати про безпеку вебзастосунків?"
+    },
+    "frontend:senior:4d23bd22": {
+      "file": "frontend/senior/106-poyasnit-pryntsypy-cross-site-scripting-xss-i.md",
+      "title": "Поясніть принципи Cross-Site Scripting (XSS) і Cross-Site Request Forgery (CSRF) атаки та способи захисту від них."
+    },
+    "frontend:senior:b54fdb35": {
+      "file": "frontend/senior/107-yaki-naykrashchi-praktyky-dlya-zabezpechennya.md",
+      "title": "Які найкращі практики для забезпечення безпеки API?"
+    },
+    "frontend:senior:fbc299ce": {
+      "file": "frontend/senior/108-rozkazhit-pro-zakhyst-vid-sql-inyektsiy.md",
+      "title": "Розкажіть про захист від SQL-ін’єкцій."
+    },
+    "frontend:senior:d48e341d": {
+      "file": "frontend/senior/109-shcho-take-cors-i-yak-yoho-pravylno-nalashtuv.md",
+      "title": "Що таке CORS і як його правильно налаштувати?"
+    },
+    "frontend:senior:266f9ad9": {
+      "file": "frontend/senior/110-yak-keruvaty-sekretamy-u-proyektakh.md",
+      "title": "Як керувати секретами у проєктах?"
+    },
+    "frontend:senior:b681e19d": {
+      "file": "frontend/senior/111-yakby-vas-poprosyly-sklasty-cheklist-z-bezpek.md",
+      "title": "Якби вас попросили скласти чекліст з безпеки для проєкту, то як би він був?"
+    },
+    "frontend:senior:c24bd2d8": {
+      "file": "frontend/senior/112-shcho-take-aria-yaki-yiyi-osnovni-roli-stany.md",
+      "title": "Що таке ARIA, які її основні ролі, стани та властивості?"
+    },
+    "frontend:senior:3670b7fa": {
+      "file": "frontend/senior/113-opyshit-stvorennya-dostupnoho-modalnoho-vikna.md",
+      "title": "Опишіть створення доступного модального вікна з нуля. Які є варіанти і на що треба звернути увагу?"
+    },
+    "frontend:senior:09f0b7be": {
+      "file": "frontend/senior/114-chy-znayete-vy-osoblyvosti-zakonodavstva-shch.md",
+      "title": "Чи знаєте ви особливості законодавства щодо вебдоступності в країнах основних клієнтів (Штати, ЄС, UK, Канада, Україна)?"
+    },
+    "frontend:senior:26570792": {
+      "file": "frontend/senior/115-uyavit-shcho-ya-kliyent-yakyy-nichoho-ne-znay.md",
+      "title": "Уявіть, що я — клієнт, який нічого не знає про доступність і ніколи про це не замислювався. Переконайте мене, чому доступність — це важливо і чому я маю витрачати на це додаткові гроші."
+    },
+    "nodejs:junior:1b32c253": {
+      "file": "nodejs/junior/001-shcho-take-nodejs.md",
+      "title": "Що таке Node.js?"
+    },
+    "nodejs:junior:2b1c228f": {
+      "file": "nodejs/junior/002-yaki-osnovni-perevahy-ta-nedoliky-vykorystann.md",
+      "title": "Які основні переваги та недоліки використання Node.js?"
+    },
+    "nodejs:junior:301874f3": {
+      "file": "nodejs/junior/003-dlya-yakykh-zavdan-nodejs-ne-pidkhodyt.md",
+      "title": "Для яких завдань Node.js не підходить?"
+    },
+    "nodejs:junior:45910253": {
+      "file": "nodejs/junior/004-yaki-v-nodejs-holovni-komponenty.md",
+      "title": "Які в Node.js головні компоненти?"
+    },
+    "nodejs:junior:af72972a": {
+      "file": "nodejs/junior/005-yakym-chynom-nodejs-server-zdaten-obroblyaty.md",
+      "title": "Яким чином Node.js сервер здатен обробляти одночасно багато паралельних запитів від клієнтів, маючи лише один thread?"
+    },
+    "nodejs:junior:b222aeeb": {
+      "file": "nodejs/junior/006-chy-mozhlyvo-vykorystovuvaty-kilka-potokiv-th.md",
+      "title": "Чи можливо використовувати кілька потоків (threads)? За допомогою яких модулів це реалізовано?"
+    },
+    "nodejs:junior:736d60e3": {
+      "file": "nodejs/junior/007-nodejs-interpretuye-chy-kompilyuye-kod-prohra.md",
+      "title": "Node.js інтерпретує чи компілює код програми?"
+    },
+    "nodejs:junior:546bc3f3": {
+      "file": "nodejs/junior/008-yak-zchytuvaty-velyki-fayly-za-dopomohoyu-nod.md",
+      "title": "Як зчитувати великі файли за допомогою Node.js?"
+    },
+    "nodejs:junior:a4aef152": {
+      "file": "nodejs/junior/009-shcho-take-libuv-i-v8-yake-yikhnye-pryznachen.md",
+      "title": "Що таке libuv i v8? Яке їхнє призначення?"
+    },
+    "nodejs:junior:32821380": {
+      "file": "nodejs/junior/010-yaka-riznytsya-mizh-microtasks-i-macrotasks-n.md",
+      "title": "Яка різниця між microtasks і macrotasks? Наведіть приклади таких завдань."
+    },
+    "nodejs:junior:d6f0d756": {
+      "file": "nodejs/junior/011-shcho-take-strym-stream.md",
+      "title": "Що таке стрим (stream)?"
+    },
+    "nodejs:junior:233bf30f": {
+      "file": "nodejs/junior/012-yaki-vydy-strymiv-vy-znayete.md",
+      "title": "Які види стримів ви знаєте?"
+    },
+    "nodejs:junior:c57f88c9": {
+      "file": "nodejs/junior/013-shcho-take-event-loop-z-yakykh-komponentiv-sk.md",
+      "title": "Що таке event loop? З яких компонентів складається і як працює?"
+    },
+    "nodejs:junior:c8f6776e": {
+      "file": "nodejs/junior/014-shcho-take-lohuvannya-i-monitorynh.md",
+      "title": "Що таке логування і моніторинг?"
+    },
+    "nodejs:junior:c22f717e": {
+      "file": "nodejs/junior/015-chym-vidriznyayetsya-monolit-vid-mikroservisu.md",
+      "title": "Чим відрізняється моноліт від мікросервісу?"
+    },
+    "nodejs:junior:334992b4": {
+      "file": "nodejs/junior/016-v-chomu-riznytsya-mizh-takymy-klyuchovymy-slo.md",
+      "title": "В чому різниця між такими ключовими словами мови, як string і String?"
+    },
+    "nodejs:junior:a899b3cc": {
+      "file": "nodejs/junior/017-dlya-choho-vykorystovuyut-middleware.md",
+      "title": "Для чого використовують middleware?"
+    },
+    "nodejs:junior:0ec5d492": {
+      "file": "nodejs/junior/018-yak-perekhodyty-z-odniyeyi-middleware-v-inshu.md",
+      "title": "Як переходити з однієї middleware в іншу?"
+    },
+    "nodejs:junior:1d88ed33": {
+      "file": "nodejs/junior/019-yak-priorytyzuvaty-middleware.md",
+      "title": "Як пріоритизувати middleware?"
+    },
+    "nodejs:junior:b126456c": {
+      "file": "nodejs/junior/020-yak-orhanizuvaty-error-handler.md",
+      "title": "Як організувати error handler?"
+    },
+    "nodejs:junior:0e782b25": {
+      "file": "nodejs/junior/021-shcho-take-asynkhronnist-i-asynkhronnyy-kod.md",
+      "title": "Що таке асинхронність і асинхронний код?"
+    },
+    "nodejs:junior:d83a733a": {
+      "file": "nodejs/junior/022-yaka-vidminnist-mizh-var-let-i-const-chomu-va.md",
+      "title": "Яка відмінність між var, let і const? Чому варто використовувати const, якщо змінна не буде змінюватися далі в коді?"
+    },
+    "nodejs:junior:ca33547f": {
+      "file": "nodejs/junior/023-yak-vidklasty-vykonannya-funktsiyi-na-konkret.md",
+      "title": "Як відкласти виконання функції на конкретний час?"
+    },
+    "nodejs:junior:3f084901": {
+      "file": "nodejs/junior/024-yaki-vy-znayete-sposoby-oholoshennya-funktsiy.md",
+      "title": "Які ви знаєте способи оголошення функції?"
+    },
+    "nodejs:junior:3ba656f9": {
+      "file": "nodejs/junior/025-shcho-take-anonimna-funktsiya.md",
+      "title": "Що таке анонімна функція?"
+    },
+    "nodejs:junior:45a830c2": {
+      "file": "nodejs/junior/026-navedit-pryklady-funktsiyi-shcho-samovyklykay.md",
+      "title": "Наведіть приклади функції, що самовикликається."
+    },
+    "nodejs:junior:ff60a669": {
+      "file": "nodejs/junior/027-u-chomu-riznytsya-mizh-function-expression-i.md",
+      "title": "У чому різниця між function expression і function declaration?"
+    },
+    "nodejs:junior:a680923d": {
+      "file": "nodejs/junior/028-yak-z-js-masyvu-chysel-otrymaty-inshyy-masyv.md",
+      "title": "Як з JS масиву чисел отримати інший масив, де залишаться тільки числа понад 10? Яку функцію масиву для цього використовувати?"
+    },
+    "nodejs:junior:7c02a0f1": {
+      "file": "nodejs/junior/029-yak-vydalyty-element-masyvu-ta-obyekta.md",
+      "title": "Як видалити елемент масиву та об’єкта?"
+    },
+    "nodejs:junior:00284d75": {
+      "file": "nodejs/junior/030-dlya-choho-pryznachenyy-typ-void.md",
+      "title": "Для чого призначений тип void?"
+    },
+    "nodejs:junior:2a906dbb": {
+      "file": "nodejs/junior/031-de-i-dlya-choho-vykorystovuyut-super.md",
+      "title": "Де і для чого використовують super()?"
+    },
+    "nodejs:junior:13a40ef6": {
+      "file": "nodejs/junior/032-dlya-choho-potriben-this-i-v-yakykh-vypadkakh.md",
+      "title": "Для чого потрібен this і в яких випадках його використовувати?"
+    },
+    "nodejs:junior:4f3477c7": {
+      "file": "nodejs/junior/033-shcho-take-nan-i-yak-yoho-vykorystaty.md",
+      "title": "Що таке NaN і як його використати?"
+    },
+    "nodejs:junior:759f01ed": {
+      "file": "nodejs/junior/034-shcho-take-npm-yaki-analohy-vy-znayete.md",
+      "title": "Що таке NPM? Які аналоги ви знаєте?"
+    },
+    "nodejs:junior:0cf933fc": {
+      "file": "nodejs/junior/035-v-chomu-perevahy-i-nedoliky-npm-proty-yarnpnp.md",
+      "title": "В чому переваги і недоліки NPM проти Yarn/PNPM?"
+    },
+    "nodejs:junior:54208ddc": {
+      "file": "nodejs/junior/036-yaki-metody-promise-api-vy-znayete-yaka-rizny.md",
+      "title": "Які методи Promise API ви знаєте? Яка різниця між ними?"
+    },
+    "nodejs:junior:76772981": {
+      "file": "nodejs/junior/037-navedit-strukturu-http-requestresponse.md",
+      "title": "Наведіть структуру HTTP request/response."
+    },
+    "nodejs:junior:eb8f5da2": {
+      "file": "nodejs/junior/038-shcho-take-new-set-i-new-map.md",
+      "title": "Що таке new Set() і new Map()?"
+    },
+    "nodejs:junior:7b43dbb2": {
+      "file": "nodejs/junior/039-shcho-take-lohichnyy-operator-ta-i-chym-vidri.md",
+      "title": "Що таке логічний оператор && та || і чим відрізняються ці оператори від логічного оператора «??»."
+    },
+    "nodejs:junior:6c361c47": {
+      "file": "nodejs/junior/040-dlya-choho-potribni-bazy-danykh-u-zastosunkak.md",
+      "title": "Для чого потрібні бази даних у застосунках?"
+    },
+    "nodejs:junior:fd4b1499": {
+      "file": "nodejs/junior/041-shcho-take-orm-i-dlya-choho-yiyi-vykorystovuy.md",
+      "title": "Що таке ORM і для чого її використовують?"
+    },
+    "nodejs:junior:03911cd1": {
+      "file": "nodejs/junior/042-shcho-take-mihratsiya-danykh-dlya-choho-vona.md",
+      "title": "Що таке міграція даних? Для чого вона потрібна?"
+    },
+    "nodejs:junior:e2b8c2d7": {
+      "file": "nodejs/junior/043-shcho-take-tranzaktsiya.md",
+      "title": "Що таке транзакція?"
+    },
+    "nodejs:junior:653b68fd": {
+      "file": "nodejs/junior/044-yak-onovyty-znachennya-kolonky-v-tablytsi.md",
+      "title": "Як оновити значення колонки в таблиці?"
+    },
+    "nodejs:junior:fe05a935": {
+      "file": "nodejs/junior/045-za-dopomohoyu-choho-mozhna-vidfiltruvaty-tabl.md",
+      "title": "За допомогою чого можна відфільтрувати таблицю Users за параметром віку?"
+    },
+    "nodejs:junior:d59cd991": {
+      "file": "nodejs/junior/046-shcho-take-cross-origin-resource-sharing-cors.md",
+      "title": "Що таке Cross-Origin Resource Sharing (CORS)? Де трапляється?"
+    },
+    "nodejs:junior:facb5d56": {
+      "file": "nodejs/junior/047-yak-otrymaty-pomylku-cors-u-konsoli-rozrobnyk.md",
+      "title": "Як отримати помилку CORS у консолі розробника?"
+    },
+    "nodejs:junior:7566a56e": {
+      "file": "nodejs/junior/048-nazvit-osnovni-http-metody-restful-abo-crud-z.md",
+      "title": "Назвіть основні HTTP-методи RESTful або CRUD застосунків."
+    },
+    "nodejs:junior:0226bf47": {
+      "file": "nodejs/junior/049-shcho-take-dns.md",
+      "title": "Що таке DNS?"
+    },
+    "nodejs:junior:95b58ac9": {
+      "file": "nodejs/junior/050-yaki-sposoby-tsentruvannya-elementa-po-horyzo.md",
+      "title": "Які способи центрування елемента по горизонталі і вертикалі ви знаєте?"
+    },
+    "nodejs:junior:e09a698b": {
+      "file": "nodejs/junior/051-yak-zvernutysya-do-vsikh-posylan-u-yakykh-v-a.md",
+      "title": "Як звернутися до всіх посилань, у яких в атрибуті в кінці посилання href є «.com»? Як приховати такі посилання?"
+    },
+    "nodejs:junior:33bbac3a": {
+      "file": "nodejs/junior/052-chy-mozhna-cherez-html-css-zrobyty-fiksatsiyu.md",
+      "title": "Чи можна через HTML + CSS зробити фіксацію кліку? Наведіть приклад."
+    },
+    "nodejs:junior:b9ef6c68": {
+      "file": "nodejs/junior/053-shcho-take-skhlopuvannya.md",
+      "title": "Що таке «схлопування»?"
+    },
+    "nodejs:junior:d3c65f08": {
+      "file": "nodejs/junior/054-yakoyu-bude-vidstan-mizh-tsymy-dvoma-elementa.md",
+      "title": "Якою буде відстань між цими двома елементами:"
+    },
+    "nodejs:junior:681d01e1": {
+      "file": "nodejs/junior/055-chomu-rozrobnyky-rekomenduyut-zapysuvaty-pidy.md",
+      "title": "Чому розробники рекомендують записувати під’єднання перед закриттям body? Що буде, якщо прописати JS-код в head?"
+    },
+    "nodejs:junior:d6bebf14": {
+      "file": "nodejs/junior/056-dlya-choho-vykorystovuyut-atrybut-defer-i-asy.md",
+      "title": "Для чого використовують атрибут defer і async у тегу script?"
+    },
+    "nodejs:junior:288f5480": {
+      "file": "nodejs/junior/057-shcho-take-atrybut-tabindex-de-yoho-vykorysto.md",
+      "title": "Що таке атрибут tabindex? Де його використовують?"
+    },
+    "nodejs:middle:22cb549b": {
+      "file": "nodejs/middle/001-nazvit-perevahy-nodejs-yakshcho-porivnyuvaty.md",
+      "title": "Назвіть переваги Node.js, якщо порівнювати з іншими технологіями для розробки серверних застосунків."
+    },
+    "nodejs:middle:f8e36b7b": {
+      "file": "nodejs/middle/002-dlya-yakykh-zadach-vy-vykorystaly-b-kilka-pro.md",
+      "title": "Для яких задач ви використали б кілька процесів/потоків (processes/threads)?"
+    },
+    "nodejs:middle:c4c669dc": {
+      "file": "nodejs/middle/003-u-chomu-polyahaye-riznytsya-paralelnoho-ta-as.md",
+      "title": "У чому полягає різниця паралельного та асинхронного програмування на прикладі серверних застосунків?"
+    },
+    "nodejs:middle:fa90f41a": {
+      "file": "nodejs/middle/004-yaki-typy-asynkhronnykh-operatsiy-zdaten-vyko.md",
+      "title": "Які типи асинхронних операцій здатен виконувати Node.js?"
+    },
+    "nodejs:middle:55ca6b29": {
+      "file": "nodejs/middle/005-yaki-moduli-nodejs-vy-znayete-yake-yikhnye-os.md",
+      "title": "Які модулі Node.js ви знаєте? Яке їхнє основне призначення?"
+    },
+    "nodejs:middle:c33071e6": {
+      "file": "nodejs/middle/006-yaka-riznytsya-mizh-operatsiynymy-pomylkamy-t.md",
+      "title": "Яка різниця між операційними помилками та помилками програміста?"
+    },
+    "nodejs:middle:d9b545fe": {
+      "file": "nodejs/middle/007-yaki-servisy-mozhna-vykorystaty-dlya-monitory.md",
+      "title": "Які сервіси можна використати для моніторингу і логування?"
+    },
+    "nodejs:middle:821130bf": {
+      "file": "nodejs/middle/008-shcho-take-libuv-nazvit-yoho-skladovi.md",
+      "title": "Що таке libuv? Назвіть його складові."
+    },
+    "nodejs:middle:5f612c1e": {
+      "file": "nodejs/middle/009-yaki-isnuyut-shablony-rozpodilenykh-tranzakts.md",
+      "title": "Які існують шаблони розподілених транзакцій?"
+    },
+    "nodejs:middle:48f0650b": {
+      "file": "nodejs/middle/010-chy-mozhlyvo-prohramno-kontrolyuvaty-vydilenn.md",
+      "title": "Чи можливо програмно контролювати виділення і звільнення пам’яті в Node.js програмі?"
+    },
+    "nodejs:middle:f1404196": {
+      "file": "nodejs/middle/011-poyasnit-shcho-take-garbage-collector.md",
+      "title": "Поясніть, що таке Garbage Collector."
+    },
+    "nodejs:middle:c5d72eeb": {
+      "file": "nodejs/middle/012-shcho-oznachaye-vytik-pamyati-protsesa-yak-ts.md",
+      "title": "Що означає «витік пам’яті» процеса? Як цьому запобігти?"
+    },
+    "nodejs:middle:f8f68ffe": {
+      "file": "nodejs/middle/013-yak-nalahodyty-heap-out-of-memory.md",
+      "title": "Як налагодити heap out of memory?"
+    },
+    "nodejs:middle:3b29a922": {
+      "file": "nodejs/middle/014-yak-nalashtuvaty-keshuvannya.md",
+      "title": "Як налаштувати кешування?"
+    },
+    "nodejs:middle:4deb379c": {
+      "file": "nodejs/middle/015-yaki-ye-varianty-vykorystannya-moduliv-childp.md",
+      "title": "Які є варіанти використання модулів child_process, worker_threads і cluster?"
+    },
+    "nodejs:middle:c66739d6": {
+      "file": "nodejs/middle/016-yaka-riznytsya-u-vykorystanni-es-modules-i-co.md",
+      "title": "Яка різниця у використанні ES modules і CommonJS модулів?"
+    },
+    "nodejs:middle:9f9006f8": {
+      "file": "nodejs/middle/017-dlya-choho-i-yak-vykorystovuyut-klas-eventemi.md",
+      "title": "Для чого і як використовують клас EventEmitter з базового модуля ’node:events’?"
+    },
+    "nodejs:middle:82c6d227": {
+      "file": "nodejs/middle/018-skilky-yader-protsesora-zalucheni-pry-vykonan.md",
+      "title": "Скільки ядер процесора залучені при виконанні Node.js програми за замовчуванням?"
+    },
+    "nodejs:middle:fccbd511": {
+      "file": "nodejs/middle/019-shcho-take-middleware-yakshcho-my-pyshemo-svi.md",
+      "title": "Що таке middleware? Якщо ми пишемо свій middleware, чому саме там, чому не в коді сервісу?"
+    },
+    "nodejs:middle:a2ceac28": {
+      "file": "nodejs/middle/020-shcho-take-eventemitter-v-nodejs.md",
+      "title": "Що таке EventEmitter в Node.js?"
+    },
+    "nodejs:middle:d73dccd7": {
+      "file": "nodejs/middle/021-yake-pryznachennya-faylu-packagejson-dlya-nod.md",
+      "title": "Яке призначення файлу package.json для Node.js проєктів?"
+    },
+    "nodejs:middle:46647608": {
+      "file": "nodejs/middle/022-yak-mozhna-za-dopomohoyu-nodejs-app-prochytat.md",
+      "title": "Як можна за допомогою Node.js app прочитати файл з логами із файлової системи? Як прочитати файл, який займає понад 300 мегабайтів?"
+    },
+    "nodejs:middle:d211fe62": {
+      "file": "nodejs/middle/023-poyasnit-tsykl-podiy-u-nodejs.md",
+      "title": "Поясніть цикл подій у Node.js."
+    },
+    "nodejs:middle:f95c27e7": {
+      "file": "nodejs/middle/024-shcho-take-i-navishcho-potriben-thread-pool-w.md",
+      "title": "Що таке і навіщо потрібен Thread Pool (Worker Pool)?"
+    },
+    "nodejs:middle:23267322": {
+      "file": "nodejs/middle/025-sigterm-vs-sigint-yaki-yikhni-perevahy-ta-ned.md",
+      "title": "SIGTERM vs SIGINT: які їхні переваги та недоліки?"
+    },
+    "nodejs:middle:d29445dc": {
+      "file": "nodejs/middle/026-shcho-take-backpressure-u-konteksti-strymiv-y.md",
+      "title": "Що таке backpressure у контексті стримів? Як з цим боротись?"
+    },
+    "nodejs:middle:cc1b6df3": {
+      "file": "nodejs/middle/027-dlya-choho-potribni-streampassthrough-i-pipe.md",
+      "title": "Для чого потрібні stream.PassThrough і pipe (pipeline)? Наведіть приклади використання."
+    },
+    "nodejs:middle:63ef8a60": {
+      "file": "nodejs/middle/028-yak-vykorystovuvaty-podiyi-data-end-error-fin.md",
+      "title": "Як використовувати події ’data’, ’end’, ’error’, ’finish’ у стримах Node.js?"
+    },
+    "nodejs:middle:d2434df5": {
+      "file": "nodejs/middle/029-yak-obrobyty-pomylky-pry-roboti-zi-strymamy-v.md",
+      "title": "Як обробити помилки при роботі зі стримами в Node.js?"
+    },
+    "nodejs:middle:e3459c4b": {
+      "file": "nodejs/middle/030-navedit-pryklady-roboty-zi-strymamy-riznykh-t.md",
+      "title": "Наведіть приклади роботи зі стримами різних типів."
+    },
+    "nodejs:middle:a81a35d4": {
+      "file": "nodejs/middle/031-chy-pratsyuvaly-vy-z-pino.md",
+      "title": "Чи працювали ви з pino?"
+    },
+    "nodejs:middle:f873d94e": {
+      "file": "nodejs/middle/032-yak-opysaty-pryyednannya-do-bazy-danykh.md",
+      "title": "Як описати приєднання до бази даних?"
+    },
+    "nodejs:middle:49383531": {
+      "file": "nodejs/middle/033-yak-realizuvaty-sviy-dekorator-validatsiyi.md",
+      "title": "Як реалізувати свій декоратор валідації?"
+    },
+    "nodejs:middle:6e5acba1": {
+      "file": "nodejs/middle/034-chomu-v-javascript-ne-rekomenduyut-robyty-dov.md",
+      "title": "Чому в JavaScript не рекомендують робити довгих обчислень у runtime?"
+    },
+    "nodejs:middle:3ee324e5": {
+      "file": "nodejs/middle/035-chy-harantovano-settimeout-vyklyche-funktsiyu.md",
+      "title": "Чи гарантовано setTimeout викличе функцію через заданий час? Від чого це залежить?"
+    },
+    "nodejs:middle:05def9d0": {
+      "file": "nodejs/middle/036-shcho-take-promises.md",
+      "title": "Що таке Promises?"
+    },
+    "nodejs:middle:33004988": {
+      "file": "nodejs/middle/037-yaka-riznytsya-mizh-promiseallsettled-promise.md",
+      "title": "Яка різниця між Promise.allSettled, Promise.race і Promise.any?"
+    },
+    "nodejs:middle:705508de": {
+      "file": "nodejs/middle/038-shcho-take-callback-u-javascript.md",
+      "title": "Що таке callback у JavaScript?"
+    },
+    "nodejs:middle:70d6998d": {
+      "file": "nodejs/middle/039-chy-krashchi-promises-za-callback-pidkhid-cho.md",
+      "title": "Чи кращі Promises за callback підхід? Чому?"
+    },
+    "nodejs:middle:fce25066": {
+      "file": "nodejs/middle/040-shcho-take-zamykannyaclosure.md",
+      "title": "Що таке замикання/closure?"
+    },
+    "nodejs:middle:a224e977": {
+      "file": "nodejs/middle/041-poyasnit-perevahy-ta-nedoliky-vykorystannya-u.md",
+      "title": "Поясніть переваги та недоліки використання «use strict»."
+    },
+    "nodejs:middle:97c39334": {
+      "file": "nodejs/middle/042-navedit-pryklad-blokuvannya-tsyklu-podiy.md",
+      "title": "Наведіть приклад блокування циклу подій."
+    },
+    "nodejs:middle:b844c9e3": {
+      "file": "nodejs/middle/043-yaka-riznytsya-mizh-abstract-i-interface.md",
+      "title": "Яка різниця між abstract і interface?"
+    },
+    "nodejs:middle:3f3e3b23": {
+      "file": "nodejs/middle/044-shcho-take-web-workers-dlya-choho-yikh-vykory.md",
+      "title": "Що таке Web Workers? Для чого їх використовують?"
+    },
+    "nodejs:middle:867d880a": {
+      "file": "nodejs/middle/045-yaki-osoblyvosti-peredachi-danymy-mizh-worker.md",
+      "title": "Які особливості передачі даними між worker’ами та основним потоком?"
+    },
+    "nodejs:middle:20f3c89c": {
+      "file": "nodejs/middle/046-yaki-obmezhennya-nakladayutsya-na-potik-web-w.md",
+      "title": "Які обмеження накладаються на потік Web Workers?"
+    },
+    "nodejs:middle:f2533ae7": {
+      "file": "nodejs/middle/047-okrim-vykorystannya-operatora-return-yak-shch.md",
+      "title": "Окрім використання оператора ‘return’, як ще можна повернути результат виконання з функції (процедури)?"
+    },
+    "nodejs:middle:8e107d0a": {
+      "file": "nodejs/middle/048-yaka-riznytsya-mizh-monolithsoamicroservices.md",
+      "title": "Яка різниця між Monolith/SOA/Microservices?"
+    },
+    "nodejs:middle:0bcc29bf": {
+      "file": "nodejs/middle/049-nazvit-perevahy-i-nedoliky-mikroservisnoyi-ar.md",
+      "title": "Назвіть переваги і недоліки мікросервісної архітектури."
+    },
+    "nodejs:middle:311fa725": {
+      "file": "nodejs/middle/050-yak-zabezpechyty-stiykist-i-mozhlyvist-massht.md",
+      "title": "Як забезпечити стійкість і можливість масштабування мікросервісів?"
+    },
+    "nodejs:middle:7e12f98c": {
+      "file": "nodejs/middle/051-yak-vidstezhuvaty-nespravnosti.md",
+      "title": "Як відстежувати несправності?"
+    },
+    "nodejs:middle:d220b6c7": {
+      "file": "nodejs/middle/052-shcho-take-ci-bezperervna-intehratsiya.md",
+      "title": "Що таке CI (безперервна інтеграція)?"
+    },
+    "nodejs:middle:8b6b6bc1": {
+      "file": "nodejs/middle/053-yak-vykorystovuyut-docker.md",
+      "title": "Як використовують Docker?"
+    },
+    "nodejs:middle:22dcc805": {
+      "file": "nodejs/middle/054-u-chomu-riznytsya-mizh-bluegreen-rozhortannya.md",
+      "title": "У чому різниця між blue/green розгортанням і rolling розгортанням."
+    },
+    "nodejs:middle:5fb44fb7": {
+      "file": "nodejs/middle/055-yak-brauzer-diznayetsya-yaku-storinku-zavanta.md",
+      "title": "Як браузер дізнається, яку сторінку завантажити за адресою домену?"
+    },
+    "nodejs:middle:aa4e7ee8": {
+      "file": "nodejs/middle/056-yaka-riznytsya-mizh-http-i-https.md",
+      "title": "Яка різниця між HTTP і HTTPS?"
+    },
+    "nodejs:middle:e0a10533": {
+      "file": "nodejs/middle/057-yakym-chynom-https-robyt-vebzastosunok-bezpec.md",
+      "title": "Яким чином HTTPS робить вебзастосунок безпечнішим?"
+    },
+    "nodejs:middle:11647c70": {
+      "file": "nodejs/middle/058-shcho-take-socket-yaka-riznytsya-mizh-socket.md",
+      "title": "Що таке Socket? Яка різниця між Socket і long polling?"
+    },
+    "nodejs:middle:73a1fba1": {
+      "file": "nodejs/middle/059-yakyy-populyarnyy-arkhitekturnyy-sposib-rozro.md",
+      "title": "Який популярний архітектурний спосіб розробки API ви знаєте?"
+    },
+    "nodejs:middle:46974849": {
+      "file": "nodejs/middle/060-yaka-riznytsya-mizh-graphql-i-rest.md",
+      "title": "Яка різниця між GraphQL і REST?"
+    },
+    "nodejs:middle:96a177e6": {
+      "file": "nodejs/middle/061-yakym-chynom-vy-b-sproyektuvaly-api-dlya-bulk.md",
+      "title": "Яким чином ви б спроєктували API для bulk delete?"
+    },
+    "nodejs:middle:aaa514a8": {
+      "file": "nodejs/middle/062-shcho-take-teorema-cap.md",
+      "title": "Що таке теорема CAP?"
+    },
+    "nodejs:middle:a2451af3": {
+      "file": "nodejs/middle/063-chym-horyzontalne-masshtabuvannya-vidriznyaye.md",
+      "title": "Чим горизонтальне масштабування відрізняється від вертикального масштабування?"
+    },
+    "nodejs:middle:d9d9e406": {
+      "file": "nodejs/middle/064-shcho-vy-rozumiyete-pid-balansuvannyam-navant.md",
+      "title": "Що ви розумієте під балансуванням навантаження? Чому це важливо при проєктуванні системи?"
+    },
+    "nodejs:middle:8d1e3aca": {
+      "file": "nodejs/middle/065-yaka-kontseptsiya-syncasync-zvyazku-mizh-serv.md",
+      "title": "Яка концепція sync/async зв’язку між сервісами в архітектурі мікросервісу?"
+    },
+    "nodejs:middle:d313d617": {
+      "file": "nodejs/middle/066-yaki-vy-znayete-populyarni-metodolohiyi-reali.md",
+      "title": "Які ви знаєте популярні методології реалізації async-зв’язку між сервісами в архітектурі мікросервісу? Які є плюси та мінуси?"
+    },
+    "nodejs:middle:ffc8a3c1": {
+      "file": "nodejs/middle/067-navishcho-pysaty-testy.md",
+      "title": "Навіщо писати тести?"
+    },
+    "nodejs:middle:0b17dab8": {
+      "file": "nodejs/middle/068-chomu-yunity-mayut-buty-bazoyu-v-piramidi-tes.md",
+      "title": "Чому юніти мають бути базою в піраміді тестування?"
+    },
+    "nodejs:middle:b45f7cee": {
+      "file": "nodejs/middle/069-dlya-choho-potribne-intehratsiyne-testuvannya.md",
+      "title": "Для чого потрібне інтеграційне тестування?"
+    },
+    "nodejs:middle:805e188e": {
+      "file": "nodejs/middle/070-navishcho-potribne-yunit-testuvannya.md",
+      "title": "Навіщо потрібне юніт-тестування?"
+    },
+    "nodejs:middle:f0146f81": {
+      "file": "nodejs/middle/071-navishcho-potribne-e2e-testuvannya.md",
+      "title": "Навіщо потрібне E2E-тестування?"
+    },
+    "nodejs:middle:0e4bfb19": {
+      "file": "nodejs/middle/072-navedit-pryklad-pohanykh-intehratsiynykh-i-yu.md",
+      "title": "Наведіть приклад поганих інтеграційних і юніт-тестів."
+    },
+    "nodejs:middle:d6fe48c4": {
+      "file": "nodejs/middle/073-yakym-chynom-vy-b-protestuvaly-skladnyy-zapyt.md",
+      "title": "Яким чином ви б протестували складний запит до бази даних у класі репозиторію?"
+    },
+    "nodejs:middle:d5ef2f72": {
+      "file": "nodejs/middle/074-yaki-b-typyobsyah-testiv-vy-obraly-dlya-absol.md",
+      "title": "Які б типи/обсяг тестів ви обрали для абсолютно нової системи без будь-яких обмежень з боку замовника?"
+    },
+    "nodejs:middle:c3fff380": {
+      "file": "nodejs/middle/075-shcho-take-tranzaktsiyi-v-bazakh-danykh-dlya.md",
+      "title": "Що таке транзакції в базах даних? Для чого вони потрібні?"
+    },
+    "nodejs:middle:210d1278": {
+      "file": "nodejs/middle/076-yaki-rivni-izolyatsiyi-tranzaktsiy-buvayut-pl.md",
+      "title": "Які рівні ізоляції транзакцій бувають? Плюси і мінуси?"
+    },
+    "nodejs:middle:0087b3fe": {
+      "file": "nodejs/middle/077-shcho-take-foreign-key-yaku-rol-vin-vykonuye.md",
+      "title": "Що таке foreign key? Яку роль він виконує?"
+    },
+    "nodejs:middle:fc915b9f": {
+      "file": "nodejs/middle/078-shcho-take-join.md",
+      "title": "Що таке JOIN?"
+    },
+    "nodejs:middle:ad7268e2": {
+      "file": "nodejs/middle/079-chym-left-vidriznyayetsya-vid-inner.md",
+      "title": "Чим LEFT відрізняється від INNER?"
+    },
+    "nodejs:middle:883410d7": {
+      "file": "nodejs/middle/080-yaki-perevahy-bazy-danykh-sql-yakshcho-porivn.md",
+      "title": "Які переваги бази даних SQL, якщо порівнювати з базою даних NoSQL?"
+    },
+    "nodejs:middle:39df0c76": {
+      "file": "nodejs/middle/081-koly-slid-vykorystovuvaty-bazu-danykh-nosql-z.md",
+      "title": "Коли слід використовувати базу даних NoSQL замість реляційної бази даних?"
+    },
+    "nodejs:middle:efdfec97": {
+      "file": "nodejs/middle/082-yak-indeks-bazy-danykh-mozhe-pidvyshchyty-pro.md",
+      "title": "Як індекс бази даних може підвищити продуктивність?"
+    },
+    "nodejs:middle:10dea923": {
+      "file": "nodejs/middle/083-yaki-minusy-dodavannya-indeksiv.md",
+      "title": "Які мінуси додавання індексів?"
+    },
+    "nodejs:middle:db16735e": {
+      "file": "nodejs/middle/084-yaki-typy-indeksiv-isnuyut-i-yaka-riznytsya-m.md",
+      "title": "Які типи індексів існують і яка різниця між ними?"
+    },
+    "nodejs:middle:067ad9fe": {
+      "file": "nodejs/middle/085-shcho-take-vlastyvist-acid-u-bazi-danykh.md",
+      "title": "Що таке властивість ACID у базі даних?"
+    },
+    "nodejs:middle:3f1070f6": {
+      "file": "nodejs/middle/086-yak-stvoryty-index-dlya-bazy-danykh-yakshcho.md",
+      "title": "Як створити index для бази даних, якщо вона реляційна?"
+    },
+    "nodejs:middle:8eb4594e": {
+      "file": "nodejs/middle/087-yak-by-vy-rozrobyly-zastosunok-dlya-obminu-po.md",
+      "title": "Як би ви розробили застосунок для обміну повідомленнями на кшталт WhatsApp або Facebook Messenger? Програми для обміну повідомленнями в режимі реального часу є звичайним окремим продуктом чи вбудованою функцією великих систем?"
+    },
+    "nodejs:middle:716e9ed7": {
+      "file": "nodejs/middle/088-yakym-bude-vykhidnyy-rezultat-navedenoho-dali.md",
+      "title": "Яким буде вихідний результат наведеного далі коду і чому? Поясніть, яким чином цей код виконується."
+    },
+    "nodejs:middle-senior:494d0d17": {
+      "file": "nodejs/middle-senior/001-yaki-vy-znayete-problemy-bahy-ta-vuzki-mistsy.md",
+      "title": "Які ви знаєте проблеми, баги та вузькі місця у Node.js?"
+    },
+    "nodejs:middle-senior:6eb8568f": {
+      "file": "nodejs/middle-senior/002-yaki-vy-znayete-vbudovani-zasoby-serializatsi.md",
+      "title": "Які ви знаєте вбудовані засоби серіалізації у Node.js, аналогічні до JSON, але для бінарної серіалізації?"
+    },
+    "nodejs:middle-senior:35bcfcf8": {
+      "file": "nodejs/middle-senior/003-chomu-nodejs-ne-odnopotokovyy-dovedit-shcho-v.md",
+      "title": "Чому Node.js не однопотоковий? Доведіть, що він ніколи не був однопотоковим?"
+    },
+    "nodejs:middle-senior:f5f5c781": {
+      "file": "nodejs/middle-senior/004-chym-zaminyty-deprecated-fsexists.md",
+      "title": "Чим замінити deprecated: fs.exists?"
+    },
+    "nodejs:middle-senior:e510e3b5": {
+      "file": "nodejs/middle-senior/005-shcho-take-back-pressure-dlya-strymiv-shcho-s.md",
+      "title": "Що таке back pressure для стримів? Що спричинила б його відсутність?"
+    },
+    "nodejs:middle-senior:11bc6c89": {
+      "file": "nodejs/middle-senior/006-shcho-take-messageport-i-broadcastchannel.md",
+      "title": "Що таке MessagePort і BroadcastChannel?"
+    },
+    "nodejs:middle-senior:1b0fcbd4": {
+      "file": "nodejs/middle-senior/007-chym-vidriznyayutsya-fsstat-fsfstat-fslstat.md",
+      "title": "Чим відрізняються fs.stat, fs.fstat, fs.lstat?"
+    },
+    "nodejs:middle-senior:e2a07930": {
+      "file": "nodejs/middle-senior/008-yak-povyazani-nodeasynchooks-i-asynclocalstor.md",
+      "title": "Як пов’язані node:async_hooks і AsyncLocalStorage?"
+    },
+    "nodejs:middle-senior:e37dc61e": {
+      "file": "nodejs/middle-senior/009-choho-ne-vystachaye-u-esm-shcho-pidtrymuyetsy.md",
+      "title": "Чого не вистачає у ESM, що підтримується у CJS?"
+    },
+    "nodejs:middle-senior:f7ad0648": {
+      "file": "nodejs/middle-senior/010-yak-stezhyty-za-zminamy-fayliv-i-dyrektoriy-n.md",
+      "title": "Як стежити за змінами файлів і директорій на диску? Які з цим можуть виникати проблеми?"
+    },
+    "nodejs:middle-senior:cd008090": {
+      "file": "nodejs/middle-senior/011-shcho-mozhna-robyty-za-dopomohoyu-nodevm.md",
+      "title": "Що можна робити за допомогою node:vm?"
+    },
+    "nodejs:middle-senior:62b49934": {
+      "file": "nodejs/middle-senior/012-yak-zakhystyty-sharedarraybuffer-vid-zapysu-z.md",
+      "title": "Як захистити SharedArrayBuffer від запису з різних worker_threads?"
+    },
+    "nodejs:middle-senior:349fcdeb": {
+      "file": "nodejs/middle-senior/013-dovedit-shcho-bud-yakyy-modul-u-nodejs-pry-za.md",
+      "title": "Доведіть, що будь-який модуль у Node.js при завантаженні огортається у функцію і створює замикання?"
+    },
+    "nodejs:middle-senior:0c7dad69": {
+      "file": "nodejs/middle-senior/014-de-vykorystovuyut-patern-revealing-constructo.md",
+      "title": "Де використовують патерн Revealing constructor (відкритий конструктор)?"
+    },
+    "nodejs:middle-senior:55d4764f": {
+      "file": "nodejs/middle-senior/015-yak-zrobyty-perevyznachennya-write-dlya-ekzem.md",
+      "title": "Як зробити перевизначення write для екземпляру Writable без створення класу спадкоємця?"
+    },
+    "nodejs:middle-senior:a5d8393a": {
+      "file": "nodejs/middle-senior/016-u-chomu-prychyna-povilnosti-vyklykiv-z-javasc.md",
+      "title": "У чому причина повільності викликів з JavaScript коду до аддонів на C, C++ чи під’єднаних через N-API?"
+    },
+    "nodejs:middle-senior:051e68e3": {
+      "file": "nodejs/middle-senior/017-navishcho-potriben-wasi-ta-yaki-mozhlyvosti-v.md",
+      "title": "Навіщо потрібен WASI та які можливості він дає?"
+    },
+    "nodejs:middle-senior:79d27a7b": {
+      "file": "nodejs/middle-senior/018-dlya-choho-vykorystovuyut-new-errorcapturesta.md",
+      "title": "Для чого використовують new Error.captureStackTrace?"
+    },
+    "nodejs:middle-senior:ee9b0fd9": {
+      "file": "nodejs/middle-senior/019-yaki-vy-znayete-deprecated-api-ta-yakoyu-ye-s.md",
+      "title": "Які ви знаєте deprecated API та якою є стратегія їх виведення з використання?"
+    },
+    "nodejs:middle-senior:3237b20f": {
+      "file": "nodejs/middle-senior/020-chomu-vazhlyvo-vykonuvaty-pravylo-eslint-cons.md",
+      "title": "Чому важливо виконувати правило eslint: consistent-return з огляду на оптимізацію v8?"
+    },
+    "nodejs:middle-senior:a8a0b126": {
+      "file": "nodejs/middle-senior/021-chomu-potribno-dodavaty-prefiks-node-pry-zava.md",
+      "title": "Чому потрібно додавати префікс node при завантаженні вбудованих модулів?"
+    },
+    "nodejs:middle-senior:1ad4842a": {
+      "file": "nodejs/middle-senior/022-shcho-mozhna-zrobyty-za-dopomohoyu-for-await.md",
+      "title": "Що можна зробити за допомогою for await з request: IncomingMessage?"
+    },
+    "nodejs:middle-senior:d88387f3": {
+      "file": "nodejs/middle-senior/023-yak-skopiyuvaty-teku-z-vkladenymy-faylamy-ta.md",
+      "title": "Як скопіювати теку з вкладеними файлами та іншими теками за допомогою node:fs?"
+    },
+    "nodejs:middle-senior:b28b79c3": {
+      "file": "nodejs/middle-senior/024-navishcho-vykorystovuyut-abortcontroller-v-ya.md",
+      "title": "Навіщо використовують AbortController? В яких API він підтримується?"
+    },
+    "nodejs:middle-senior:2a010429": {
+      "file": "nodejs/middle-senior/025-chym-suchasnym-zaminyty-nodedomain-api.md",
+      "title": "Чим сучасним замінити node:domain API?"
+    },
+    "nodejs:middle-senior:3f39cabf": {
+      "file": "nodejs/middle-senior/026-yake-api-realizuye-nodejsundici.md",
+      "title": "Яке API реалізує nodejs/undici?"
+    },
+    "nodejs:middle-senior:f73824de": {
+      "file": "nodejs/middle-senior/027-koly-my-mozhemo-vykorystovuvaty-synkhronni-ve.md",
+      "title": "Коли ми можемо використовувати синхронні версії операцій з файлами з node:fs замість асинхронних? На що звертати увагу, ухвалюючи таке рішення?"
+    },
+    "nodejs:middle-senior:02844eee": {
+      "file": "nodejs/middle-senior/028-navedit-naykrashchi-praktyky-dlya-obrobky-pom.md",
+      "title": "Наведіть найкращі практики для обробки помилок в асинхронному коді."
+    },
+    "nodejs:middle-senior:54aaf700": {
+      "file": "nodejs/middle-senior/029-yak-u-proyektakh-na-nodejs-mozhut-zyavytysya.md",
+      "title": "Як у проєктах на Node.js можуть з’явитися вразливості з (на вибір): XSS, Path traversal, SQLI, CSRF? Як від них захищатися?"
+    },
+    "nodejs:middle-senior:c5c386f9": {
+      "file": "nodejs/middle-senior/030-yak-mozhlyvi-race-conditions-pry-asynkhronnom.md",
+      "title": "Як можливі race conditions при асинхронному програмуванні?"
+    },
+    "nodejs:middle-senior:fb2e80ac": {
+      "file": "nodejs/middle-senior/031-yaki-ye-plyusy-ta-minusy-rozdilennya-kodu-na.md",
+      "title": "Які є плюси та мінуси розділення коду на .js та окремо тайпінги .d.ts?"
+    },
+    "nodejs:middle-senior:377a2b34": {
+      "file": "nodejs/middle-senior/032-navedit-kilka-typovykh-paterniv-proyektuvanny.md",
+      "title": "Наведіть кілька типових патернів проєктування з GoF і приклади їхнього використання у Node.js."
+    },
+    "nodejs:middle-senior:b20d51e3": {
+      "file": "nodejs/middle-senior/033-yakyy-pattern-z-gof-realizuye-eventemitter.md",
+      "title": "Який паттерн з GoF реалізує EventEmitter?"
+    },
+    "nodejs:middle-senior:b42ce7e1": {
+      "file": "nodejs/middle-senior/034-u-chomu-polyahaye-problema-tovstykh-kontroler.md",
+      "title": "У чому полягає проблема товстих контролерів?"
+    },
+    "nodejs:middle-senior:f3c62d41": {
+      "file": "nodejs/middle-senior/035-navedit-pryklady-protikannya-abstraktsiy-u-ty.md",
+      "title": "Наведіть приклади протікання абстракцій у типових системах на базі Node.js."
+    },
+    "nodejs:middle-senior:4c5f5c3a": {
+      "file": "nodejs/middle-senior/036-yak-mozhna-stvoryty-singleton-za-dopomohoyu-s.md",
+      "title": "Як можна створити singleton за допомогою системи модульності у Node.js?"
+    },
+    "nodejs:middle-senior:b355b94c": {
+      "file": "nodejs/middle-senior/037-navedit-pryklad-paternu-adapter-z-vbudovanykh.md",
+      "title": "Наведіть приклад патерну adapter з вбудованих бібліотек."
+    },
+    "nodejs:middle-senior:3528a0bc": {
+      "file": "nodejs/middle-senior/038-dlya-choho-nam-potribni-taki-polya-error-erro.md",
+      "title": "Для чого нам потрібні такі поля Error: error.cause, error.code, error.message, error.stack?"
+    },
+    "nodejs:senior:ac8af237": {
+      "file": "nodejs/senior/001-yaki-naybilshi-problemy-platformy-nodejs.md",
+      "title": "Які найбільші проблеми платформи Node.js?"
+    },
+    "nodejs:senior:890648d0": {
+      "file": "nodejs/senior/002-skilky-potokiv-nodejs-vykorystovuye-dlya-robo.md",
+      "title": "Скільки потоків Node.js використовує для роботи? Яким чином можна регулювати цю кількість?"
+    },
+    "nodejs:senior:5c2bdca3": {
+      "file": "nodejs/senior/003-chy-ye-v-nodejs-mozhlyvist-vykonuvaty-skrypty.md",
+      "title": "Чи є в Node.js можливість виконувати скрипти, написані іншими мовами?"
+    },
+    "nodejs:senior:c5931c19": {
+      "file": "nodejs/senior/004-chy-ye-riznytsya-u-vykonanni-microtasksmacrot.md",
+      "title": "Чи є різниця у виконанні microtasks/macrotasks залежно від версій Node.js?"
+    },
+    "nodejs:senior:afda9ae3": {
+      "file": "nodejs/senior/005-yak-pratsyuvaty-iz-vbudovanymy-nodejs-funktsi.md",
+      "title": "Як працювати із вбудованими Node.js функціями, реалізованими через callback інтерфейс в async/await стилі?"
+    },
+    "nodejs:senior:9212bf01": {
+      "file": "nodejs/senior/006-u-chomu-polyahaye-riznytsya-mizh-requiremodul.md",
+      "title": "У чому полягає різниця між require/module.exports і ES6-модулями?"
+    },
+    "nodejs:senior:4c844b01": {
+      "file": "nodejs/senior/007-z-yakykh-stadiy-skladayetsya-tsykl-event-loop.md",
+      "title": "З яких стадій складається цикл event loop в libuv?"
+    },
+    "nodejs:senior:e853f228": {
+      "file": "nodejs/senior/008-yakym-chynom-biblioteka-libuv-dosyahaye-neblo.md",
+      "title": "Яким чином бібліотека libuv досягає неблокуючого вводу і виводу?"
+    },
+    "nodejs:senior:c456f08c": {
+      "file": "nodejs/senior/009-shcho-take-harantiyi-dostavky-povidomlen-ta-y.md",
+      "title": "Що таке гарантії доставки повідомлень та якими вони бувають?"
+    },
+    "nodejs:senior:f1b0a2df": {
+      "file": "nodejs/senior/010-u-yakykh-vypadkakh-vy-zastosuvaly-b-asynkhron.md",
+      "title": "У яких випадках ви застосували б асинхронний зв’язок між двома системами?"
+    },
+    "nodejs:senior:d4ec3fc6": {
+      "file": "nodejs/senior/011-chy-mozhna-zaminyty-v-v8-v-nodejs.md",
+      "title": "Чи можна замінити в V8 в Node.js?"
+    },
+    "nodejs:senior:4e6bab69": {
+      "file": "nodejs/senior/012-yak-nalashtuvaty-lohuvannya-i-monitorynh-yaki.md",
+      "title": "Як налаштувати логування і моніторинг? Які найкращі практики ви знаєте?"
+    },
+    "nodejs:senior:fb390f16": {
+      "file": "nodejs/senior/013-yak-by-vy-vykorystaly-strymy-dlya-pokrashchen.md",
+      "title": "Як би ви використали стрими для покращення продуктивності вебзастосунку?"
+    },
+    "nodejs:senior:2c919458": {
+      "file": "nodejs/senior/014-yaki-ye-sposoby-masshtabuvaty-nodejs-server.md",
+      "title": "Які є способи масштабувати Node.js сервер?"
+    },
+    "nodejs:senior:49feb399": {
+      "file": "nodejs/senior/015-yaki-ye-perevahy-klasteryzatsiyi-nodejs-zasto.md",
+      "title": "Які є переваги кластеризації Node.js застосунку? Які проблеми можуть виникнути?"
+    },
+    "nodejs:senior:191086c3": {
+      "file": "nodejs/senior/016-u-chomu-osnovna-riznytsya-chy-skhozhist-u-rob.md",
+      "title": "У чому основна різниця чи схожість у роботі вебсерверів на Node.js або, наприклад, на Apache (PHP)?"
+    },
+    "nodejs:senior:35cfe70d": {
+      "file": "nodejs/senior/017-shcho-take-metodolohiya-twelve-factor-app.md",
+      "title": "Що таке методологія Twelve-Factor App?"
+    },
+    "nodejs:senior:95cf593a": {
+      "file": "nodejs/senior/018-yaki-pokaznyky-monitorynhu-nayvazhlyvishi.md",
+      "title": "Які показники моніторингу найважливіші?"
+    },
+    "nodejs:senior:f4bc76f4": {
+      "file": "nodejs/senior/019-opyshit-dyzayn-pattern-saga-yaka-riznytsya-mi.md",
+      "title": "Опишіть дизайн-паттерн SAGA. Яка різниця між транзакцією та операцією компенсації в SAGA, в SOA?"
+    },
+    "nodejs:senior:d005171d": {
+      "file": "nodejs/senior/020-shcho-take-avtoryzatsiya-ta-autentyfikatsiya.md",
+      "title": "Що таке авторизація та аутентифікація?"
+    },
+    "nodejs:senior:0a218cb7": {
+      "file": "nodejs/senior/021-express-vs-nestjs-yaki-perevahy-i-nedoliky-ko.md",
+      "title": "Express vs Nest.js: які переваги і недоліки кожного фреймворку? Коли який доцільніше використовувати?"
+    },
+    "nodejs:senior:384cd8b7": {
+      "file": "nodejs/senior/022-shcho-take-cls-i-de-varto-yoho-vykorystovuvat.md",
+      "title": "Що таке CLS і де варто його використовувати?"
+    },
+    "nodejs:senior:61ab1872": {
+      "file": "nodejs/senior/023-shcho-take-graceful-shutdown-yak-yoho-impleme.md",
+      "title": "Що таке graceful shutdown? Як його імплементувати?"
+    },
+    "nodejs:senior:da17ae3d": {
+      "file": "nodejs/senior/024-navedit-pryklady-implementatsiyi-gof-paterniv.md",
+      "title": "Наведіть приклади імплементації GoF патернів у Node.js і фреймворках."
+    },
+    "nodejs:senior:e70a4e40": {
+      "file": "nodejs/senior/025-porivnyayte-messageq-rabbitmq-i-kafka.md",
+      "title": "Порівняйте MessageQ, RabbitMQ і Kafka."
+    },
+    "nodejs:senior:a15f9d77": {
+      "file": "nodejs/senior/026-yaki-problemy-rozvyazuye-serverless.md",
+      "title": "Які проблеми розв’язує serverless?"
+    },
+    "nodejs:senior:cb872a6a": {
+      "file": "nodejs/senior/027-z-yakoyu-shvydkistyu-vytyahuvatymutsya-dani-z.md",
+      "title": "З якою швидкістю витягуватимуться дані за ключем зі звичайного JavaScript об’єкта? Поясніть, що це за структура даних і як вона працює?"
+    },
+    "nodejs:senior:fea21f21": {
+      "file": "nodejs/senior/028-chym-js-vidriznyayetsya-vid-bahatopotokovykh.md",
+      "title": "Чим JS відрізняється від багатопотокових мов?"
+    },
+    "nodejs:senior:35134717": {
+      "file": "nodejs/senior/029-shcho-take-funktsiyi-vyshchoho-poryadku.md",
+      "title": "Що таке функції вищого порядку?"
+    },
+    "nodejs:senior:e102a07a": {
+      "file": "nodejs/senior/030-nazvit-obyekty-pershoho-klasu.md",
+      "title": "Назвіть об’єкти першого класу."
+    },
+    "nodejs:senior:f4afedee": {
+      "file": "nodejs/senior/031-yak-zrozumity-chy-ye-u-vashomu-kodizastosunku.md",
+      "title": "Як зрозуміти, чи є у вашому коді/застосунку витоки пам’яті (memory leaks)?"
+    },
+    "nodejs:senior:ead53d1b": {
+      "file": "nodejs/senior/032-yak-pratsyuvaty-z-asynkhronnoyu-vidpoviddyu.md",
+      "title": "Як працювати з асинхронною відповіддю?"
+    },
+    "nodejs:senior:a9e729e6": {
+      "file": "nodejs/senior/033-yak-mozhna-otrymaty-inkapsulyatsiyu-vseredyni.md",
+      "title": "Як можна отримати інкапсуляцію всередині класу без використання Typescript?"
+    },
+    "nodejs:senior:27c9b7d8": {
+      "file": "nodejs/senior/034-rozkazhit-pro-vash-dosvid-roboty-z-mikroservi.md",
+      "title": "Розкажіть про ваш досвід роботи з мікросервісами в Node.js. Як ви забезпечували комунікацію між різними сервісами?"
+    },
+    "nodejs:senior:656413f4": {
+      "file": "nodejs/senior/035-yak-vy-pratsyuvaly-z-mihratsiyeyu-ta-pokrashc.md",
+      "title": "Як ви працювали з міграцією та покращенням сервісів в архітектурі мікросервісів?"
+    },
+    "nodejs:senior:3bf9fb2f": {
+      "file": "nodejs/senior/036-yak-by-vy-pidkhodyly-do-testuvannya-ta-debahu.md",
+      "title": "Як би ви підходили до тестування та дебагу застосунку з мікросервісною архітектурою у Node.js?"
+    },
+    "nodejs:senior:ea668e6d": {
+      "file": "nodejs/senior/037-yak-by-vy-vporalysya-zi-zboyamy-v-rozpodileni.md",
+      "title": "Як би ви впоралися зі збоями в розподіленій системі (Failed message processing, dead letter queue)?"
+    },
+    "nodejs:senior:1b6733c0": {
+      "file": "nodejs/senior/038-yaki-paterny-dlya-pobudovy-mikroservisnoyi-ar.md",
+      "title": "Які патерни для побудови мікросервісної архітектури ви використовували?"
+    },
+    "nodejs:senior:23d6c7ce": {
+      "file": "nodejs/senior/039-yak-pratsyuye-gateway.md",
+      "title": "Як працює gateway?"
+    },
+    "nodejs:senior:2d9d7d4d": {
+      "file": "nodejs/senior/040-shcho-take-cap-teorema.md",
+      "title": "Що таке CAP теорема?"
+    },
+    "nodejs:senior:c789ea99": {
+      "file": "nodejs/senior/041-shcho-krashche-okremi-bazy-danykh-dlya-okremy.md",
+      "title": "Що краще: окремі бази даних для окремих мікросервісів чи одна база даних для всіх мікросервісів? Чому?"
+    },
+    "nodejs:senior:59c698e4": {
+      "file": "nodejs/senior/042-yaki-buvayut-rivni-izolyatsiyi-tranzaktsiy-ta.md",
+      "title": "Які бувають рівні ізоляції транзакцій та чим вони відрізняються?"
+    },
+    "nodejs:senior:d677ca94": {
+      "file": "nodejs/senior/043-navishcho-isnuyut-rivni-izolyatsiyi-tranzakts.md",
+      "title": "Навіщо існують рівні ізоляції транзакції? Наведіть приклади."
+    },
+    "nodejs:senior:5dbb529e": {
+      "file": "nodejs/senior/044-shcho-take-anomaliyi-tranzaktsiy-dirty-read-d.md",
+      "title": "Що таке аномалії транзакцій (dirty read, dirty write, read skew, phantom read, lost update)?"
+    },
+    "nodejs:senior:4ea120f1": {
+      "file": "nodejs/senior/045-u-chomu-riznytsya-normalizovanykh-i-nenormali.md",
+      "title": "У чому різниця нормалізованих і ненормалізованих даних? Наведіть приклад, коли які краще використовувати."
+    },
+    "nodejs:senior:3db2b447": {
+      "file": "nodejs/senior/046-u-chomu-riznytsya-mizh-optymistychnym-ta-pesy.md",
+      "title": "У чому різниця між оптимістичним та песимістичним блокуванням?"
+    },
+    "nodejs:senior:3686ed10": {
+      "file": "nodejs/senior/047-navishcho-potribni-indeksy-poshuku-yaki-minus.md",
+      "title": "Навіщо потрібні індекси пошуку? Які мінуси в індексів?"
+    },
+    "nodejs:senior:74f25bba": {
+      "file": "nodejs/senior/048-shcho-take-race-condition-mozhete-navesty-pry.md",
+      "title": "Що таке race condition? Можете навести приклад?"
+    },
+    "nodejs:senior:7bb56af2": {
+      "file": "nodejs/senior/049-shcho-take-replikatsiya-navishcho-vona-potrib.md",
+      "title": "Що таке реплікація? Навіщо вона потрібна?"
+    },
+    "nodejs:senior:2b7e70f0": {
+      "file": "nodejs/senior/050-yaka-riznytsya-mizh-hrafom-i-derevom.md",
+      "title": "Яка різниця між графом і деревом?"
+    },
+    "nodejs:senior:ea77fc82": {
+      "file": "nodejs/senior/051-chy-dovodylos-vam-robyty-optymizatsiyu-perfor.md",
+      "title": "Чи доводилось вам робити оптимізацію перформансу за допомогою структур даних?"
+    },
+    "nodejs:senior:8497ec7a": {
+      "file": "nodejs/senior/052-navedit-plyusy-ta-minusy-shared-db.md",
+      "title": "Наведіть плюси та мінуси Shared DB."
+    },
+    "nodejs:senior:f5146146": {
+      "file": "nodejs/senior/053-shcho-take-foreign-keys-i-constraints-u-sql-b.md",
+      "title": "Що таке foreign keys і constraints у SQL базах даних?"
+    },
+    "nodejs:senior:7c3d0cc9": {
+      "file": "nodejs/senior/054-shcho-take-masshtabuvannya-baz-danykh-yak-tse.md",
+      "title": "Що таке масштабування баз даних? Як це робити?"
+    },
+    "nodejs:senior:d7036be2": {
+      "file": "nodejs/senior/055-shcho-take-shardynh.md",
+      "title": "Що таке шардинг?"
+    },
+    "nodejs:senior:9fade409": {
+      "file": "nodejs/senior/056-shcho-take-concurrent-locking-v-bazi-danykh.md",
+      "title": "Що таке concurrent locking в базі даних?"
+    },
+    "nodejs:senior:84862c93": {
+      "file": "nodejs/senior/057-chomu-vlastyvosti-acid-vazhlyvi-dlya-sql-baz.md",
+      "title": "Чому властивості ACID важливі для SQL баз даних?"
+    },
+    "nodejs:senior:e79b3923": {
+      "file": "nodejs/senior/058-shcho-take-eventual-consistency-yaki-shche-bu.md",
+      "title": "Що таке eventual consistency? Які ще бувають типи узгодженості?"
+    }
+  }
+}

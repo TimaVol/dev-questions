@@ -1,0 +1,11 @@
+---
+interface Props {
+	difficulty: 'easy' | 'medium' | 'hard';
+}
+
+const { difficulty } = Astro.props;
+
+const labels = { easy: 'Легко', medium: 'Середньо', hard: 'Складно' } as const;
+---
+
+<span class={`badge badge--${difficulty}`}>{labels[difficulty]}</span>

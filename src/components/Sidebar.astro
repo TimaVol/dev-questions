@@ -1,0 +1,66 @@
+---
+import ThemeToggle from './ThemeToggle.astro';
+
+interface Props {
+	currentTopic: 'frontend' | 'nodejs';
+	grade: string;
+}
+
+const { currentTopic, grade } = Astro.props;
+
+const frontendGrades = [
+	{ slug: 'junior', label: 'Junior' },
+	{ slug: 'middle', label: 'Middle' },
+	{ slug: 'senior', label: 'Senior' },
+];
+
+const nodejsGrades = [
+	{ slug: 'junior', label: 'Junior' },
+	{ slug: 'middle', label: 'Middle' },
+	{ slug: 'middle-senior', label: 'Middle/Senior' },
+	{ slug: 'senior', label: 'Senior' },
+];
+---
+
+<aside class="sidebar">
+	<div class="site-header">
+		<h1 class="site-title"><a href="/">Підготовка до Dev-інтерв'ю</a></h1>
+		<ThemeToggle />
+	</div>
+	<nav aria-label="Теми">
+		<div class="nav-group">
+			<span class="nav-group-label">Frontend</span>
+			<ul>
+				{
+					frontendGrades.map((g) => (
+						<li>
+							<a
+								href={`/frontend/${g.slug}`}
+								class:list={{ active: currentTopic === 'frontend' && grade === g.slug }}
+							>
+								{g.label}
+							</a>
+						</li>
+					))
+				}
+			</ul>
+		</div>
+		<div class="nav-group">
+			<span class="nav-group-label">Node.js</span>
+			<ul>
+				{
+					nodejsGrades.map((g) => (
+						<li>
+							<a
+								href={`/nodejs/${g.slug}`}
+								class:list={{ active: currentTopic === 'nodejs' && grade === g.slug }}
+							>
+								{g.label}
+							</a>
+						</li>
+					))
+				}
+			</ul>
+		</div>
+	</nav>
+</aside>

@@ -1,17 +1,75 @@
 ---
+import '../styles/global.css';
+import ThemeInit from '../components/ThemeInit.astro';
+import ThemeToggle from '../components/ThemeToggle.astro';
+import SeoHead from '../components/SeoHead.astro';
 
+const pageTitle = "Підготовка до Dev-інтерв'ю";
+const pageDescription =
+	'644 питання з DOU для підготовки до співбесід Frontend та Node.js — відповідай сам, потім перевіряй.';
 ---
 
-<html lang="en">
+<!doctype html>
+<html lang="uk">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+		<title>{pageTitle}</title>
+		<SeoHead title={pageTitle} description={pageDescription} path="/" />
+		<ThemeInit />
 	</head>
-	<body>
-		<h1>Astro</h1>
+	<body class="landing">
+		<ThemeToggle />
+		<main class="landing-main">
+			<h1>Підготовка до Dev-інтерв'ю</h1>
+			<p class="landing-lead">
+				644 питання з DOU — спочатку відповідай сам, потім перевіряй. Пошук, фільтри за складністю,
+				клавіші <kbd>J</kbd>/<kbd>K</kbd>.
+			</p>
+
+			<section class="landing-section">
+				<h2>Frontend</h2>
+				<div class="landing-links">
+					<a href="/frontend/junior" class="landing-card">
+						<span class="landing-card-title">Junior</span>
+						<span class="landing-card-meta">185 питань</span>
+					</a>
+					<a href="/frontend/middle" class="landing-card">
+						<span class="landing-card-title">Middle</span>
+						<span class="landing-card-meta">103 питання</span>
+					</a>
+					<a href="/frontend/senior" class="landing-card">
+						<span class="landing-card-title">Senior</span>
+						<span class="landing-card-meta">115 питань</span>
+					</a>
+				</div>
+			</section>
+
+			<section class="landing-section">
+				<h2>Node.js</h2>
+				<div class="landing-links">
+					<a href="/nodejs/junior" class="landing-card">
+						<span class="landing-card-title">Junior</span>
+						<span class="landing-card-meta">57 питань</span>
+					</a>
+					<a href="/nodejs/middle" class="landing-card">
+						<span class="landing-card-title">Middle</span>
+						<span class="landing-card-meta">88 питань</span>
+					</a>
+					<a href="/nodejs/middle-senior" class="landing-card">
+						<span class="landing-card-title">Middle/Senior</span>
+						<span class="landing-card-meta">38 питань</span>
+					</a>
+					<a href="/nodejs/senior" class="landing-card">
+						<span class="landing-card-title">Senior</span>
+						<span class="landing-card-meta">58 питань</span>
+					</a>
+				</div>
+			</section>
+		</main>
+		<script>
+			import '../scripts/theme.ts';
+		</script>
 	</body>
 </html>

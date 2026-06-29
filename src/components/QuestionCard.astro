@@ -1,0 +1,35 @@
+---
+import { render } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+import DifficultyBadge from './DifficultyBadge.astro';
+
+interface Props {
+	entry: CollectionEntry<'questions'>;
+	index: number;
+}
+
+const { entry, index } = Astro.props;
+const { Content } = await render(entry);
+---
+
+<section
+	id={entry.id}
+	class="question-card"
+	data-difficulty={entry.data.difficulty}
+	data-index={index}
+>
+	<header class="question-header">
+		<span class="question-num" aria-hidden="true">{index}</span>
+		<div class="question-title-wrap">
+			<h2>{entry.data.title}</h2>
+			<DifficultyBadge difficulty={entry.data.difficulty} />
+		</div>
+	</header>
+
+	<details class="answer-panel">
+		<summary class="answer-toggle">Спробуй відповісти — потім відкрий</summary>
+		<div class="question-body">
+			<Content />
+		</div>
+	</details>
+</section>

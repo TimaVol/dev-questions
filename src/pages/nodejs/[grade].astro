@@ -1,0 +1,37 @@
+---
+import { getCollection } from 'astro:content';
+import TopicLayout from '../../layouts/TopicLayout.astro';
+
+const GRADES = ['junior', 'middle', 'middle-senior', 'senior'] as const;
+type Grade = (typeof GRADES)[number];
+
+export function getStaticPaths() {
+	return (['junior', 'middle', 'middle-senior', 'senior'] as const).map((grade) => ({
+		params: { grade },
+	}));
+}
+
+const { grade } = Astro.params;
+if (!grade || !(GRADES as readonly string[]).includes(grade)) {
+	return Astro.redirect('/nodejs/junior');
+}
+
+const gradeLabels: Record<string, string> = {
+	junior: 'Junior',
+	middle: 'Middle',
+	'middle-senior': 'Middle/Senior',
+	senior: 'Senior',
+};
+
+const questions = (
+	await getCollection('questions', (q) => q.data.topic === 'nodejs' && q.data.grade === grade)
+).sort((a, b) => a.data.order - b.data.order);
+---
+
+<TopicLayout
+	topic="nodejs"
+	grade={grade as Grade}
+	title="Node.js"
+	subtitle={`${gradeLabels[grade]} — Питання для співбесіди`}
+	questions={questions}
+/>

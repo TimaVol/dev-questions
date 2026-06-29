@@ -1,0 +1,44 @@
+---
+interface TocItem {
+	id: string;
+	title: string;
+	index: number;
+}
+
+interface TocGroup {
+	category: string;
+	items: TocItem[];
+}
+
+interface Props {
+	groups: TocGroup[];
+}
+
+const { groups } = Astro.props;
+---
+
+<aside class="toc" aria-label="На цій сторінці">
+	<h2>На цій сторінці</h2>
+	{
+		groups.map((group) => (
+			<details class="toc-group" data-toc-group open>
+				<summary class="toc-group-label" title={group.category}>
+					<span class="toc-group-name">{group.category}</span>
+					<span class="toc-group-count">{group.items.length}</span>
+				</summary>
+				<ul>
+					{
+						group.items.map((q) => (
+							<li data-toc-item={q.id}>
+								<a href={`#${q.id}`} data-toc-link={q.id} title={q.title}>
+									<span class="toc-num">{q.index}</span>
+									<span class="toc-title">{q.title}</span>
+								</a>
+							</li>
+						))
+					}
+				</ul>
+			</details>
+		))
+	}
+</aside>

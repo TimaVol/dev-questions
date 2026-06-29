@@ -1,0 +1,107 @@
+---
+import '../styles/global.css';
+import Sidebar from '../components/Sidebar.astro';
+import TableOfContents from '../components/TableOfContents.astro';
+import QuestionCard from '../components/QuestionCard.astro';
+import CategorySection from '../components/CategorySection.astro';
+import PageToolbar from '../components/PageToolbar.astro';
+import MobileBar from '../components/MobileBar.astro';
+import ThemeInit from '../components/ThemeInit.astro';
+import SeoHead from '../components/SeoHead.astro';
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+	topic: 'frontend' | 'nodejs';
+	grade: string;
+	title: string;
+	subtitle: string;
+	questions: CollectionEntry<'questions'>[];
+}
+
+const { topic, grade, title, subtitle, questions } = Astro.props;
+
+const pageTitle = `${title} · ${subtitle}`;
+const pageDescription = `${subtitle} — ${questions.length} питань для підготовки до співбесіди.`;
+const pagePath = `/${topic}/${grade}`;
+
+function categoryId(name: string): string {
+	return `cat-${name.replace(/\s+/g, '-').toLowerCase()}`;
+}
+
+const tocGroups: { category: string; categoryId: string; items: { id: string; title: string; index: number }[] }[] =
+	[];
+for (let i = 0; i < questions.length; i++) {
+	const q = questions[i];
+	const item = { id: q.id, title: q.data.title, index: i + 1 };
+	const last = tocGroups[tocGroups.length - 1];
+	if (!last || last.category !== q.data.category) {
+		tocGroups.push({ category: q.data.category, categoryId: categoryId(q.data.category), items: [item] });
+	} else {
+		last.items.push(item);
+	}
+}
+---
+
+<!doctype html>
+<html lang="uk">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{pageTitle} — Підготовка до Dev-інтерв'ю</title>
+		<SeoHead title={pageTitle} description={pageDescription} path={pagePath} />
+		<link rel="preload" href="/search-index.json" as="fetch" crossorigin />
+		<ThemeInit />
+	</head>
+	<body>
+		<div class="read-progress" id="read-progress" aria-hidden="true"></div>
+
+		<MobileBar title={title} />
+
+		<div class="layout">
+			<Sidebar currentTopic={topic} grade={grade} />
+
+			<main class="main">
+				<header class="page-header">
+					<h1>{title}</h1>
+					<p class="subtitle">{subtitle}</p>
+				</header>
+
+				<PageToolbar total={questions.length} />
+
+				{
+					questions.map((entry, i) => {
+						const prev = questions[i - 1];
+						const showCategory = !prev || prev.data.category !== entry.data.category;
+						return (
+							<>
+								{showCategory && <CategorySection name={entry.data.category} />}
+								<QuestionCard entry={entry} index={i + 1} />
+							</>
+						);
+					})
+				}
+			</main>
+
+			<TableOfContents groups={tocGroups} />
+		</div>
+
+		<script>
+			import '../scripts/toc-spy.ts';
+			import '../scripts/learn-ui.ts';
+			import '../scripts/theme.ts';
+			import '../scripts/mobile-nav.ts';
+
+			const bar = document.getElementById('read-progress');
+			window.addEventListener(
+				'scroll',
+				() => {
+					const h = document.documentElement.scrollHeight - window.innerHeight;
+					if (bar && h > 0) bar.style.width = `${(window.scrollY / h) * 100}%`;
+				},
+				{ passive: true },
+			);
+		</script>
+	</body>
+</html>
