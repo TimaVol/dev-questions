@@ -11,6 +11,7 @@ const resultsPanel = document.getElementById('results-panel');
 const toc = document.querySelector('.toc');
 const favoritesChip = document.querySelector<HTMLButtonElement>('[data-favorites-filter]');
 const favoritesCountEl = document.getElementById('favorites-count');
+const openAllBtn = document.getElementById('open-all-answers');
 
 const pageTotal = pageQuestions?.querySelectorAll('.question-card').length ?? 0;
 const currentPath = window.location.pathname;
@@ -171,6 +172,34 @@ function applyPageDifficultyFilter(): void {
 	showPageView(visible);
 }
 
+function visibleAnswerPanels(): HTMLDetailsElement[] {
+	return [
+		...document.querySelectorAll<HTMLDetailsElement>(
+			'#page-questions .question-card:not([hidden]) .answer-panel',
+		),
+	];
+}
+
+function allAnswersOpen(): boolean {
+	const panels = visibleAnswerPanels();
+	return panels.length > 0 && panels.every((p) => p.open);
+}
+
+function syncOpenAllBtn(): void {
+	if (!openAllBtn) return;
+	openAllBtn.hidden = isGlobalMode();
+	if (!isGlobalMode()) {
+		openAllBtn.textContent = allAnswersOpen() ? 'Закрити всі відповіді' : 'Відкрити всі відповіді';
+	}
+}
+
+function toggleAllAnswers(): void {
+	if (isGlobalMode()) return;
+	const open = !allAnswersOpen();
+	for (const panel of visibleAnswerPanels()) panel.open = open;
+	syncOpenAllBtn();
+}
+
 function showPageView(visibleCount?: number): void {
 	pageQuestions?.removeAttribute('hidden');
 	resultsPanel?.replaceChildren();
@@ -183,6 +212,7 @@ function showPageView(visibleCount?: number): void {
 				: `${pageTotal} на сторінці`;
 	}
 	navIdx = -1;
+	syncOpenAllBtn();
 }
 
 function getFilteredItems(): SearchItem[] {
@@ -213,6 +243,7 @@ function renderMainResults(items: SearchItem[]): void {
 		resultsPanel.innerHTML = `<p class="results-empty">${emptyResultsMessage()}</p>`;
 		if (statusEl) statusEl.textContent = '0 знайдено';
 		navIdx = -1;
+		syncOpenAllBtn();
 		return;
 	}
 
@@ -260,6 +291,7 @@ function renderMainResults(items: SearchItem[]): void {
 	resultsPanel.replaceChildren(frag);
 	if (statusEl) statusEl.textContent = `${items.length} знайдено`;
 	navIdx = -1;
+	syncOpenAllBtn();
 }
 
 function applySearch(): void {
@@ -337,6 +369,12 @@ favoritesChip?.addEventListener('click', () => {
 	applySearch();
 });
 
+openAllBtn?.addEventListener('click', toggleAllAnswers);
+
+pageQuestions?.addEventListener('toggle', (e) => {
+	if ((e.target as Element).classList.contains('answer-panel')) syncOpenAllBtn();
+}, true);
+
 document.addEventListener('keydown', (e) => {
 	if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) return;
 	if (search && document.activeElement === search) return;
@@ -351,6 +389,10 @@ document.addEventListener('keydown', (e) => {
 	if (e.code === 'Space') {
 		e.preventDefault();
 		toggleAnswerAtNav();
+	}
+	if (e.code === 'KeyO') {
+		e.preventDefault();
+		toggleAllAnswers();
 	}
 });
 

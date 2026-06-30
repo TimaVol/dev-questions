@@ -550,6 +550,14 @@ kbd {
 	white-space: nowrap;
 }
 
+button.pin-continue {
+	background: none;
+	border: none;
+	padding: 0;
+	cursor: pointer;
+	font: inherit;
+}
+
 .pin-continue::before {
 	content: '·';
 	color: var(--muted);
