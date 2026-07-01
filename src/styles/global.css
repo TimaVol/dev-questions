@@ -264,6 +264,13 @@ kbd {
 	touch-action: pan-y;
 	will-change: transform, opacity;
 	cursor: grab;
+	user-select: none;
+	-webkit-user-select: none;
+}
+
+.random-card * {
+	user-select: none;
+	-webkit-user-select: none;
 }
 
 .random-card button,
@@ -272,14 +279,15 @@ kbd {
 	cursor: pointer;
 }
 
-.random-card .random-card__title,
-.random-card .random-card__category,
-.random-card .random-card__label,
-.random-card .question-body {
+.random-card.random-card--select-text .random-card__title,
+.random-card.random-card--select-text .question-body,
+.random-card.random-card--select-text .question-body * {
+	user-select: text;
+	-webkit-user-select: text;
 	cursor: text;
 }
 
-.random-card .question-body a {
+.random-card.random-card--select-text .question-body a {
 	cursor: pointer;
 }
 
@@ -287,6 +295,13 @@ kbd {
 	transition: none;
 	cursor: grabbing;
 	touch-action: none;
+	user-select: none;
+	-webkit-user-select: none;
+}
+
+.random-card.is-dragging * {
+	user-select: none;
+	-webkit-user-select: none;
 }
 
 .random-card--out-left {
@@ -509,9 +524,17 @@ kbd {
 	display: none;
 }
 
+.keyboard-tips__desktop {
+	display: list-item;
+}
+
 @media (hover: none) and (pointer: coarse) {
 	.keyboard-tips__touch {
 		display: list-item;
+	}
+
+	.keyboard-tips__desktop {
+		display: none;
 	}
 }
 
@@ -1188,6 +1211,11 @@ button.pin-continue {
 	margin: 0.35rem 0 0;
 	line-height: 1.5;
 	-webkit-overflow-scrolling: touch;
+	touch-action: pan-x pan-y;
+}
+
+.random-card .question-body pre {
+	cursor: auto;
 }
 
 .question-body pre > code {

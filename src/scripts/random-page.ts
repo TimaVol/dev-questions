@@ -23,6 +23,13 @@ const RECENT_MAX = 5;
 const SWIPE_MIN = 56;
 const DRAG_START = 10;
 const ANIM_MS = 340;
+const DOUBLE_TAP_MS = 400;
+const DOUBLE_TAP_PX = 24;
+const coarsePointer = window.matchMedia('(hover: none) and (pointer: coarse)');
+
+function textSelectAllowed(): boolean {
+	return !coarsePointer.matches;
+}
 
 const topicSelect = document.getElementById('random-topic') as HTMLSelectElement;
 const gradeSelect = document.getElementById('random-grade') as HTMLSelectElement;
@@ -79,6 +86,10 @@ let pointerId: number | null = null;
 let touchStartX = 0;
 let touchStartY = 0;
 let dragDx = 0;
+let textSwipeOnly = false;
+let lastTextTapAt = 0;
+let lastTextTapX = 0;
+let lastTextTapY = 0;
 
 type ExitDir = 'left' | 'right';
 
@@ -256,6 +267,91 @@ function isInteractiveTarget(target: EventTarget | null): boolean {
 	return Boolean((target as Element | null)?.closest('button, a, summary, select, input, textarea'));
 }
 
+function isTextTarget(target: EventTarget | null): boolean {
+	return Boolean((target as Element | null)?.closest('.random-card__title, .question-body'));
+}
+
+function horizontalScrollBlock(target: EventTarget | null): HTMLElement | null {
+	const pre = (target as Element | null)?.closest('.question-body pre');
+	if (!(pre instanceof HTMLElement) || !card?.contains(pre)) return null;
+	if (pre.scrollWidth > pre.clientWidth + 1) return pre;
+	return null;
+}
+
+function clearSelectTextMode(): void {
+	card?.classList.remove('random-card--select-text');
+	window.getSelection()?.removeAllRanges();
+	lastTextTapAt = 0;
+}
+
+function enableSelectTextAt(x: number, y: number): void {
+	if (!textSelectAllowed() || !card || card.classList.contains('random-card--select-text')) return;
+	card.classList.add('random-card--select-text');
+	selectWordAt(x, y);
+	lastTextTapAt = 0;
+}
+
+function tryDoubleTapSelect(e: PointerEvent): void {
+	if (!textSelectAllowed()) return;
+	if (!isTextTarget(e.target) || isInteractiveTarget(e.target)) return;
+	if (card?.classList.contains('random-card--select-text')) return;
+	const now = e.timeStamp;
+	const near = Math.hypot(e.clientX - lastTextTapX, e.clientY - lastTextTapY) < DOUBLE_TAP_PX;
+	if (near && now - lastTextTapAt < DOUBLE_TAP_MS) {
+		enableSelectTextAt(e.clientX, e.clientY);
+		return;
+	}
+	lastTextTapAt = now;
+	lastTextTapX = e.clientX;
+	lastTextTapY = e.clientY;
+}
+
+function selectWordAt(x: number, y: number): void {
+	const sel = window.getSelection();
+	if (!sel) return;
+	const range =
+		document.caretRangeFromPoint?.(x, y) ??
+		(() => {
+			const pos = document.caretPositionFromPoint?.(x, y);
+			if (!pos) return null;
+			const r = document.createRange();
+			r.setStart(pos.offsetNode, pos.offset);
+			r.collapse(true);
+			return r;
+		})();
+	if (!range) return;
+	sel.removeAllRanges();
+	sel.addRange(range);
+	try {
+		sel.modify('extend', 'forward', 'word');
+		sel.modify('extend', 'backward', 'word');
+	} catch {
+		/* ponytail: caret only if modify unsupported */
+	}
+}
+
+function selectionInCard(): boolean {
+	const sel = window.getSelection();
+	if (!sel || sel.rangeCount === 0 || sel.isCollapsed) return false;
+	const node = sel.anchorNode;
+	return Boolean(node && card?.contains(node));
+}
+
+function cancelSwipeGesture(): void {
+	if (pointerId == null) return;
+	const id = pointerId;
+	dragging = false;
+	dragDx = 0;
+	pointerId = null;
+	card?.classList.remove('is-dragging');
+	resetCardMotion();
+	try {
+		card?.releasePointerCapture(id);
+	} catch {
+		/* already released */
+	}
+}
+
 function setStatus(msg: string, show = true): void {
 	if (!statusEl) return;
 	statusEl.textContent = msg;
@@ -312,6 +408,7 @@ function renderPayload(data: QuestionPayload): void {
 	}
 
 	card.hidden = false;
+	clearSelectTextMode();
 	setStatus('', false);
 	syncFavoriteButton();
 	syncPinButton();
@@ -399,34 +496,60 @@ autoOpenBtn?.addEventListener('click', () => {
 
 function onPointerDown(e: PointerEvent): void {
 	if (swapping || card?.hidden || e.button !== 0 || isInteractiveTarget(e.target)) return;
+	if (horizontalScrollBlock(e.target)) return;
+	if (card?.classList.contains('random-card--select-text')) {
+		if (isTextTarget(e.target)) return;
+		clearSelectTextMode();
+	}
+	textSwipeOnly =
+		textSelectAllowed() &&
+		!card!.classList.contains('random-card--select-text') &&
+		isTextTarget(e.target);
 	pointerId = e.pointerId;
 	touchStartX = e.clientX;
 	touchStartY = e.clientY;
 	dragDx = 0;
 	dragging = false;
-	card?.setPointerCapture(e.pointerId);
+	if (!textSwipeOnly) card?.setPointerCapture(e.pointerId);
 }
 
 function onPointerMove(e: PointerEvent): void {
 	if (swapping || card?.hidden || pointerId !== e.pointerId) return;
+
+	if (card?.classList.contains('random-card--select-text') && selectionInCard()) {
+		cancelSwipeGesture();
+		return;
+	}
+
 	const dx = e.clientX - touchStartX;
 	const dy = e.clientY - touchStartY;
 
 	if (!dragging) {
 		if (Math.abs(dx) < DRAG_START || Math.abs(dx) < Math.abs(dy)) return;
+		if (textSwipeOnly) card?.setPointerCapture(e.pointerId);
+		textSwipeOnly = false;
 		dragging = true;
 		card?.classList.add('is-dragging');
+		if (!card?.classList.contains('random-card--select-text')) {
+			window.getSelection()?.removeAllRanges();
+		}
 	}
 
 	dragDx = dx;
+	if (!dragging) return;
 	setDragTransform(dx);
 	e.preventDefault();
 }
 
 async function onPointerUp(e: PointerEvent): Promise<void> {
 	if (pointerId !== e.pointerId) return;
+	const wasDragging = dragging;
+	const smallMove = Math.abs(dragDx) < DRAG_START;
 	card?.releasePointerCapture(e.pointerId);
 	pointerId = null;
+	textSwipeOnly = false;
+
+	if (!wasDragging && smallMove) tryDoubleTapSelect(e);
 
 	if (!dragging || swapping || card?.hidden) {
 		dragging = false;
@@ -454,6 +577,18 @@ card?.addEventListener('pointermove', onPointerMove, { passive: false });
 card?.addEventListener('pointerup', onPointerUp);
 card?.addEventListener('pointercancel', onPointerUp);
 
+card?.addEventListener('dblclick', (e) => {
+	if (!textSelectAllowed()) return;
+	if (isInteractiveTarget(e.target)) return;
+	if (!isTextTarget(e.target)) return;
+	e.preventDefault();
+	enableSelectTextAt(e.clientX, e.clientY);
+});
+
+card?.addEventListener('selectstart', (e) => {
+	if (dragging || !card.classList.contains('random-card--select-text')) e.preventDefault();
+});
+
 favoriteBtn?.addEventListener('click', () => {
 	if (!currentId) return;
 	toggleFavorite(currentId);
@@ -471,6 +606,9 @@ pinBtn?.addEventListener('click', () => {
 document.addEventListener('keydown', (e) => {
 	if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) return;
 	if (e.target instanceof HTMLSelectElement) return;
+	if (e.code === 'Escape') {
+		clearSelectTextMode();
+	}
 	if (e.code === 'KeyR') {
 		e.preventDefault();
 		void swapQuestion('left');
