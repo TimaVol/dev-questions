@@ -1,6 +1,6 @@
 ---
 interface Props {
-	page: 'topic' | 'random';
+	page: 'topic' | 'random' | 'practice';
 	variant?: 'inline' | 'panel';
 	above?: boolean;
 }
@@ -29,11 +29,17 @@ const { page, variant = 'inline', above = false } = Astro.props;
 					<li><kbd>O</kbd> — відкрити або закрити всі відповіді</li>
 					<li><kbd>Esc</kbd> — скинути пошук</li>
 				</>
+			) : page === 'practice' ? (
+				<>
+					<li><kbd>Space</kbd> — відкрити / закрити відповідь</li>
+					<li><kbd>1</kbd> / <kbd>2</kbd> / <kbd>3</kbd> — знав / частково / не знав</li>
+					<li class="keyboard-tips__touch">свайп вліво / вправо — знав / частково</li>
+				</>
 			) : (
 				<>
 					<li><kbd>R</kbd> — інше питання</li>
 					<li><kbd>Space</kbd> — відкрити / закрити відповідь</li>
-					<li><kbd>O</kbd> — відкрити / закрити всі відповіді</li>
+					<li><kbd>O</kbd> — відкрити або закрити всі відповіді</li>
 					<li class="keyboard-tips__desktop">подвійний клік по тексту — виділити</li>
 					<li class="keyboard-tips__touch">свайп вліво / вправо — наступне питання</li>
 				</>

@@ -1,0 +1,263 @@
+---
+import '../styles/global.css';
+import Sidebar from '../components/Sidebar.astro';
+import MobileBar from '../components/MobileBar.astro';
+import ThemeInit from '../components/ThemeInit.astro';
+import SeoHead from '../components/SeoHead.astro';
+import GoogleAnalytics from '../components/GoogleAnalytics.astro';
+import KeyboardTips from '../components/KeyboardTips.astro';
+
+const pageTitle = 'Сесія';
+const pageDescription =
+	'Структурована практика для співбесіди — відповідай сам, оцінюй знання, повторюй слабкі місця.';
+---
+
+<!doctype html>
+<html lang="uk">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon-light.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{pageTitle} — Підготовка до Dev-інтерв'ю</title>
+		<SeoHead title={pageTitle} description={pageDescription} path="/practice" />
+		<GoogleAnalytics />
+		<link rel="preload" href="/search-index.json" as="fetch" crossorigin />
+		<ThemeInit />
+	</head>
+	<body>
+		<MobileBar title="Сесія" showToc={false} />
+
+		<div class="layout">
+			<Sidebar practiceActive />
+
+			<main class="main random-main practice-main">
+				<header class="page-header">
+					<h1>Сесія</h1>
+					<p class="subtitle">Відповідай сам — оціни — повторюй слабкі</p>
+				</header>
+
+				<div id="practice-notice" class="practice-notice" hidden role="status">
+					<div class="practice-notice__body">
+						<p id="practice-notice-title" class="practice-notice__title"></p>
+						<p id="practice-notice-message" class="practice-notice__message"></p>
+					</div>
+					<button type="button" class="practice-notice__close" id="practice-notice-close" aria-label="Закрити">
+						×
+					</button>
+				</div>
+
+				<div id="practice-recap" class="practice-recap" hidden>
+					<div class="practice-recap__head">
+						<p id="practice-recap-title" class="practice-recap__title"></p>
+						<p id="practice-recap-sub" class="practice-recap__sub"></p>
+					</div>
+					<div id="practice-recap-stats" class="practice-recap__stats"></div>
+					<div class="practice-recap__actions">
+						<button type="button" class="practice-recap__btn practice-recap__btn--primary" id="practice-recap-weak" hidden>
+							Повторити слабкі
+						</button>
+						<button type="button" class="practice-recap__btn" id="practice-recap-again">Ще одна сесія</button>
+						<button type="button" class="practice-recap__btn practice-recap__btn--ghost" id="practice-recap-dismiss">
+							До налаштувань
+						</button>
+					</div>
+				</div>
+
+				<div id="practice-resume" class="practice-resume" hidden>
+					<div class="practice-resume__body">
+						<p class="practice-resume__title">Незавершена сесія</p>
+						<p id="practice-resume-meta" class="practice-resume__meta"></p>
+					</div>
+					<div class="practice-resume__actions">
+						<button type="button" class="practice-resume__btn practice-resume__btn--primary" id="practice-resume-go">
+							Продовжити
+						</button>
+						<button type="button" class="practice-resume__btn" id="practice-resume-discard">Скинути</button>
+					</div>
+				</div>
+
+				<div id="practice-setup" class="practice-setup">
+					<div class="random-filters" role="group" aria-label="Фільтри">
+						<div class="random-filter-row">
+							<label class="random-select-wrap">
+								<span class="visually-hidden">Тема</span>
+								<select id="practice-topic" class="random-select">
+									<option value="all">Усі теми</option>
+									<option value="frontend">Frontend</option>
+									<option value="nodejs">Node.js</option>
+								</select>
+							</label>
+							<label class="random-select-wrap">
+								<span class="visually-hidden">Рівень</span>
+								<select id="practice-grade" class="random-select">
+									<option value="all">Усі рівні</option>
+								</select>
+							</label>
+						</div>
+						<div class="filter-chips" role="group" aria-label="Складність">
+							<button type="button" class="chip chip--active" data-practice-difficulty="all">Усі</button>
+							<button type="button" class="chip" data-practice-difficulty="easy">Легкі</button>
+							<button type="button" class="chip" data-practice-difficulty="medium">Середні</button>
+							<button type="button" class="chip" data-practice-difficulty="hard">Складні</button>
+						</div>
+					</div>
+
+					<button type="button" id="practice-queue-open" class="practice-queue-open" hidden>
+						Черга повторень
+						<span id="practice-queue-open-meta" class="practice-queue-open__meta"></span>
+					</button>
+
+					<div class="practice-presets" role="group" aria-label="Режим сесії">
+						<button type="button" class="practice-preset" data-practice-preset="quick" disabled>
+							<span class="practice-preset__title">10 питань</span>
+							<span class="practice-preset__meta">Швидка сесія без таймера</span>
+						</button>
+						<button type="button" class="practice-preset" data-practice-preset="focus" disabled>
+							<span class="practice-preset__title">25 хв · до 15 питань</span>
+							<span class="practice-preset__meta">~2 хв на питання — зазвичай встигає таймер</span>
+						</button>
+						<button
+							type="button"
+							class="practice-preset practice-preset--review"
+							id="practice-review-btn"
+							data-practice-preset="review"
+							disabled
+							hidden
+						>
+							<span class="practice-preset__title" id="practice-review-title">Повторити</span>
+							<span class="practice-preset__meta">Питання з черги «Сьогодні»</span>
+						</button>
+					</div>
+				</div>
+
+				<div id="practice-session-bar" class="practice-session-bar" hidden>
+					<span class="practice-session-bar__live" aria-hidden="true">●</span>
+					<span id="practice-session-label" class="practice-session-bar__label">Сесія</span>
+					<span id="practice-progress" class="practice-session-bar__progress">0 / 10</span>
+					<button type="button" id="practice-queue-open-session" class="practice-session-bar__queue" hidden>
+						Черга
+					</button>
+					<span id="practice-timer" class="practice-session-bar__timer" hidden>25:00</span>
+					<div class="practice-session-bar__end" id="practice-stop-wrap">
+						<button type="button" class="practice-session-bar__stop" id="practice-stop">Завершити</button>
+						<div class="practice-stop-confirm" id="practice-stop-confirm" hidden>
+							<span class="practice-stop-confirm__text">Завершити зараз?</span>
+							<button type="button" class="practice-stop-confirm__yes" id="practice-stop-yes">Так</button>
+							<button type="button" class="practice-stop-confirm__no" id="practice-stop-no">Ні</button>
+						</div>
+					</div>
+				</div>
+
+				<div id="practice-tips">
+					<KeyboardTips page="practice" variant="panel" above />
+				</div>
+
+				<div class="random-card-stage" id="practice-card-stage" hidden>
+					<article id="practice-card" class="random-card" hidden aria-live="polite">
+						<p class="random-card__category" id="practice-category"></p>
+						<div class="random-card__meta">
+							<span id="practice-label" class="random-card__label"></span>
+							<span id="practice-badge" class="badge"></span>
+						</div>
+						<h2 id="practice-title" class="random-card__title"></h2>
+
+						<details class="answer-panel" id="practice-answer">
+							<summary class="answer-toggle">Спробуй відповісти — потім відкрий</summary>
+							<div class="question-body" id="practice-body"></div>
+						</details>
+
+						<div id="practice-rating" class="practice-rating" hidden role="group" aria-label="Оцінка">
+							<p class="practice-rating__hint">Спочатку відкрий відповідь (Space)</p>
+							<div class="practice-rating__btns">
+							<button type="button" class="practice-rating__btn" data-rating="knew">Знав</button>
+							<button type="button" class="practice-rating__btn" data-rating="partial">Частково</button>
+							<button type="button" class="practice-rating__btn practice-rating__btn--missed" data-rating="missed">
+								Не знав
+							</button>
+							</div>
+						</div>
+
+						<footer class="random-card__footer practice-card__footer">
+							<div class="random-card__actions">
+								<button
+									type="button"
+									class="pin-btn"
+									id="practice-pin"
+									aria-label="Закріпити питання"
+									aria-pressed="false"
+								>📍</button>
+								<button
+									type="button"
+									class="favorite-btn"
+									id="practice-favorite"
+									aria-label="Додати в обране"
+									aria-pressed="false"
+								>☆</button>
+							</div>
+						</footer>
+
+						<p class="random-card__link-wrap">
+							<a id="practice-list-link" class="random-card__link" href="#">Відкрити в списку →</a>
+						</p>
+					</article>
+				</div>
+			</main>
+		</div>
+
+		<div id="practice-queue-layer" class="practice-queue-layer" hidden>
+			<div id="practice-queue-backdrop" class="practice-queue-backdrop"></div>
+			<div
+				id="practice-queue"
+				class="practice-queue practice-queue--modal"
+				role="dialog"
+				aria-modal="true"
+				aria-labelledby="practice-queue-title"
+			>
+				<div class="practice-queue__toolbar">
+					<h2 id="practice-queue-title" class="practice-queue__title">Черга повторень</h2>
+					<button type="button" class="practice-queue__close" id="practice-queue-close" aria-label="Закрити">
+						×
+					</button>
+				</div>
+				<p class="practice-queue__intro">
+					<strong>Знав</strong> — відкладеться на кілька днів.
+					<strong>Частково</strong> / <strong>Не знав</strong> — залишаються на сьогодні.
+				</p>
+				<div class="practice-queue__clear-wrap">
+					<button type="button" id="practice-queue-clear" class="practice-queue__clear">
+						Очистити всю чергу
+					</button>
+					<div class="practice-stop-confirm practice-queue__clear-confirm" id="practice-queue-clear-confirm" hidden>
+						<span class="practice-stop-confirm__text">Скинути всю чергу?</span>
+						<button type="button" class="practice-stop-confirm__yes" id="practice-queue-clear-yes">Так</button>
+						<button type="button" class="practice-stop-confirm__no" id="practice-queue-clear-no">Ні</button>
+					</div>
+				</div>
+				<div class="practice-queue__section">
+					<h3 class="practice-queue__section-title">
+						Сьогодні
+						<span id="practice-queue-today-count" class="practice-queue__count">0</span>
+					</h3>
+					<ul id="practice-queue-today" class="practice-queue__list"></ul>
+					<p id="practice-queue-today-empty" class="practice-queue__empty">Нічого на сьогодні</p>
+				</div>
+				<div class="practice-queue__section">
+					<h3 class="practice-queue__section-title">
+						Пізніше
+						<span id="practice-queue-later-count" class="practice-queue__count">0</span>
+					</h3>
+					<div id="practice-queue-later" class="practice-queue__later"></div>
+					<p id="practice-queue-later-empty" class="practice-queue__empty">Нічого не заплановано</p>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			import '../scripts/practice-page.ts';
+			import '../scripts/pin-resume.ts';
+			import '../scripts/theme.ts';
+			import '../scripts/mobile-nav.ts';
+		</script>
+	</body>
+</html>

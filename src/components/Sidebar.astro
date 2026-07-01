@@ -5,9 +5,10 @@ interface Props {
 	currentTopic?: 'frontend' | 'nodejs';
 	grade?: string;
 	randomActive?: boolean;
+	practiceActive?: boolean;
 }
 
-const { currentTopic, grade, randomActive = false } = Astro.props;
+const { currentTopic, grade, randomActive = false, practiceActive = false } = Astro.props;
 
 const frontendGrades = [
 	{ slug: 'junior', label: 'Junior' },
@@ -35,6 +36,9 @@ const nodejsGrades = [
 		<div class="nav-group">
 			<span class="nav-group-label">Практика</span>
 			<ul>
+				<li>
+					<a href="/practice" class:list={{ active: practiceActive }}>Сесія</a>
+				</li>
 				<li>
 					<a href="/random" class:list={{ active: randomActive }}>Випадкове</a>
 				</li>
