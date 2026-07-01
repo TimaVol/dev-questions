@@ -1,0 +1,120 @@
+---
+import '../styles/global.css';
+import Sidebar from '../components/Sidebar.astro';
+import MobileBar from '../components/MobileBar.astro';
+import ThemeInit from '../components/ThemeInit.astro';
+import SeoHead from '../components/SeoHead.astro';
+import GoogleAnalytics from '../components/GoogleAnalytics.astro';
+import KeyboardTips from '../components/KeyboardTips.astro';
+
+const pageTitle = 'Випадкове питання';
+const pageDescription = 'Тренуйся з випадковими питаннями для співбесіди — Frontend та Node.js.';
+---
+
+<!doctype html>
+<html lang="uk">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon-light.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{pageTitle} — Підготовка до Dev-інтерв'ю</title>
+		<SeoHead title={pageTitle} description={pageDescription} path="/random" />
+		<GoogleAnalytics />
+		<link rel="preload" href="/search-index.json" as="fetch" crossorigin />
+		<ThemeInit />
+	</head>
+	<body>
+		<MobileBar title="Випадкове" showToc={false} />
+
+		<div class="layout">
+			<Sidebar randomActive />
+
+			<main class="main random-main">
+				<header class="page-header">
+					<h1>Випадкове питання</h1>
+					<p class="subtitle">Відповідай сам — потім перевіряй</p>
+				</header>
+
+				<div class="random-filters" role="group" aria-label="Фільтри">
+					<div class="random-filter-row">
+						<label class="random-select-wrap">
+							<span class="visually-hidden">Тема</span>
+							<select id="random-topic" class="random-select">
+								<option value="all">Усі теми</option>
+								<option value="frontend">Frontend</option>
+								<option value="nodejs">Node.js</option>
+							</select>
+						</label>
+						<label class="random-select-wrap">
+							<span class="visually-hidden">Рівень</span>
+							<select id="random-grade" class="random-select">
+								<option value="all">Усі рівні</option>
+							</select>
+						</label>
+					</div>
+					<div class="filter-chips" role="group" aria-label="Складність">
+						<button type="button" class="chip chip--active" data-random-difficulty="all">Усі</button>
+						<button type="button" class="chip" data-random-difficulty="easy">Легкі</button>
+						<button type="button" class="chip" data-random-difficulty="medium">Середні</button>
+						<button type="button" class="chip" data-random-difficulty="hard">Складні</button>
+						<button type="button" class="chip" id="random-auto-open" aria-pressed="false">
+							Відповіді відкриті
+						</button>
+					</div>
+				</div>
+
+				<p id="random-status" class="random-status" hidden></p>
+
+				<KeyboardTips page="random" variant="panel" above />
+
+				<div class="random-card-stage" id="random-card-stage">
+					<article id="random-card" class="random-card" hidden aria-live="polite">
+					<p class="random-card__category" id="random-category"></p>
+					<div class="random-card__meta">
+						<span id="random-label" class="random-card__label"></span>
+						<span id="random-badge" class="badge"></span>
+					</div>
+					<h2 id="random-title" class="random-card__title"></h2>
+
+					<details class="answer-panel" id="random-answer">
+						<summary class="answer-toggle">Спробуй відповісти — потім відкрий</summary>
+						<div class="question-body" id="random-body"></div>
+					</details>
+
+					<footer class="random-card__footer">
+						<button type="button" class="random-swap-btn" id="random-swap">Інше питання</button>
+						<div class="random-card__actions">
+							<button
+								type="button"
+								class="pin-btn"
+								id="random-pin"
+								aria-label="Закріпити питання"
+								aria-pressed="false"
+							>📍</button>
+							<button
+								type="button"
+								class="favorite-btn"
+								id="random-favorite"
+								aria-label="Додати в обране"
+								aria-pressed="false"
+							>☆</button>
+						</div>
+					</footer>
+
+					<p class="random-card__link-wrap">
+						<a id="random-list-link" class="random-card__link" href="#">Відкрити в списку →</a>
+					</p>
+				</article>
+				</div>
+			</main>
+		</div>
+
+		<script>
+			import '../scripts/random-page.ts';
+			import '../scripts/pin-resume.ts';
+			import '../scripts/theme.ts';
+			import '../scripts/mobile-nav.ts';
+		</script>
+	</body>
+</html>

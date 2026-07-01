@@ -5,6 +5,7 @@ import TableOfContents from '../components/TableOfContents.astro';
 import QuestionCard from '../components/QuestionCard.astro';
 import CategorySection from '../components/CategorySection.astro';
 import PageToolbar from '../components/PageToolbar.astro';
+import KeyboardTips from '../components/KeyboardTips.astro';
 import MobileBar from '../components/MobileBar.astro';
 import ThemeInit from '../components/ThemeInit.astro';
 import SeoHead from '../components/SeoHead.astro';
@@ -71,6 +72,8 @@ for (let i = 0; i < questions.length; i++) {
 				</header>
 
 				<PageToolbar total={questions.length} />
+
+				<KeyboardTips page="topic" variant="panel" above />
 
 				<div id="results-panel" class="results-panel" hidden></div>
 

@@ -1,0 +1,42 @@
+---
+interface Props {
+	page: 'topic' | 'random';
+	variant?: 'inline' | 'panel';
+	above?: boolean;
+}
+
+const { page, variant = 'inline', above = false } = Astro.props;
+---
+
+<aside
+	class:list={[
+		'keyboard-tips',
+		variant === 'panel' && 'keyboard-tips--panel',
+		variant === 'inline' && 'toolbar-hint',
+		above && 'keyboard-tips--above',
+	]}
+	aria-label="Клавіатурні скорочення"
+>
+	{
+		variant === 'panel' && <p class="keyboard-tips__title">Клавіші</p>
+	}
+	<ul class="keyboard-tips__list">
+		{
+			page === 'topic' ? (
+				<>
+					<li><kbd>J</kbd> / <kbd>K</kbd> — наступне / попереднє питання</li>
+					<li><kbd>Space</kbd> — відкрити / закрити відповідь</li>
+					<li><kbd>O</kbd> — відкрити або закрити всі відповіді</li>
+					<li><kbd>Esc</kbd> — скинути пошук</li>
+				</>
+			) : (
+				<>
+					<li><kbd>R</kbd> — інше питання</li>
+					<li><kbd>Space</kbd> — відкрити / закрити відповідь</li>
+					<li><kbd>O</kbd> — відкрити / закрити всі відповіді</li>
+					<li class="keyboard-tips__touch">свайп вліво / вправо — наступне питання</li>
+				</>
+			)
+		}
+	</ul>
+</aside>

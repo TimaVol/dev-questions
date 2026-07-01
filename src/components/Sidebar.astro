@@ -2,11 +2,12 @@
 import ThemeToggle from './ThemeToggle.astro';
 
 interface Props {
-	currentTopic: 'frontend' | 'nodejs';
-	grade: string;
+	currentTopic?: 'frontend' | 'nodejs';
+	grade?: string;
+	randomActive?: boolean;
 }
 
-const { currentTopic, grade } = Astro.props;
+const { currentTopic, grade, randomActive = false } = Astro.props;
 
 const frontendGrades = [
 	{ slug: 'junior', label: 'Junior' },
@@ -63,6 +64,14 @@ const nodejsGrades = [
 						</li>
 					))
 				}
+			</ul>
+		</div>
+		<div class="nav-group">
+			<span class="nav-group-label">Практика</span>
+			<ul>
+				<li>
+					<a href="/random" class:list={{ active: randomActive }}>Випадкове</a>
+				</li>
 			</ul>
 		</div>
 	</nav>

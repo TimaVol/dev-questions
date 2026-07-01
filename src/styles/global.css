@@ -181,6 +181,344 @@ kbd {
 	min-width: 0;
 }
 
+.random-main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.random-main .keyboard-tips--above {
+	align-self: center;
+}
+
+.random-main .page-header {
+	width: 100%;
+	text-align: center;
+}
+
+.random-filters {
+	width: 100%;
+	max-width: 42rem;
+	background: var(--surface);
+	border: 1px solid var(--border);
+	border-radius: var(--radius);
+	padding: 0.85rem 1rem;
+	margin-bottom: 1.5rem;
+}
+
+.random-filter-row {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.65rem;
+	margin-bottom: 0.75rem;
+}
+
+.random-select-wrap {
+	flex: 1;
+	min-width: 140px;
+}
+
+.random-select {
+	width: 100%;
+	padding: 0.55rem 0.85rem;
+	border-radius: 8px;
+	border: 1px solid var(--border);
+	background: var(--bg);
+	color: var(--text);
+	font-size: 0.9rem;
+}
+
+.random-select:focus {
+	outline: 2px solid var(--accent);
+	outline-offset: 1px;
+	border-color: transparent;
+}
+
+.random-status {
+	width: 100%;
+	max-width: 42rem;
+	text-align: center;
+	color: var(--muted);
+	margin: 0 0 1rem;
+}
+
+.random-card-stage {
+	width: 100%;
+	max-width: 42rem;
+	overflow: hidden;
+	position: relative;
+}
+
+.random-card {
+	width: 100%;
+	background: var(--surface);
+	border: 1px solid var(--border);
+	border-radius: var(--radius);
+	padding: 1.5rem 1.5rem 1.25rem;
+	box-shadow: 0 12px 40px color-mix(in srgb, var(--text) 6%, transparent);
+	transform: translateX(0) rotate(0deg);
+	opacity: 1;
+	transition:
+		transform 0.32s cubic-bezier(0.4, 0, 0.2, 1),
+		opacity 0.28s ease;
+	touch-action: pan-y;
+	will-change: transform, opacity;
+	cursor: grab;
+}
+
+.random-card button,
+.random-card a,
+.random-card summary {
+	cursor: pointer;
+}
+
+.random-card .random-card__title,
+.random-card .random-card__category,
+.random-card .random-card__label,
+.random-card .question-body {
+	cursor: text;
+}
+
+.random-card .question-body a {
+	cursor: pointer;
+}
+
+.random-card.is-dragging {
+	transition: none;
+	cursor: grabbing;
+	touch-action: none;
+}
+
+.random-card--out-left {
+	transform: translateX(-112%) rotate(-5deg);
+	opacity: 0;
+}
+
+.random-card--out-right {
+	transform: translateX(112%) rotate(5deg);
+	opacity: 0;
+}
+
+.random-card--from-left {
+	transform: translateX(-112%) rotate(-5deg);
+	opacity: 0;
+	transition: none;
+}
+
+.random-card--from-right {
+	transform: translateX(112%) rotate(5deg);
+	opacity: 0;
+	transition: none;
+}
+
+.random-card--out-left,
+.random-card--out-right {
+	pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.random-card {
+		transition: none;
+	}
+}
+
+.random-card__category {
+	font-size: 0.72rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.06em;
+	color: var(--muted);
+	margin: 0 0 0.65rem;
+}
+
+.random-card__meta {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 0.5rem;
+	margin-bottom: 0.85rem;
+}
+
+.random-card__label {
+	font-size: 0.85rem;
+	color: var(--muted);
+}
+
+.random-card__title {
+	font-size: 1.35rem;
+	font-weight: 600;
+	line-height: 1.4;
+	letter-spacing: -0.02em;
+	margin: 0 0 1.25rem;
+}
+
+.random-card .answer-panel {
+	border-top: 1px solid var(--border);
+	margin: 0 -1.5rem;
+	border-radius: 0;
+}
+
+.random-card .answer-toggle {
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+}
+
+.random-card .question-body {
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+}
+
+.random-card__footer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+	margin-top: 1.25rem;
+	padding-top: 1rem;
+	border-top: 1px solid var(--border);
+}
+
+.random-swap-btn {
+	padding: 0.6rem 1.15rem;
+	border-radius: 8px;
+	border: 1px solid var(--accent);
+	background: var(--accent-dim);
+	color: var(--accent);
+	font-size: 0.9rem;
+	font-weight: 600;
+	cursor: pointer;
+	transition: background 0.15s, transform 0.15s;
+}
+
+.random-swap-btn:hover:not(:disabled) {
+	background: color-mix(in srgb, var(--accent) 18%, transparent);
+	transform: translateY(-1px);
+}
+
+.random-swap-btn:disabled {
+	opacity: 0.6;
+	cursor: wait;
+}
+
+.random-card__actions {
+	display: flex;
+	gap: 0.35rem;
+}
+
+.random-card__link-wrap {
+	margin: 1rem 0 0;
+	text-align: center;
+}
+
+.random-card__link {
+	font-size: 0.85rem;
+	font-weight: 500;
+	color: var(--accent);
+	text-decoration: none;
+}
+
+.random-card__link:hover {
+	text-decoration: underline;
+}
+
+.random-hint {
+	margin-top: 1.25rem;
+	text-align: center;
+}
+
+.keyboard-tips--panel {
+	width: 100%;
+	max-width: 42rem;
+	margin-top: 1.25rem;
+	padding: 0.8rem 1rem;
+	border: 1px solid var(--border);
+	border-radius: var(--radius);
+	background: color-mix(in srgb, var(--surface) 92%, var(--accent-dim));
+	font-size: 0.8rem;
+	color: var(--muted);
+}
+
+.keyboard-tips--above {
+	margin-top: 0;
+	margin-bottom: 0.85rem;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	gap: 0.45rem 1rem;
+	max-width: none;
+}
+
+.random-main .keyboard-tips--above {
+	max-width: 42rem;
+	width: 100%;
+}
+
+.keyboard-tips--above .keyboard-tips__list {
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 0.35rem 1rem;
+	margin-top: 0;
+}
+
+.keyboard-tips__title {
+	margin: 0;
+	font-size: 0.68rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.06em;
+	color: var(--muted);
+}
+
+.keyboard-tips__list {
+	list-style: none;
+	margin: 0.45rem 0 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 0.35rem;
+}
+
+.keyboard-tips--inline {
+	display: contents;
+}
+
+.keyboard-tips--inline::before {
+	content: '·';
+	color: var(--muted);
+}
+
+.keyboard-tips--inline .keyboard-tips__title {
+	display: none;
+}
+
+.keyboard-tips--inline .keyboard-tips__list {
+	display: contents;
+	margin: 0;
+	padding: 0;
+}
+
+.keyboard-tips--inline .keyboard-tips__list li {
+	display: inline;
+}
+
+.keyboard-tips--inline .keyboard-tips__list li + li::before {
+	content: ' · ';
+}
+
+.keyboard-tips__touch {
+	display: none;
+}
+
+@media (hover: none) and (pointer: coarse) {
+	.keyboard-tips__touch {
+		display: list-item;
+	}
+}
+
+.toolbar-meta .keyboard-tips--inline .keyboard-tips__touch {
+	display: none;
+}
+
 .sidebar,
 .toc {
 	position: sticky;
