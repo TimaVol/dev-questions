@@ -33,6 +33,14 @@ const nodejsGrades = [
 	</p>
 	<nav aria-label="Теми">
 		<div class="nav-group">
+			<span class="nav-group-label">Практика</span>
+			<ul>
+				<li>
+					<a href="/random" class:list={{ active: randomActive }}>Випадкове</a>
+				</li>
+			</ul>
+		</div>
+		<div class="nav-group">
 			<span class="nav-group-label">Frontend</span>
 			<ul>
 				{
@@ -64,14 +72,6 @@ const nodejsGrades = [
 						</li>
 					))
 				}
-			</ul>
-		</div>
-		<div class="nav-group">
-			<span class="nav-group-label">Практика</span>
-			<ul>
-				<li>
-					<a href="/random" class:list={{ active: randomActive }}>Випадкове</a>
-				</li>
 			</ul>
 		</div>
 	</nav>
