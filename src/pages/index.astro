@@ -4,10 +4,31 @@ import ThemeInit from '../components/ThemeInit.astro';
 import ThemeToggle from '../components/ThemeToggle.astro';
 import SeoHead from '../components/SeoHead.astro';
 import GoogleAnalytics from '../components/GoogleAnalytics.astro';
+import { getCollection } from 'astro:content';
+import { pluralQuestions } from '../scripts/practice-session.ts';
+
+const questions = await getCollection('questions');
+const total = questions.length;
+
+function count(topic: string, grade: string): number {
+	return questions.filter((q) => q.data.topic === topic && q.data.grade === grade).length;
+}
+
+const frontendGrades = [
+	{ slug: 'junior', label: 'Junior', count: count('frontend', 'junior') },
+	{ slug: 'middle', label: 'Middle', count: count('frontend', 'middle') },
+	{ slug: 'senior', label: 'Senior', count: count('frontend', 'senior') },
+];
+
+const nodejsGrades = [
+	{ slug: 'junior', label: 'Junior', count: count('nodejs', 'junior') },
+	{ slug: 'middle', label: 'Middle', count: count('nodejs', 'middle') },
+	{ slug: 'middle-senior', label: 'Middle/Senior', count: count('nodejs', 'middle-senior') },
+	{ slug: 'senior', label: 'Senior', count: count('nodejs', 'senior') },
+];
 
 const pageTitle = "Підготовка до Dev-інтерв'ю";
-const pageDescription =
-	'644 питання з DOU для підготовки до співбесід Frontend та Node.js — відповідай сам, потім перевіряй.';
+const pageDescription = `${total} питань з DOU для підготовки до співбесід Frontend та Node.js — сесії, випадковий режим, browse за рівнем.`;
 ---
 
 <!doctype html>
@@ -19,6 +40,7 @@ const pageDescription =
 		<title>{pageTitle}</title>
 		<SeoHead title={pageTitle} description={pageDescription} path="/" />
 		<GoogleAnalytics />
+		<link rel="preload" href="/search-index.json" as="fetch" crossorigin />
 		<ThemeInit />
 	</head>
 	<body class="landing">
@@ -26,57 +48,102 @@ const pageDescription =
 		<main class="landing-main">
 			<h1>Підготовка до Dev-інтерв'ю</h1>
 			<p class="landing-lead">
-				644 питання з DOU — спочатку відповідай сам, потім перевіряй. Пошук, фільтри за складністю,
-				клавіші <kbd>J</kbd>/<kbd>K</kbd>.
+				{total} питань з DOU — спочатку відповідай сам, потім перевіряй. Сесії з оцінкою, випадковий режим
+				або browse за темою та рівнем.
 			</p>
 
-			<p class="pin-resume pin-resume--landing" hidden data-pin-resume>
-				<a href="#">Продовжити</a>
-			</p>
+			<div id="landing-resume" class="landing-resume" hidden>
+				<p class="pin-resume pin-resume--landing" hidden data-pin-resume>
+					<a href="#">Продовжити</a>
+				</p>
+				<p id="landing-practice-resume" class="pin-resume pin-resume--landing" hidden>
+					<a href="/practice" id="landing-practice-resume-link">Продовжити сесію</a>
+				</p>
+			</div>
 
-			<section class="landing-section">
-				<h2>Frontend</h2>
-				<div class="landing-links">
-					<a href="/frontend/junior" class="landing-card">
-						<span class="landing-card-title">Junior</span>
-						<span class="landing-card-meta">185 питань</span>
-					</a>
-					<a href="/frontend/middle" class="landing-card">
-						<span class="landing-card-title">Middle</span>
-						<span class="landing-card-meta">103 питання</span>
-					</a>
-					<a href="/frontend/senior" class="landing-card">
-						<span class="landing-card-title">Senior</span>
-						<span class="landing-card-meta">115 питань</span>
-					</a>
-				</div>
+			<section class="landing-hero" aria-label="Режими практики">
+				<a href="/practice" class="landing-hero-card">
+					<span class="landing-hero-card__title">Сесія</span>
+					<span class="landing-hero-card__meta">10 питань або 25 хв · оцінка · повтор слабких</span>
+				</a>
+				<a href="/random" class="landing-hero-card">
+					<span class="landing-hero-card__title">Випадкове</span>
+					<span class="landing-hero-card__meta">Одне питання за раз — швидкий drill</span>
+				</a>
 			</section>
 
-			<section class="landing-section">
-				<h2>Node.js</h2>
-				<div class="landing-links">
-					<a href="/nodejs/junior" class="landing-card">
-						<span class="landing-card-title">Junior</span>
-						<span class="landing-card-meta">57 питань</span>
-					</a>
-					<a href="/nodejs/middle" class="landing-card">
-						<span class="landing-card-title">Middle</span>
-						<span class="landing-card-meta">88 питань</span>
-					</a>
-					<a href="/nodejs/middle-senior" class="landing-card">
-						<span class="landing-card-title">Middle/Senior</span>
-						<span class="landing-card-meta">38 питань</span>
-					</a>
-					<a href="/nodejs/senior" class="landing-card">
-						<span class="landing-card-title">Senior</span>
-						<span class="landing-card-meta">58 питань</span>
-					</a>
+			<ol class="landing-steps">
+				<li>Відповідай сам — відповідь закрита</li>
+				<li>Відкрий і перевір себе</li>
+				<li>Оціни в сесії — слабкі повернуться в чергу</li>
+			</ol>
+
+			<section class="landing-search" aria-label="Пошук">
+				<label class="search-wrap">
+					<span class="visually-hidden">Пошук питань</span>
+					<input
+						type="search"
+						id="landing-search"
+						class="search-input"
+						placeholder="Пошук у всіх питаннях…"
+						autocomplete="off"
+					/>
+				</label>
+				<div class="filter-chips" role="group" aria-label="Складність">
+					<button type="button" class="chip chip--active" data-landing-difficulty="all">Усі</button>
+					<button type="button" class="chip" data-landing-difficulty="easy">Легкі</button>
+					<button type="button" class="chip" data-landing-difficulty="medium">Середні</button>
+					<button type="button" class="chip" data-landing-difficulty="hard">Складні</button>
 				</div>
+				<p id="landing-search-status" class="landing-search-status">{total} питань</p>
+				<div id="landing-results" class="results-panel landing-results" hidden></div>
 			</section>
+
+			<div id="landing-browse">
+				<section class="landing-section">
+					<h2>Frontend</h2>
+					<div class="landing-links">
+						{
+							frontendGrades.map((g) => (
+								<a href={`/frontend/${g.slug}`} class="landing-card">
+									<span class="landing-card-title">{g.label}</span>
+									<span class="landing-card-meta">{g.count} {pluralQuestions(g.count)}</span>
+								</a>
+							))
+						}
+					</div>
+				</section>
+
+				<section class="landing-section">
+					<h2>Node.js</h2>
+					<div class="landing-links">
+						{
+							nodejsGrades.map((g) => (
+								<a href={`/nodejs/${g.slug}`} class="landing-card">
+									<span class="landing-card-title">{g.label}</span>
+									<span class="landing-card-meta">{g.count} {pluralQuestions(g.count)}</span>
+								</a>
+							))
+						}
+					</div>
+				</section>
+			</div>
+
+			<footer class="landing-footer">
+				<p>
+					Питання з
+					<a href="https://dou.ua/lenta/articles/front-end-developer-interview-questions/" rel="noopener">
+						DOU (Frontend)
+					</a>
+					та
+					<a href="https://dou.ua/lenta/articles/interview-node-js/" rel="noopener">DOU (Node.js)</a>.
+				</p>
+			</footer>
 		</main>
 		<script>
 			import '../scripts/theme.ts';
 			import '../scripts/pin-resume.ts';
+			import '../scripts/landing-page.ts';
 		</script>
 	</body>
 </html>

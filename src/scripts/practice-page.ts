@@ -2,6 +2,13 @@ import { isFavorite, toggleFavorite } from './favorites.ts';
 import { isPinned, togglePin, type Pin } from './pin.ts';
 import { updatePinResumeUI } from './pin-resume.ts';
 import { loadQuestion, type QuestionPayload } from './question-loader.ts';
+import {
+	loadPracticeSession,
+	pluralQuestions,
+	practiceSessionResumeMeta,
+	PRACTICE_SESSION_KEY,
+	type PracticeSession,
+} from './practice-session.ts';
 import { clearAllReviews, dueDateLabel, getDueIds, getScheduledLater, scheduleReview, type ReviewRating } from './review.ts';
 import { loadSearchIndex, type SearchItem } from './search-index.ts';
 
@@ -13,18 +20,8 @@ type Filters = {
 
 type Preset = 'quick' | 'focus' | 'review' | 'weak';
 
-type Session = {
-	preset: Preset;
-	targetCount: number;
-	durationMs: number | null;
-	startedAt: number;
-	deck: string[];
-	ratings: Record<string, ReviewRating>;
-	weakIds: string[];
-	filters: Filters;
-};
+type Session = PracticeSession & { preset: Preset; ratings: Record<string, ReviewRating> };
 
-const SESSION_KEY = 'dev-questions:practice-session';
 const WEAK_KEY = 'dev-questions:practice-weak';
 const RECENT_KEY = 'dev-questions:practice-recent';
 const RECENT_MAX = 8;
@@ -199,19 +196,9 @@ function pushRecent(id: string): void {
 	sessionStorage.setItem(RECENT_KEY, JSON.stringify(recent.slice(0, RECENT_MAX)));
 }
 
-function loadSession(): Session | null {
-	try {
-		const raw = sessionStorage.getItem(SESSION_KEY);
-		if (!raw) return null;
-		return JSON.parse(raw) as Session;
-	} catch {
-		return null;
-	}
-}
-
 function saveSession(): void {
-	if (session) sessionStorage.setItem(SESSION_KEY, JSON.stringify(session));
-	else sessionStorage.removeItem(SESSION_KEY);
+	if (session) sessionStorage.setItem(PRACTICE_SESSION_KEY, JSON.stringify(session));
+	else sessionStorage.removeItem(PRACTICE_SESSION_KEY);
 }
 
 function loadWeakIds(): string[] {
@@ -246,14 +233,6 @@ function syncGradeOptions(): void {
 	else gradeSelect.value = 'all';
 }
 
-function pluralQuestions(n: number): string {
-	const mod10 = n % 10;
-	const mod100 = n % 100;
-	if (mod10 === 1 && mod100 !== 11) return 'питання';
-	if (mod10 >= 2 && mod10 <= 4 && (mod100 < 10 || mod100 >= 20)) return 'питання';
-	return 'питань';
-}
-
 function dueInPool(): string[] {
 	const ids = new Set(allItems.map((i) => i.id));
 	return getDueIds().filter((id) => ids.has(id));
@@ -270,21 +249,18 @@ function hideResumeBanner(): void {
 }
 
 function showResumeBanner(saved: Session): void {
-	const done = Object.keys(saved.ratings).length;
 	if (saved.deck.length === 0) {
-		sessionStorage.removeItem(SESSION_KEY);
+		sessionStorage.removeItem(PRACTICE_SESSION_KEY);
 		return;
 	}
 	pendingSession = saved;
-	if (resumeMeta) {
-		resumeMeta.textContent = `${done} з ${saved.targetCount} зроблено · ${saved.deck.length} ${pluralQuestions(saved.deck.length)} залишилось`;
-	}
+	if (resumeMeta) resumeMeta.textContent = practiceSessionResumeMeta(saved);
 	resumeEl?.removeAttribute('hidden');
 }
 
 function discardPendingSession(): void {
 	hideResumeBanner();
-	sessionStorage.removeItem(SESSION_KEY);
+	sessionStorage.removeItem(PRACTICE_SESSION_KEY);
 }
 
 function resumePendingSession(): void {
@@ -1101,6 +1077,6 @@ loadSearchIndex().then((items) => {
 	allItems = items;
 	setPresetsReady(true);
 	syncReviewQueueUI();
-	const saved = loadSession();
+	const saved = loadPracticeSession() as Session | null;
 	if (saved?.deck.length) showResumeBanner(saved);
 });
