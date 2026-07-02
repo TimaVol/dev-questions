@@ -624,6 +624,14 @@ document.addEventListener('keydown', (e) => {
 		syncAutoOpenBtn();
 		if (card && !card.hidden) answerEl.open = on;
 	}
+	if (e.code === 'KeyP') {
+		e.preventDefault();
+		const pin = readPin();
+		if (!pin) return;
+		togglePin(pin);
+		syncPinButton();
+		updatePinResumeUI();
+	}
 });
 
 syncGradeOptions();

@@ -1005,6 +1005,14 @@ document.addEventListener('keydown', (e) => {
 		answerEl.open = !answerEl.open;
 		syncRatingRow();
 	}
+	if (e.code === 'KeyP') {
+		e.preventDefault();
+		const pin = readPin();
+		if (!pin) return;
+		togglePin(pin);
+		syncPinButton();
+		updatePinResumeUI();
+	}
 	if (answerEl.open) {
 		if (e.code === 'Digit1') {
 			e.preventDefault();

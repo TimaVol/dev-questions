@@ -394,6 +394,10 @@ document.addEventListener('keydown', (e) => {
 		e.preventDefault();
 		toggleAllAnswers();
 	}
+	if (e.code === 'KeyP') {
+		e.preventDefault();
+		togglePinAtNav();
+	}
 });
 
 function findNavIdx(vis: HTMLElement[]): number {
@@ -428,6 +432,18 @@ function toggleAnswerAtNav(): void {
 	navIdx = idx;
 	const details = vis[idx].querySelector<HTMLDetailsElement>('.answer-panel');
 	if (details) details.open = !details.open;
+}
+
+function togglePinAtNav(): void {
+	const vis = navTargets();
+	if (!vis.length) return;
+	const idx = navIdx >= 0 && navIdx < vis.length ? navIdx : findNavIdx(vis);
+	navIdx = idx;
+	const btn = vis[idx].querySelector<HTMLButtonElement>('[data-pin-id]');
+	if (!btn) return;
+	togglePin(readPinFromBtn(btn));
+	syncAllPinButtons();
+	updatePinResumeUI();
 }
 
 for (const a of document.querySelectorAll<HTMLAnchorElement>('.question-body a[href^="http"]')) {
